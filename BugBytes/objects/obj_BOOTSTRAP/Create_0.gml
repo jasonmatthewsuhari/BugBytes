@@ -1,0 +1,1 @@
+// declare macros and globals here

@@ -21,5 +21,6 @@
     {"name":"rm_game","order":1,"path":"rooms/rm_game/rm_game.yy",},
     {"name":"spr_server","order":1,"path":"sprites/spr_server/spr_server.yy",},
     {"name":"obj_remote","order":2,"path":"objects/obj_remote/obj_remote.yy",},
+    {"name":"spr_client","order":2,"path":"sprites/spr_client/spr_client.yy",},
   ],
 }

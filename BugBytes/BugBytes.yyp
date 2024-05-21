@@ -43,6 +43,7 @@
     {"id":{"name":"PacketReceive","path":"scripts/PacketReceive/PacketReceive.yy",},},
     {"id":{"name":"spr_server","path":"sprites/spr_server/spr_server.yy",},},
     {"id":{"name":"obj_remote","path":"objects/obj_remote/obj_remote.yy",},},
+    {"id":{"name":"spr_client","path":"sprites/spr_client/spr_client.yy",},},
     {"id":{"name":"spr_BOOTSTRAP","path":"sprites/spr_BOOTSTRAP/spr_BOOTSTRAP.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
   ],

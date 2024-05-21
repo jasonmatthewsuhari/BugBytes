@@ -6,7 +6,7 @@
     {"name":"Objects","order":2,"path":"folders/Objects.yy",},
     {"name":"Particle Systems","order":5,"path":"folders/Unused (Temp)/Particle Systems.yy",},
     {"name":"Paths","order":6,"path":"folders/Unused (Temp)/Paths.yy",},
-    {"name":"Scripts","order":7,"path":"folders/Unused (Temp)/Scripts.yy",},
+    {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
     {"name":"Sequences","order":8,"path":"folders/Unused (Temp)/Sequences.yy",},
     {"name":"Shaders","order":9,"path":"folders/Unused (Temp)/Shaders.yy",},
     {"name":"Sounds","order":10,"path":"folders/Unused (Temp)/Sounds.yy",},
@@ -14,8 +14,12 @@
     {"name":"Tile Sets","order":12,"path":"folders/Unused (Temp)/Tile Sets.yy",},
     {"name":"Timelines","order":13,"path":"folders/Unused (Temp)/Timelines.yy",},
     {"name":"Unused (Temp)","order":1,"path":"folders/Unused (Temp).yy",},
+    {"name":"Multiplayer","order":1,"path":"folders/Objects/Multiplayer.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"obj_client","order":1,"path":"objects/obj_client/obj_client.yy",},
     {"name":"rm_game","order":1,"path":"rooms/rm_game/rm_game.yy",},
+    {"name":"spr_server","order":1,"path":"sprites/spr_server/spr_server.yy",},
+    {"name":"obj_remote","order":2,"path":"objects/obj_remote/obj_remote.yy",},
   ],
 }

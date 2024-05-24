@@ -22,9 +22,11 @@
   "ResourceOrderSettings": [
     {"name":"obj_server","order":2,"path":"objects/obj_server/obj_server.yy",},
     {"name":"spr_player","order":3,"path":"sprites/spr_player/spr_player.yy",},
+    {"name":"obj_button_join","order":1,"path":"objects/obj_button_join/obj_button_join.yy",},
     {"name":"rm_game","order":1,"path":"rooms/rm_game/rm_game.yy",},
     {"name":"spr_server","order":1,"path":"sprites/spr_server/spr_server.yy",},
     {"name":"obj_remote","order":1,"path":"objects/obj_remote/obj_remote.yy",},
     {"name":"obj_player","order":2,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"spr_button_join","order":1,"path":"sprites/spr_button_join/spr_button_join.yy",},
   ],
 }

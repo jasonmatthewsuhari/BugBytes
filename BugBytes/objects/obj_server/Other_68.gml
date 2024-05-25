@@ -1,11 +1,11 @@
 var event = async_load[? "type"];
-var socket = async_load[? "socket"];
 var server_id = async_load[? "id"];
 
 if(server == server_id) {
 	switch(event) {
 		case network_type_connect:
 			// adds newly connected socket to sockets list
+			var socket = async_load[? "socket"];
 			ds_list_add(sockets, socket);
 			
 			// adds newly generated player to player map
@@ -19,15 +19,27 @@ if(server == server_id) {
 				with(p
 				) {instance_destroy();}
 			}
+			var socket = async_load[? "socket"];
 			ds_list_delete(sockets, ds_list_find_index(sockets, socket));
-		break;
+		break;		
+	}
+}
+
+else if(server_id != global.socket) {
+	var socket = async_load[? "id"];
+	var buffer = async_load[? "buffer"];
 	
-		case network_type_data:
-			var buffer = async_load[? "buffer"];
-			var socket = async_load[? "id"];
-			buffer_seek(buffer, buffer_seek_start, 0);
-			PacketReceive(buffer, socket);
-		break;
+	buffer_seek(buffer, buffer_seek_start, 0);
+	var cmd = buffer_read(buffer, buffer_u8);
+	
+	var p = players[? socket];
+	switch(cmd) {
+		case global.PACKET_KEY:
+			with(p) {
+				var k = buffer_read(buffer, buffer_u8);
+				var s = buffer_read(buffer, buffer_u8);
+				movement_array[k] = s;
+			}	
 	}
 }
 

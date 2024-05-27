@@ -1,5 +1,6 @@
 {
   "$GMObject":"",
+<<<<<<<< Updated upstream:BugBytes/objects/img_Logo/img_Logo.yy
   "%Name":"img_Logo",
   "eventList":[],
   "managed":true,
@@ -8,6 +9,16 @@
   "parent":{
     "name":"Images",
     "path":"folders/Objects/Images.yy",
+========
+  "%Name":"Logo",
+  "eventList":[],
+  "managed":true,
+  "name":"Logo",
+  "overriddenProperties":[],
+  "parent":{
+    "name":"Misc",
+    "path":"folders/Objects/Misc.yy",
+>>>>>>>> Stashed changes:BugBytes/objects/Logo/Logo.yy
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +39,13 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
+<<<<<<<< Updated upstream:BugBytes/objects/img_Logo/img_Logo.yy
     "name":"BugByte_Logo",
     "path":"sprites/BugByte_Logo/BugByte_Logo.yy",
+========
+    "name":"BugBytes_Logo",
+    "path":"sprites/BugBytes_Logo/BugBytes_Logo.yy",
+>>>>>>>> Stashed changes:BugBytes/objects/Logo/Logo.yy
   },
   "spriteMaskId":null,
   "visible":true,

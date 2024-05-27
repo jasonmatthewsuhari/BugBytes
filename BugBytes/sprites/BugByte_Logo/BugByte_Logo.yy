@@ -1,17 +1,27 @@
 {
   "$GMSprite":"",
+<<<<<<<< Updated upstream:BugBytes/sprites/BugByte_Logo/BugByte_Logo.yy
   "%Name":"BugByte_Logo",
   "bboxMode":0,
   "bbox_bottom":222,
   "bbox_left":27,
   "bbox_right":982,
   "bbox_top":113,
+========
+  "%Name":"BugBytes_Logo",
+  "bboxMode":0,
+  "bbox_bottom":669,
+  "bbox_left":80,
+  "bbox_right":2949,
+  "bbox_top":340,
+>>>>>>>> Stashed changes:BugBytes/sprites/BugBytes_Logo/BugBytes_Logo.yy
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
+<<<<<<<< Updated upstream:BugBytes/sprites/BugByte_Logo/BugByte_Logo.yy
     {"$GMSpriteFrame":"","%Name":"38ef47cc-e1ab-4d92-85e0-20dc73650039","name":"38ef47cc-e1ab-4d92-85e0-20dc73650039","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -22,6 +32,18 @@
     {"$GMImageLayer":"","%Name":"a7addaa7-889a-4dfa-a079-40af4a571ce8","blendMode":0,"displayName":"default","isLocked":false,"name":"a7addaa7-889a-4dfa-a079-40af4a571ce8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"BugByte_Logo",
+========
+    {"$GMSpriteFrame":"","%Name":"996eaebe-ab51-4d2b-ab53-a8cc0d545bf4","name":"996eaebe-ab51-4d2b-ab53-a8cc0d545bf4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+  ],
+  "gridX":0,
+  "gridY":0,
+  "height":1000,
+  "HTile":false,
+  "layers":[
+    {"$GMImageLayer":"","%Name":"15df3ff3-6fd3-4dd2-9040-9b194ae8bb09","blendMode":0,"displayName":"default","isLocked":false,"name":"15df3ff3-6fd3-4dd2-9040-9b194ae8bb09","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+  ],
+  "name":"BugBytes_Logo",
+>>>>>>>> Stashed changes:BugBytes/sprites/BugBytes_Logo/BugBytes_Logo.yy
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +55,11 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
+<<<<<<<< Updated upstream:BugBytes/sprites/BugByte_Logo/BugByte_Logo.yy
     "%Name":"BugByte_Logo",
+========
+    "%Name":"BugBytes_Logo",
+>>>>>>>> Stashed changes:BugBytes/sprites/BugBytes_Logo/BugBytes_Logo.yy
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +83,11 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
+<<<<<<<< Updated upstream:BugBytes/sprites/BugByte_Logo/BugByte_Logo.yy
     "name":"BugByte_Logo",
+========
+    "name":"BugBytes_Logo",
+>>>>>>>> Stashed changes:BugBytes/sprites/BugBytes_Logo/BugBytes_Logo.yy
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +99,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+<<<<<<<< Updated upstream:BugBytes/sprites/BugByte_Logo/BugByte_Logo.yy
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"38ef47cc-e1ab-4d92-85e0-20dc73650039","path":"sprites/BugByte_Logo/BugByte_Logo.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"32763d92-02c7-41e2-bc99-689800e687ec","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+========
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"996eaebe-ab51-4d2b-ab53-a8cc0d545bf4","path":"sprites/BugBytes_Logo/BugBytes_Logo.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"0884d745-b1ba-4a82-9075-a4aadac3c957","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+>>>>>>>> Stashed changes:BugBytes/sprites/BugBytes_Logo/BugBytes_Logo.yy
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +121,9 @@
   },
   "type":0,
   "VTile":false,
+<<<<<<<< Updated upstream:BugBytes/sprites/BugByte_Logo/BugByte_Logo.yy
   "width":1000,
+========
+  "width":3000,
+>>>>>>>> Stashed changes:BugBytes/sprites/BugBytes_Logo/BugBytes_Logo.yy
 }

@@ -1,42 +1,4 @@
 {
-<<<<<<< Updated upstream:BugBytes/objects/obj_server/obj_server.yy
-  "resourceType": "GMObject",
-  "resourceVersion": "1.0",
-  "name": "obj_server",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":68,"eventType":7,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
-  ],
-  "managed": true,
-  "overriddenProperties": [],
-  "parent": {
-    "name": "Multiplayer",
-    "path": "folders/Objects/Multiplayer.yy",
-  },
-  "parentObjectId": null,
-  "persistent": true,
-  "physicsAngularDamping": 0.1,
-  "physicsDensity": 0.5,
-  "physicsFriction": 0.2,
-  "physicsGroup": 1,
-  "physicsKinematic": false,
-  "physicsLinearDamping": 0.1,
-  "physicsObject": false,
-  "physicsRestitution": 0.1,
-  "physicsSensor": false,
-  "physicsShape": 1,
-  "physicsShapePoints": [],
-  "physicsStartAwake": true,
-  "properties": [],
-  "solid": false,
-  "spriteId": {
-    "name": "spr_server",
-    "path": "sprites/spr_server/spr_server.yy",
-  },
-  "spriteMaskId": null,
-  "visible": true,
-=======
   "$GMObject":"",
   "%Name":"class_Damageable",
   "eventList":[
@@ -70,5 +32,4 @@
   "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
->>>>>>> Stashed changes:BugBytes/objects/class_Damageable/class_Damageable.yy
 }

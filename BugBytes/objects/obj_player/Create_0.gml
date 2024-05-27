@@ -1,40 +1,31 @@
-<<<<<<< Updated upstream
-// WASD = 0123
-movement_array = array_create(4,0);
-walking_speed = 5;
-hspd = 0;
-vspd = 0;
-=======
-/// @description Initialise Player
+/// @description Initialise player
 
-max_speed = 4;
-curr_speed = max_speed
-my_hp = 200;
+max_hp = 100;
+curr_hp = max_hp;
+max_speed = 3;
+curr_speed = max_speed;
 
-curr_mouse_x = mouse_x;
-curr_mouse_y = mouse_y;
+curr_mouse_x = x;		// track last left clicked mouse x pos
+curr_mouse_y = y;		// track last left clicked mouse y pos
 
-#region sprite control
+// sprite control
+face = 0;					// index of the sprite based on where it is facing
+image_index = face;
+aim_direction = 0;			// aim direction (in degrees) of the sprite
 
-enum SPRITE{
+
+enum SPRITE 
+{
 	LEFT = 0,
 	RIGHT = 1,
 	UP = 2,
 	DOWN = 3
 }
 
-face = SPRITE.RIGHT;
-aim_direction = 0;
-weapon_x_offset = 105;			// pixel difference between origin and weapon placement for x
-weapon_y_offset = 50;			// pixel difference between origin and weapon placement for y
-weapon_x = x + weapon_x_offset;
-weapon_y = y + weapon_y_offset;
-
-#endregion
-
-#region initialise useable controls
-useable = {
-	left_arrow : true,
+// initialise useable controls
+useable = 
+{
+	left_arrow: true,
 	right_arrow: true,
 	up_arrow: true,
 	down_arrow: true,
@@ -46,8 +37,9 @@ useable = {
 	
 	left_mouse_button: true,
 	right_mouse_button: true
-}
+};
 
-#endregion
->>>>>>> Stashed changes
 
+
+
+	

@@ -1,4 +1,9 @@
-/// @description initialise Damageable
+/// @description Initialise Damageable
 
-my_hp = 100;
-curr_speed = 0;
+
+// variables declared here must be redeclared in the child
+
+max_hp = 100;
+curr_hp = max_hp;
+max_speed = 3;
+curr_speed = max_speed;

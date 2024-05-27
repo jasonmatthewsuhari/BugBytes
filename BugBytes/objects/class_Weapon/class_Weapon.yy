@@ -1,11 +1,19 @@
 {
   "$GMObject":"",
+<<<<<<<< Updated upstream:BugBytes/objects/class_Weapon/class_Weapon.yy
   "%Name":"class_Weapon",
+========
+  "%Name":"class_Damageable",
+>>>>>>>> Stashed changes:BugBytes/objects/class_Damageable/class_Damageable.yy
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
+<<<<<<<< Updated upstream:BugBytes/objects/class_Weapon/class_Weapon.yy
   "name":"class_Weapon",
+========
+  "name":"class_Damageable",
+>>>>>>>> Stashed changes:BugBytes/objects/class_Damageable/class_Damageable.yy
   "overriddenProperties":[],
   "parent":{
     "name":"Abstract Classes",

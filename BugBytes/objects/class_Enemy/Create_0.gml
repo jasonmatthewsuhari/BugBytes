@@ -1,5 +1,8 @@
 /// @description Initialise Enemy
 
-targets = ds_list_create();
-ds_list_add(targets, obj_player);
-target = obj_player;
+
+// variables declared here must be redeclared in the child
+
+targets = noone;
+curr_target = noone;
+weapon_equipped = noone;

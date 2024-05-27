@@ -1,9 +1,6 @@
-/// @description Set new position to go to
+/// @description Left mouse click movement
 
-if (!useable.left_mouse_button) {
-} else {
-	speed = curr_speed;
+speed = curr_speed;
 
-	curr_mouse_x = mouse_x;
-	curr_mouse_y = mouse_y;
-}
+curr_mouse_x = mouse_x;
+curr_mouse_y = mouse_y;

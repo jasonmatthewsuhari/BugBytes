@@ -2,13 +2,7 @@
 
 #region Health and movement variables
 
-health_bar = instance_create_depth(x, y - obj_player.sprite_height / 2 - 10, depth, class_HealthDisplay,
-{
-	owner: obj_player,
-	max_hp: 100,
-	curr_hp: 100		
-});
-
+health_bar = f_create_healthbar(obj_player, 100);
 
 
 max_speed = 3;

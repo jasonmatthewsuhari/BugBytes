@@ -69,6 +69,6 @@ if (face = SPRITE.LEFT) {
 
 #region handle character HP
 
-if (health_bar.curr_hp <= 0)	instance_destroy(self);
+f_check_healthbar(obj_player);
 
 #endregion

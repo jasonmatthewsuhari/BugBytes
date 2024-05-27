@@ -66,6 +66,7 @@
     {"id":{"name":"rm_singleplayer","path":"rooms/rm_singleplayer/rm_singleplayer.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"PacketReceive","path":"scripts/PacketReceive/PacketReceive.yy",},},
+    {"id":{"name":"Script_HealthBar","path":"scripts/Script_HealthBar/Script_HealthBar.yy",},},
     {"id":{"name":"BugBytes_Logo","path":"sprites/BugBytes_Logo/BugBytes_Logo.yy",},},
     {"id":{"name":"Camera","path":"sprites/Camera/Camera.yy",},},
     {"id":{"name":"Exit_Button","path":"sprites/Exit_Button/Exit_Button.yy",},},

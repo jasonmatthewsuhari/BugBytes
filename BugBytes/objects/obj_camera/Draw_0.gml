@@ -1,3 +1,3 @@
 /// @description Visual testing
 
-draw_self();
+// draw_self();

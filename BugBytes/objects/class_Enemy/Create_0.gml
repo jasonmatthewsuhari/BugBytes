@@ -6,3 +6,4 @@
 targets = noone;
 curr_target = noone;
 weapon_equipped = noone;
+

@@ -1,4 +1,4 @@
-/// @description Initialise Weapon
+/// @description Initialise Melee
 
 // variables declared here must be redeclared in the child
 

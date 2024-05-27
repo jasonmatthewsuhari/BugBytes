@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"class_HealthDisplay",
+  "%Name":"class_Gun",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"class_HealthDisplay",
+  "name":"class_Gun",
   "overriddenProperties":[],
   "parent":{
     "name":"Abstract Classes",
     "path":"folders/Objects/Abstract Classes.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"clsss_Weapon",
+    "path":"objects/clsss_Weapon/clsss_Weapon.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_knife",
+  "%Name":"obj_fire",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_knife",
+  "name":"obj_fire",
   "overriddenProperties":[],
   "parent":{
-    "name":"Weapons",
-    "path":"folders/Objects/Weapons.yy",
+    "name":"Melee",
+    "path":"folders/Objects/Weapons/Melee.yy",
   },
   "parentObjectId":{
     "name":"class_Melee",
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"knife",
-    "path":"sprites/knife/knife.yy",
+    "name":"Fire",
+    "path":"sprites/Fire/Fire.yy",
   },
   "spriteMaskId":null,
   "visible":true,

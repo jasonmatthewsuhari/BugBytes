@@ -1,14 +1,15 @@
-///	@func								f_create_weapon(_owner)
-///	@desc								Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
-///	@param {Id.Instance} _owner			The owner of this weapon instance
-/// @return {Id.Instance}				The weapon instance
-function f_create_weapon(_owner) {
+///	@func												f_create_weapon(_owner)
+///	@desc												Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
+///	@param {Id.Instance} _owner							The owner of this weapon instance
+///	@param {Asset.GMObject} _weapon_to_create			The owner of this weapon instance
+/// @return {Id.Instance}								The weapon instance
+function f_create_weapon(_owner, _weapon_to_create) {
 		var _weapon = 
-			instance_create_depth(_owner.weapon_x, _owner.weapon_y, _owner.depth - 1, obj_revolver,
+			instance_create_depth(_owner.weapon_x, _owner.weapon_y, _owner.depth - 1, _weapon_to_create,
 				{
 					owner: _owner,					// Wielder of the weapon
 					ox: _owner.weapon_x,			// Original x position (owner must have .weapon_x)
-					oy: _owner.weapon_y				// Original y position (owner must have .weapon_y)
+					oy: _owner.weapon_y	+ 20			// Original y position (owner must have .weapon_y)
 				});
 				
 		return _weapon;
@@ -37,9 +38,11 @@ function f_fire(_gun) {
 				depth - 1,
 				obj_bullet,
 				{
+					owner: noone,
 					image_angle: _angle + random_range(- gun.inaccuracy, gun.inaccuracy),
 					sprite_index: gun.ammo[bullet_index].sprite,
-					spd: gun.ammo[bullet_index].spd
+					spd: gun.ammo[bullet_index].spd,
+					owner: _gun
 				}
 			);
 		}
@@ -59,22 +62,5 @@ function f_fire(_gun) {
 ///	@param {Id.Instance} _owner			The owner of this weapon instance
 ///	@param {Id.Instance} _weapon		The weapon instance
 function f_track_weapon(_owner, _weapon) {
-
-	with _weapon {
-		sprite_index = gun.sprite;
-
-		// If rotated to left, flip gun
-		if mouse_x > x image_yscale = 1;
-		else image_yscale = -1;
-
-		// Lerp angle to mouse and kickback angle to zero
-		mouse_angle -= angle_difference(mouse_angle, point_direction(x, y, mouse_x, mouse_y)) * 0.5;
-		knockback_angle -= angle_difference(knockback_angle, 0) * 0.05;
-		image_angle = mouse_angle + knockback_angle;
-
-		//Lerp position
-		x = lerp(x, ox, 0.05);
-		y = lerp(y, oy, 0.05);
-	}
 
 }

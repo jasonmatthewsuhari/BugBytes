@@ -76,6 +76,23 @@ f_check_healthbar(self);
 
 #region handle weapon tracking
 
-f_track_weapon(self, weapon);
+with weapon {
+	
+		sprite_index = gun.sprite;
+
+		// If rotated to left, flip gun
+		if mouse_x > x image_yscale = 1;
+		else image_yscale = -1;
+
+		// Lerp angle to mouse and kickback angle to zero
+		mouse_angle -= angle_difference(mouse_angle, point_direction(x, y, mouse_x, mouse_y)) * 0.5;
+		knockback_angle -= angle_difference(knockback_angle, 0) * 0.05;
+		image_angle = mouse_angle + knockback_angle;
+
+		//Lerp position
+		x = lerp(x, ox, 0.05);
+		y = lerp(y, oy, 0.05);
+}
+
 
 #endregion

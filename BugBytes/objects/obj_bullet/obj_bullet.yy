@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_revolver",
+  "%Name":"obj_bullet",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_revolver",
+  "name":"obj_bullet",
   "overriddenProperties":[],
   "parent":{
-    "name":"Gun",
-    "path":"folders/Objects/Weapons/Gun.yy",
+    "name":"Melee",
+    "path":"folders/Objects/Weapons/Melee.yy",
   },
   "parentObjectId":{
-    "name":"class_Gun",
-    "path":"objects/class_Gun/class_Gun.yy",
+    "name":"class_Melee",
+    "path":"objects/class_Melee/class_Melee.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"revolver",
-    "path":"sprites/revolver/revolver.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,4 +1,4 @@
-/// @description Initialise knife
+/// @description Initialise fire
 
 // The following variables must be declared when creating an instance of this class
 /*

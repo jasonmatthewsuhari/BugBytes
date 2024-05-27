@@ -51,5 +51,24 @@ if (aim_direction <= 45 || aim_direction > 315) {
 
 image_index = face;
 
+if (face = SPRITE.LEFT) {
+	weapon_x = x - weapon_x_offset;
+	weapon_y = y + weapon_y_offset;
+} else if (face = SPRITE.RIGHT) {
+	weapon_x = x + weapon_x_offset;
+	weapon_y = y + weapon_y_offset;
+} else if (face = SPRITE.UP) {
+	weapon_x = x;
+	weapon_y = y - weapon_y_offset;
+} else if (face = SPRITE.DOWN) {
+	weapon_x = x;
+	weapon_y = y - weapon_y_offset;
+} else { }
+
 #endregion
 
+#region handle character HP
+
+if (health_bar.curr_hp <= 0)	instance_destroy(self);
+
+#endregion

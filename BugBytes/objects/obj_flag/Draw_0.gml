@@ -2,4 +2,4 @@
 
 draw_self();
 
-f_draw_healthbar(obj_flag);
+f_draw_healthbar(self);

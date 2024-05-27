@@ -2,7 +2,7 @@
 ///	@desc												Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
 ///	@param {Id.Instance} _owner							The owner of this weapon instance
 ///	@param {Asset.GMObject} _weapon_to_create			The owner of this weapon instance
-/// @return {Id.Instance}								The weapon instance
+/// @return {Id.Instance}								The created weapon instance
 function f_create_weapon(_owner, _weapon_to_create) {
 		var _weapon = 
 			instance_create_depth(_owner.weapon_x, _owner.weapon_y, _owner.depth - 1, _weapon_to_create,
@@ -17,7 +17,7 @@ function f_create_weapon(_owner, _weapon_to_create) {
 
 
 ///	@func								f_shoot(_gun)
-///	@desc								Fires the gun
+///	@desc								Fires the gun, note that the sprite y origin must be set at the same height as the barrel of the gun
 ///	@param {Id.Instance} _gun			The gun that is being fired
 function f_fire(_gun) {
 	
@@ -38,7 +38,7 @@ function f_fire(_gun) {
 				depth - 1,
 				obj_bullet,
 				{
-					owner: noone,
+					owner: _gun,
 					image_angle: _angle + random_range(- gun.inaccuracy, gun.inaccuracy),
 					sprite_index: gun.ammo[bullet_index].sprite,
 					spd: gun.ammo[bullet_index].spd,

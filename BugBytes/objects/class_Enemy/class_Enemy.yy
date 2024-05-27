@@ -12,8 +12,8 @@
     "path":"folders/Objects/Abstract Classes.yy",
   },
   "parentObjectId":{
-    "name":"class_Damageable",
-    "path":"objects/class_Damageable/class_Damageable.yy",
+    "name":"class_Damageable_Enemy",
+    "path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

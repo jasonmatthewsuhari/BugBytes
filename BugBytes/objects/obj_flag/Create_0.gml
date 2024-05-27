@@ -1,3 +1,3 @@
-/// @description Initialise Flag
+/// @description Initialise flag
 
-health_bar = f_create_healthbar(obj_flag, 300, ,30);
+health_bar = f_create_healthbar(self, 300, ,30);

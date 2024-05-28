@@ -1,4 +1,4 @@
-/// @description Initialise fire
+/// @description Initialise flame
 
 // The following variables must be declared when creating an instance of this class
 /*

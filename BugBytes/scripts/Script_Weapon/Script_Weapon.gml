@@ -3,13 +3,14 @@
 ///	@param {Id.Instance} _owner							The owner of this weapon instance
 ///	@param {Asset.GMObject} _weapon_to_create			The owner of this weapon instance
 /// @return {Id.Instance}								The created weapon instance
-function f_create_weapon(_owner, _weapon_to_create) {
+function f_create_weapon(_owner, _weapon_to_create) 
+{
 		var _weapon = 
 			instance_create_depth(_owner.weapon_x, _owner.weapon_y, _owner.depth - 1, _weapon_to_create,
 				{
 					owner: _owner,					// Wielder of the weapon
 					ox: _owner.weapon_x,			// Original x position (owner must have .weapon_x)
-					oy: _owner.weapon_y	+ 20			// Original y position (owner must have .weapon_y)
+					oy: _owner.weapon_y	+ 20		// Original y position (owner must have .weapon_y)
 				});
 				
 		return _weapon;
@@ -19,7 +20,8 @@ function f_create_weapon(_owner, _weapon_to_create) {
 ///	@func								f_fire(_gun)
 ///	@desc								Fires the gun, note that the sprite y origin must be set at the same height as the barrel of the gun
 ///	@param {Id.Instance} _gun			The gun that is being fired
-function f_fire(_gun) {
+function f_fire(_gun) 
+{
 	
 	with _gun {
 		// Play sound
@@ -54,6 +56,22 @@ function f_fire(_gun) {
 		// Iterate through ammo types
 		if bullet_index < array_length(gun.ammo) - 1 bullet_index++;
 		else bullet_index = 0;
+	}
+}
+
+///	@func								f_attack(_melee)
+///	@desc								Attacks with the melee weapon, note that the sprite y origin must be set at the same height as the barrel of the gun
+///	@param {Id.Instance} _gun			The melee weapon that is used to attack
+function f_attack(_melee) 
+{
+	if (place_meeting(_melee.x, _melee.y, class_Damageable)) {
+		if (other != owner) {
+			timer--;
+			if (timer <= 0) {
+				timer = cooldown;
+				other.health_bar.curr_hp -= damage;
+			}
+		}
 	}
 }
 

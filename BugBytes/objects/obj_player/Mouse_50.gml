@@ -1,6 +1,6 @@
 /// @description Left mouse click movement
 
-if (useable.left_arrow) {
+if (useable.left_mouse_button) {
 	speed = curr_speed;
 
 	curr_mouse_x = mouse_x;

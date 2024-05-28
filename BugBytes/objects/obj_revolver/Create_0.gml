@@ -15,6 +15,10 @@ mouse_angle = 0;					// Direction from gun to mouse
 knockback_angle = 0;				// Angle of knockback
 canshoot = 0;						// Shooting timer
 bullet_index = 0;					// Current bullet
+cooldown = 1 * 60;					// Attack cooldown of the weapon in frames
+timer = cooldown;					// Timer for weapon cooldown (same as cooldown)
+range = 500;						// Range of the weapon
+
 
 bullet0 = {
 	sprite: bullet_1,				// Bullet sprite to draw

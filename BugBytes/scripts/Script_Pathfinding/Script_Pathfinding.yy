@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"Pathfinding",
+  "%Name":"Script_Pathfinding",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Pathfinding",
+  "name":"Script_Pathfinding",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

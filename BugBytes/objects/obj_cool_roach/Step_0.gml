@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+image_index = face;
+
+if !global.time_stop {
 
 #region handle character HP tracking
 
@@ -25,6 +28,10 @@ if (x > xprevious) {
 	face = SPRITE.RIGHT;
 } else if (x < xprevious) {
 	face = SPRITE.LEFT;
+} else if (y < yprevious) {
+	face = SPRITE.UP;
+} else if (y > yprevious) {
+	face = SPRITE.DOWN;
 } else { };
 
 image_index = face;
@@ -159,6 +166,7 @@ if check_path and instance_exists(weapon) {
 			options_arr[i].weight = _weight;
 	    }
 	} else {
+		
 		#region
 		// * visual only - clears the path which we draw to show the choice
 		path_clear_points(path);
@@ -196,13 +204,11 @@ if check_path and instance_exists(weapon) {
 			var _id = options_arr[_highest].id;
 			
 			//set target values to this instance
-
 			if (instance_exists(weapon)) {
 				target_pos_x = _id.x - weapon.range / 2;
 				target_pos_y = _id.y;
 				target_id = _id;				
 			}
-
 			
 			#region visual only - add the path coordinates, and activate the path so we can draw it
 			// * visual only - add the path coordinates, and activate the path so we can draw it
@@ -211,19 +217,20 @@ if check_path and instance_exists(weapon) {
 			// * visual only end			
 			#endregion
 		}
-	}
+	} 
 
+	
 	#region visual only - if no path coordinates exists, set the path to the chars start position
 	// * visual only - if no path coordinates exists, set the path to the chars start position
 	if path_get_number(path) == 0 {
 		path_add_point(path, x, y, move_spd);
-		path_add_point(path, xstart, ystart, move_spd);
-		target_pos_y = ystart;
+		path_add_point(path, obj_flag.x, obj_flag.y, move_spd);
+		//target_pos_y = ystart;
 		path_start(path, move_spd, path_action_stop, false);
 	}
+
 	// * visual only end	
 	#endregion
-}
 
 #region visual only - ensure range lerps to it's current target value
 // * visual only - ensure range lerps to it's current target value
@@ -232,5 +239,7 @@ image_xscale = lerp(abs(image_xscale), 1, 0.1) * sign(image_xscale);
 image_yscale = lerp(image_yscale, 1, 0.1);
 // * visual only end
 #endregion
+}
 
 #endregion
+}

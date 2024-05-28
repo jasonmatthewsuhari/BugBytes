@@ -6,7 +6,8 @@
 ///	@param input_end			real input end value to map from
 ///	@param output_start			real start value to map to
 ///	@param output_end			real end value to map to
-function map_value(_in, _ins, _ine, _outs, _oute) {
+function map_value(_in, _ins, _ine, _outs, _oute) 
+{
 
 	//Figure out how 'wide' each range is
 	var inr = _ine - _ins;

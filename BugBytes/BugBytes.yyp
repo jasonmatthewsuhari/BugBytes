@@ -94,6 +94,7 @@
     {"id":{"name":"rm_singleplayer","path":"rooms/rm_singleplayer/rm_singleplayer.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"Script_HealthBar","path":"scripts/Script_HealthBar/Script_HealthBar.yy",},},
+    {"id":{"name":"Script_Misc","path":"scripts/Script_Misc/Script_Misc.yy",},},
     {"id":{"name":"Script_Pathfinding","path":"scripts/Script_Pathfinding/Script_Pathfinding.yy",},},
     {"id":{"name":"Script_Weapon","path":"scripts/Script_Weapon/Script_Weapon.yy",},},
     {"id":{"name":"blaster","path":"sounds/blaster/blaster.yy",},},

@@ -1,3 +1,3 @@
 /// @description remove left_mouse_button functionality
 
-obj_player.useable.left_mouse_button = false;
+if instance_exists(obj_player)	obj_player.useable.left_mouse_button = false;

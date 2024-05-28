@@ -11,7 +11,7 @@
 	rate_multi: 0,					// Multiplication in firerate per shot
 	firerate: 20,					// Current firerate
 	damage: 30,						// Damage of the bullet
-	cooldown: 0 * 60,				// Attack cooldown of the weapon in frames
+	cooldown: 0 * game_get_speed(gamespeed_fps),				// Attack cooldown of the weapon in frames
 	timer: cooldown,				// Timer for weapon cooldown
 	damage: 30						// Damage of the weapon
 }	

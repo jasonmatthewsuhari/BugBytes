@@ -1,3 +1,3 @@
 /// @description remove w_key functionality
 
-obj_player.useable.w_key = false;
+if instance_exists(obj_player)	obj_player.useable.w_key = false;

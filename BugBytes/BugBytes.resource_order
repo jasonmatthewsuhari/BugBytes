@@ -67,6 +67,7 @@
     {"name":"rm_gameover","order":3,"path":"rooms/rm_gameover/rm_gameover.yy",},
     {"name":"rm_singleplayer","order":2,"path":"rooms/rm_singleplayer/rm_singleplayer.yy",},
     {"name":"Script_HealthBar","order":1,"path":"scripts/Script_HealthBar/Script_HealthBar.yy",},
+    {"name":"Script_Misc","order":4,"path":"scripts/Script_Misc/Script_Misc.yy",},
     {"name":"Script_Pathfinding","order":3,"path":"scripts/Script_Pathfinding/Script_Pathfinding.yy",},
     {"name":"Script_Weapon","order":2,"path":"scripts/Script_Weapon/Script_Weapon.yy",},
     {"name":"A_key","order":1,"path":"sprites/A_key/A_key.yy",},

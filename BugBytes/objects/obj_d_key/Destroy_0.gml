@@ -1,3 +1,3 @@
 /// @description remove d_key functionality
 
-obj_player.useable.d_key = false;
+if instance_exists(obj_player)	obj_player.useable.d_key = false;

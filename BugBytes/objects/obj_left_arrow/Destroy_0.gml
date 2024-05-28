@@ -1,3 +1,3 @@
 /// @description remove left_arrow functionality
 
-obj_player.useable.left_arrow = false;
+if instance_exists(obj_player)	obj_player.useable.left_arrow = false;

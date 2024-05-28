@@ -1,21 +1,22 @@
 /// @description Initialise player
 
-#region Health and movement variables
+#region Health, spawning, and movement variables
 
 health_bar = f_create_healthbar(self, 100);
-
 
 max_speed = 3;
 curr_speed = max_speed;
 
+respawn_timer = 3;						// respawn timer in seconds
+
 // spawn location
 if (instance_exists(obj_flag)) {
-	x = obj_flag.x;
-	y = obj_flag.y;
+	x = obj_flag.x + irandom_range(- 120, 120);
+	y = obj_flag.y + irandom_range(- 120, 120);
 }
 
-curr_mouse_x = x;				// track last left clicked mouse x pos
-curr_mouse_y = y;				// track last left clicked mouse y pos
+curr_mouse_x = x;						// track last left clicked mouse x pos
+curr_mouse_y = y;						// track last left clicked mouse y pos
 
 #endregion
 

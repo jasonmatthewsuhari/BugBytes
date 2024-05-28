@@ -1,6 +1,6 @@
 {
   "FolderOrderSettings":[
-    {"name":"Assets","order":5,"path":"folders/Assets.yy",},
+    {"name":"Assets","order":4,"path":"folders/Assets.yy",},
     {"name":"Objects","order":2,"path":"folders/Objects.yy",},
     {"name":"Abstract Classes","order":3,"path":"folders/Objects/Abstract Classes.yy",},
     {"name":"Buttons","order":6,"path":"folders/Objects/Buttons.yy",},
@@ -12,11 +12,12 @@
     {"name":"Weapons","order":2,"path":"folders/Objects/Weapons.yy",},
     {"name":"Gun","order":4,"path":"folders/Objects/Weapons/Gun.yy",},
     {"name":"Melee","order":3,"path":"folders/Objects/Weapons/Melee.yy",},
-    {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
-    {"name":"Sounds","order":6,"path":"folders/Sounds.yy",},
-    {"name":"Sprites","order":3,"path":"folders/Sprites.yy",},
+    {"name":"Scripts","order":3,"path":"folders/Scripts.yy",},
+    {"name":"Sounds","order":5,"path":"folders/Sounds.yy",},
+    {"name":"Sprites","order":6,"path":"folders/Sprites.yy",},
     {"name":"Buttons","order":15,"path":"folders/Sprites/Buttons.yy",},
     {"name":"Friendly","order":13,"path":"folders/Sprites/Friendly.yy",},
+    {"name":"Enemy","order":25,"path":"folders/Sprites/Enemy.yy",},
     {"name":"Misc","order":14,"path":"folders/Sprites/Misc.yy",},
     {"name":"UI","order":24,"path":"folders/Sprites/UI.yy",},
     {"name":"Weapon","order":12,"path":"folders/Sprites/Weapon.yy",},

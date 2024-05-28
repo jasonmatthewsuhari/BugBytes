@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_no_go",
+  "%Name":"obj_cool_roach",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_no_go",
+  "name":"obj_cool_roach",
   "overriddenProperties":[],
   "parent":{
-    "name":"Misc",
-    "path":"folders/Objects/Misc.yy",
+    "name":"Enemy",
+    "path":"folders/Objects/Enemy.yy",
   },
   "parentObjectId":{
     "name":"class_Enemy",
@@ -35,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"No_Go",
-    "path":"sprites/No_Go/No_Go.yy",
+    "name":"Cool_roach_sprite_sheet",
+    "path":"sprites/Cool_roach_sprite_sheet/Cool_roach_sprite_sheet.yy",
   },
   "spriteMaskId":null,
   "visible":true,

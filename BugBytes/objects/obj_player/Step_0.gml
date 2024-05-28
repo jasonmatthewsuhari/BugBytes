@@ -51,6 +51,16 @@ if (aim_direction <= 45 || aim_direction > 315) {
 
 image_index = face;
 
+#endregion
+
+#region handle character HP tracking
+
+f_check_healthbar(self);
+
+#endregion
+
+#region handle weapon tracking
+
 // handle origin for weapon
 if (face = SPRITE.LEFT) {
 	weapon_x = x - weapon_x_offset;
@@ -66,17 +76,8 @@ if (face = SPRITE.LEFT) {
 	weapon_y = y + weapon_y_offset;
 } else { }
 
-#endregion
-
-#region handle character HP tracking
-
-f_check_healthbar(self);
-
-#endregion
-
-#region handle weapon tracking
-
-with weapon {
+with weapon 
+{
 	
 		sprite_index = gun.sprite;
 

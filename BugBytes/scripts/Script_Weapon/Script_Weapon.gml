@@ -16,7 +16,7 @@ function f_create_weapon(_owner, _weapon_to_create) {
 }
 
 
-///	@func								f_shoot(_gun)
+///	@func								f_fire(_gun)
 ///	@desc								Fires the gun, note that the sprite y origin must be set at the same height as the barrel of the gun
 ///	@param {Id.Instance} _gun			The gun that is being fired
 function f_fire(_gun) {
@@ -42,7 +42,7 @@ function f_fire(_gun) {
 					image_angle: _angle + random_range(- gun.inaccuracy, gun.inaccuracy),
 					sprite_index: gun.ammo[bullet_index].sprite,
 					spd: gun.ammo[bullet_index].spd,
-					owner: _gun
+					damage: gun.ammo[bullet_index].damage
 				}
 			);
 		}
@@ -61,6 +61,16 @@ function f_fire(_gun) {
 ///	@desc								Sprite control of the weapon in relation to the direction its owner is facing
 ///	@param {Id.Instance} _owner			The owner of this weapon instance
 ///	@param {Id.Instance} _weapon		The weapon instance
-function f_track_weapon(_owner, _weapon) {
+function f_track_weapon(_owner, _weapon) 
+{
 
+	with _weapon 
+	{
+			sprite_index = gun.sprite;
+
+			// If rotated to left, flip gun
+			if _owner.face = SPRITE.RIGHT image_xscale = 1;
+			else image_xscale = -1;
+
+	}
 }

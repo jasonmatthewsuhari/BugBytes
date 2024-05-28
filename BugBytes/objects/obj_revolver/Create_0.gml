@@ -8,13 +8,13 @@
 }
 */
 
-mouse_angle = 0;					// Direction from gun to mouse
+// only for player
+mouse_angle = 0;					// Direction from gun to mouse 
+
+
 knockback_angle = 0;				// Angle of knockback
 canshoot = 0;						// Shooting timer
 bullet_index = 0;					// Current bullet
-cooldown = 1.5 * 60;				// Attack cooldown of the weapon in frames
-timer = cooldown;					// Timer for weapon cooldown
-damage = 0;							// Damage of the gun (0 by default)
 
 bullet0 = {
 	sprite: bullet_1,				// Bullet sprite to draw
@@ -23,7 +23,10 @@ bullet0 = {
 	rate_end: 20,					// Max firerate of bullet
 	rate_multi: 0,					// Multiplication in firerate per shot
 	firerate: 20,					// Current firerate
-	damage: 30						// Damage of the bullet
+	damage: 30,						// Damage of the bullet
+	cooldown: 0 * 60,				// Attack cooldown of the weapon in frames
+	timer: 0 * 60,					// Timer for weapon cooldown (same as cooldown)
+	damage: 30						// Damage of the weapon
 };
 
 gun = {
@@ -36,7 +39,7 @@ gun = {
 	sound: blaster,					// Shooting sound effect to play
 	spread_number: 1,				// Number of bullets in spread
 	spread_angle: 15,				// Angle between each bullet in spread
-	fullauto: true,					// Shoot while holding down or only when pressed
+	fullauto: false,				// Shoot while holding down or only when pressed
 	burst_number: 1,				// Number of bullets in burst
 	burst_delay: 0,					// Delay between bullets in burst
 };

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "SendPacket",
+  "name": "MultiClientGetClientID",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "C2S",
-    "path": "folders/Scripts/C2S.yy",
+    "name": "MultiClient",
+    "path": "folders/MultiClient.yy",
   },
 }

@@ -97,3 +97,22 @@ with weapon
 
 
 #endregion
+
+#region handle useable controls
+useable = 
+{
+	left_arrow: instance_exists(obj_left_arrow) ? true : false,
+	right_arrow: instance_exists(obj_right_arrow) ? true : false,
+	up_arrow: instance_exists(obj_up_arrow) ? true : false,
+	down_arrow: instance_exists(obj_down_arrow) ? true : false,
+	
+	w_key: instance_exists(obj_w_key) ? true : false,
+	a_key: instance_exists(obj_a_key) ? true : false,
+	s_key: instance_exists(obj_s_key) ? true : false,
+	d_key: instance_exists(obj_d_key) ? true : false,
+	
+	left_mouse_button: instance_exists(obj_left_mouse_button) ? true : false,
+	right_mouse_button: instance_exists(obj_right_mouse_button) ? true : false
+};
+
+#endregion

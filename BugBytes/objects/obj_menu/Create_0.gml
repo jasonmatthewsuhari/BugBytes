@@ -1,1 +1,1 @@
-menu_options = ["START", "JOIN"];
+menu_options = ["START", "JOIN", "SETTINGS", "CREDITS", "EXIT"];

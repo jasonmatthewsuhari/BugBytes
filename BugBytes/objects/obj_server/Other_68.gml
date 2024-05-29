@@ -34,7 +34,7 @@ else if (type == network_type_data) {
 		obj_player.playerID = count;
 		
 		for (var i=0; i < count; i++) {
-			var plr = instance_create_layer(room_width/2, room_height/2 + 50 * ds_list_size(clients), "Instances", obj_player);
+			var plr = instance_create_layer(room_width/2, room_height/2, "Instances", obj_player);
 			plr.playerID = i;
 			plr.is_local = false;
 		}
@@ -47,7 +47,12 @@ else if (type == network_type_data) {
 			if (pID == playerID) {
 				x = buffer_read(buffer, buffer_s16);
 				y = buffer_read(buffer, buffer_s16);
+				draw_healthbar(0, sprite_height+30, sprite_width, sprite_height + 5, (buffer_read(buffer, buffer_u8)/max_hp)*100, c_black, c_red, c_lime, 0, true, true);
 			}
 		}
 	}
+}
+
+else if (type == network_type_disconnect) {
+	
 }

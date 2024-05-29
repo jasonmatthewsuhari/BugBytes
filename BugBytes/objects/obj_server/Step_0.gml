@@ -1,4 +1,5 @@
-if(keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
+if(room == rm_menu) {
+	if(keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
 	switch(global.MENU_INDEX) {
 		case 0: // HOST
 			server = network_create_server(network_socket_tcp, PORT, MAX_CLIENTS);
@@ -34,4 +35,8 @@ if(keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
 		case 4: // EXIT
 		break;
 	}
+}
+}
+else if (room == rm_game && is_server) {
+	alarm[0] = 5 * game_get_speed(gamespeed_fps);
 }

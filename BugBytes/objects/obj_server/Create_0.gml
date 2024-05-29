@@ -11,4 +11,5 @@ enum DATA {
 
 // Connected clients
 clients = ds_list_create();
+players = ds_list_create();
 global.MENU_INDEX = 0;

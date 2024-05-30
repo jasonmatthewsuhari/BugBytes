@@ -43,7 +43,7 @@
   },
   "resources": [
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
-    {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},},
+    {"id":{"name":"obj_listener","path":"objects/obj_listener/obj_listener.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"id":{"name":"spr_server","path":"sprites/spr_server/spr_server.yy",},},
@@ -54,6 +54,7 @@
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},},
     {"id":{"name":"Sprite8","path":"sprites/Sprite8/Sprite8.yy",},},
     {"id":{"name":"spr_client","path":"sprites/spr_client/spr_client.yy",},},
+    {"id":{"name":"EventPacket","path":"scripts/EventPacket/EventPacket.yy",},},
     {"id":{"name":"obj_BOOTSTRAP","path":"objects/obj_BOOTSTRAP/obj_BOOTSTRAP.yy",},},
     {"id":{"name":"MultiClientGetClientID","path":"scripts/MultiClientGetClientID/MultiClientGetClientID.yy",},},
     {"id":{"name":"spr_button_join","path":"sprites/spr_button_join/spr_button_join.yy",},},

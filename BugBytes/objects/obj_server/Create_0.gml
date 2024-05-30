@@ -3,14 +3,6 @@ PORT = 64000;
 MAX_CLIENTS = 2;
 is_server = false;
 
-// Data types
-enum PACKETS {
-	INIT,
-	EVENT,
-	CONTINUOUS,
-}
-
-// Connected clients
 clients = ds_list_create();
 
 global.MENU_INDEX = 0;

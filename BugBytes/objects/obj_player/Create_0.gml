@@ -7,3 +7,5 @@ name = "";
 max_hp = 10;
 hp = max_hp;
 vulnerable = true;
+
+depth = -1

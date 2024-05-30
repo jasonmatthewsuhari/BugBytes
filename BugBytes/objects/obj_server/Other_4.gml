@@ -1,5 +1,5 @@
 if (room == rm_game) {
-	var player = instance_create_layer(room_width/2, room_height/2 + 50 * ds_list_size(clients), "Instances", obj_player);
+	var player = instance_create_layer(room_width/2, room_height/2, "Instances", obj_player);
 	player.playerID = 0;
 	
 	if (is_server) {

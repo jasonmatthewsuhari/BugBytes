@@ -1,6 +1,9 @@
 {
   "FolderOrderSettings": [
+    {"name":"MultiClient","order":5,"path":"folders/MultiClient.yy",},
     {"name":"Objects","order":2,"path":"folders/Objects.yy",},
+    {"name":"Controllers","order":5,"path":"folders/Objects/Controllers.yy",},
+    {"name":"Enemies","order":4,"path":"folders/Objects/Enemies.yy",},
     {"name":"Menu","order":3,"path":"folders/Objects/Menu.yy",},
     {"name":"Multiplayer","order":1,"path":"folders/Objects/Multiplayer.yy",},
     {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
@@ -20,9 +23,6 @@
     {"name":"Sounds","order":10,"path":"folders/Unused (Temp)/Sounds.yy",},
     {"name":"Tile Sets","order":12,"path":"folders/Unused (Temp)/Tile Sets.yy",},
     {"name":"Timelines","order":13,"path":"folders/Unused (Temp)/Timelines.yy",},
-    {"name":"MultiClient","order":5,"path":"folders/MultiClient.yy",},
-    {"name":"Enemies","order":4,"path":"folders/Objects/Enemies.yy",},
-    {"name":"Controllers","order":5,"path":"folders/Objects/Controllers.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_player","order":3,"path":"sprites/spr_player/spr_player.yy",},

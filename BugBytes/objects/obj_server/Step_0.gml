@@ -3,9 +3,7 @@ if(room == rm_menu) {
 	switch(global.MENU_INDEX) {
 		case 0: // HOST
 			server = network_create_server(network_socket_tcp, PORT, MAX_CLIENTS);
-			if (server < 0) {
-				show_error("Could not create server.", false);
-			}
+			if (server < 0) {show_error("Could not create a server.", false);}
 			else {
 				room_goto(rm_game);
 				is_server = true;
@@ -14,16 +12,10 @@ if(room == rm_menu) {
 		
 		case 1: // JOIN
 			server = network_create_socket(network_socket_tcp);
-			var res = network_connect(server, SERVER_IP, PORT);
-	
-			// Failed
-			if (res < 0) {
-				show_error("Could not connect to server.", false);
-			}
-			// Connected
-			else {
-				room_goto(rm_game);
-			}
+			var connection = network_connect(server, SERVER_IP, PORT);
+			
+			if (connection < 0) {show_error("Could not connect to a server.", false);}
+			else {room_goto(rm_game);}
 		break;
 		
 		case 2: // SETTINGS
@@ -34,9 +26,6 @@ if(room == rm_menu) {
 		
 		case 4: // EXIT
 		break;
+		}
 	}
-}
-}
-else if (room == rm_game && is_server) {
-	alarm[0] = 5 * game_get_speed(gamespeed_fps);
 }

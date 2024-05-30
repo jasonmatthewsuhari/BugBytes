@@ -5,4 +5,5 @@ playerID = -1;
 name = "";
 
 max_hp = 10;
-hp = random(max_hp);
+hp = max_hp;
+vulnerable = true;

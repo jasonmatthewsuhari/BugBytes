@@ -4,12 +4,13 @@ MAX_CLIENTS = 2;
 is_server = false;
 
 // Data types
-enum DATA {
+enum PACKETS {
 	INIT,
-	UPDATE
+	EVENT,
+	CONTINUOUS,
 }
 
 // Connected clients
 clients = ds_list_create();
-players = ds_list_create();
+
 global.MENU_INDEX = 0;

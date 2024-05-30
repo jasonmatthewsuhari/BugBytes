@@ -8,4 +8,4 @@ if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
 }
 
 // Clamp the MENU_INDEX value
-global.MENU_INDEX = clamp(global.MENU_INDEX, 0, array_length(menu_options) - 1);
+global.MENU_INDEX = clamp(global.MENU_INDEX, 0, array_length(global.MENU_OPTIONS) - 1);

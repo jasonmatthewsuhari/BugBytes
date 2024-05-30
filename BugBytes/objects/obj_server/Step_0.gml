@@ -34,3 +34,11 @@ if(room == rm_menu) {
 		}
 	}
 }
+
+else if (room == rm_game) {
+	if(!instance_exists(obj_player)) {
+		// TODO: make it so that client (joiner) can join after game end
+		network_destroy(server);
+		room_goto(rm_menu);
+	}
+}

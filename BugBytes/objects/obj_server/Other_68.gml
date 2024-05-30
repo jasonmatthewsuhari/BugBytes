@@ -19,7 +19,9 @@ if (type == network_type_connect) {
 
 else if (type == network_type_disconnect) {
 	// to implement the disconnection later
-	show_message("Imagine the disconnect function actually worked");
+	show_message("woah");
+	var socket = async_load[? "socket"];
+	network_destroy(socket);
 }
 
 else if (type == network_type_data) {

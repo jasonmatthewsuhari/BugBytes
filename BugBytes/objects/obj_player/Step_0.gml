@@ -12,13 +12,24 @@ var vspd = movement_array[2] - movement_array[0];
 x += hspd * moveSpeed;
 y += vspd * moveSpeed;
 
+if (hspd == 1) {
+    image_index = 3;
+} else if (hspd == -1) {
+    image_index = 1;
+} else if (vspd == 1) {
+    image_index = 2;
+} else if (vspd == -1) {
+    image_index = 0;
+}
+
 if(global.IS_MULTIPLAYER) {
-	var buffer = buffer_create(6, buffer_fixed, 1);
+	var buffer = buffer_create(7, buffer_fixed, 1);
 
 	buffer_write(buffer, buffer_u8, PACKETS.CONTINUOUS);
 	buffer_write(buffer, buffer_u8, playerID);
 	buffer_write(buffer, buffer_s16, x);
 	buffer_write(buffer, buffer_s16, y);
+	buffer_write(buffer, buffer_u8, image_index);
 
 	if (!obj_server.is_server) {
 		network_send_packet(obj_server.server, buffer, buffer_get_size(buffer));

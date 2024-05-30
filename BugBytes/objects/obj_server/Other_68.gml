@@ -64,6 +64,7 @@ else if (type == network_type_data) {
 				if (pID == playerID) {
 					x = buffer_read(buffer, buffer_s16);
 					y = buffer_read(buffer, buffer_s16);
+					image_index = buffer_read(buffer, buffer_u8);
 				}
 			}
 		break;

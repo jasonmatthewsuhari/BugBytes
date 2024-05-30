@@ -27,7 +27,6 @@
     {"name":"obj_enemy","order":1,"path":"objects/obj_enemy/obj_enemy.yy",},
     {"name":"rm_game","order":1,"path":"rooms/rm_game/rm_game.yy",},
     {"name":"spr_server","order":1,"path":"sprites/spr_server/spr_server.yy",},
-    {"name":"Sprite7","order":6,"path":"sprites/Sprite7/Sprite7.yy",},
     {"name":"Sprite8","order":7,"path":"sprites/Sprite8/Sprite8.yy",},
     {"name":"obj_BOOTSTRAP","order":6,"path":"objects/obj_BOOTSTRAP/obj_BOOTSTRAP.yy",},
     {"name":"MultiClientGetClientID","order":1,"path":"scripts/MultiClientGetClientID/MultiClientGetClientID.yy",},

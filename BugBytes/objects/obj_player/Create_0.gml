@@ -9,3 +9,5 @@ hp = max_hp;
 vulnerable = true;
 
 depth = -1
+image_speed	 = 0;
+sprite_index = 0;

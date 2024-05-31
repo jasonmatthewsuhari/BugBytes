@@ -1,7 +1,7 @@
 var type = async_load[? "type"];
 
 if (type == network_type_connect) {
-	var socket = async_load[? "socket"];
+	socket = async_load[? "socket"];
 	var buffer = buffer_create(2, buffer_fixed, 1);
 		
 	buffer_write(buffer, buffer_u8, PACKETS.INIT);
@@ -11,7 +11,7 @@ if (type == network_type_connect) {
 	
 	buffer_delete(buffer);
 
-	var player = instance_create_layer(random(room_width), random(room_height), "Instances", obj_player);
+	var player = instance_create_layer(0, 0, "Instances", obj_player);
 	player.playerID = ds_list_size(clients);
 	player.is_local = false;
 		
@@ -72,6 +72,13 @@ else if (type == network_type_data) {
 					image_index = buffer_read(buffer, buffer_u8);
 				}
 			}
+		break;
+		
+		case PACKETS.SPAWN:
+			var _x = buffer_read(buffer, buffer_u8);
+			var _y = buffer_read(buffer, buffer_u8);
+			
+			instance_create_layer(_x, _y, "Instances", obj_enemy);
 		break;
 	}
 }

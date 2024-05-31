@@ -54,6 +54,7 @@
     {"id":{"name":"Sprite8","path":"sprites/Sprite8/Sprite8.yy",},},
     {"id":{"name":"spr_client","path":"sprites/spr_client/spr_client.yy",},},
     {"id":{"name":"EventPacket","path":"scripts/EventPacket/EventPacket.yy",},},
+    {"id":{"name":"SpawnRemoteEntity","path":"scripts/SpawnRemoteEntity/SpawnRemoteEntity.yy",},},
     {"id":{"name":"obj_BOOTSTRAP","path":"objects/obj_BOOTSTRAP/obj_BOOTSTRAP.yy",},},
     {"id":{"name":"MultiClientGetClientID","path":"scripts/MultiClientGetClientID/MultiClientGetClientID.yy",},},
     {"id":{"name":"spr_button_join","path":"sprites/spr_button_join/spr_button_join.yy",},},

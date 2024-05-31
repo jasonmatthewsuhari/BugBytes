@@ -6,6 +6,7 @@ if (type == network_type_connect) {
 		
 	buffer_write(buffer, buffer_u8, PACKETS.INIT);
 	buffer_write(buffer, buffer_u8, ds_list_size(clients));
+	// insert buffer for name and any other character details here
 	network_send_packet(socket, buffer, buffer_get_size(buffer));
 	
 	buffer_delete(buffer);
@@ -19,8 +20,12 @@ if (type == network_type_connect) {
 
 else if (type == network_type_disconnect) {
 	// to implement the disconnection later
-	show_message("woah");
 	var socket = async_load[? "socket"];
+	with(obj_player) {
+		if(playerID == socket) {
+			instance_destroy();	
+		}
+	}
 	network_destroy(socket);
 }
 

@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-image_index = face;
-
 if !global.time_stop {
 
 #region handle character HP tracking
@@ -21,62 +19,11 @@ if (x != xprevious && y != yprevious) {
 
 #endregion
 
-#region handle character sprite control
-
-// sprite control when moving
-if (x > xprevious) {
-	face = SPRITE.RIGHT;
-} else if (x < xprevious) {
-	face = SPRITE.LEFT;
-} else if (y < yprevious) {
-	face = SPRITE.UP;
-} else if (y > yprevious) {
-	face = SPRITE.DOWN;
-} else { };
-
-image_index = face;
-
-#endregion
-
-#region handle weapon sprite tracking
-
-// handle origin for weapon
-if (face = SPRITE.LEFT) {
-	weapon_x = x - weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (face = SPRITE.RIGHT) {
-	weapon_x = x + weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (face = SPRITE.UP) {
-	weapon_x = x;
-	weapon_y = y - weapon_y_offset;
-} else if (face = SPRITE.DOWN) {
-	weapon_x = x;
-	weapon_y = y + weapon_y_offset;
-} else { }
-
-
-f_track_weapon(self, weapon);
-
-
-#endregion
-
-#region handle attack time
-
-if (instance_exists(weapon)) 
-{	
-	weapon.timer--;
-	if (weapon.timer <= 0) {
-		weapon.timer = weapon.cooldown;
-		f_fire(weapon);
-	}
-}
-
 #endregion
 
 #region handle pathfinding with weights
 //do we need to check for a new path?
-if check_path and instance_exists(weapon) {	
+if check_path {	
 	#region
 	// * visual only - reset visual cues.  We are checking each step, but ideally this is only needed
 	//every 10-60 steps instead depending how 'smart' and responsive you want the AI to be
@@ -204,12 +151,10 @@ if check_path and instance_exists(weapon) {
 			//get the id of the highest weighted instance
 			var _id = options_arr[_highest].id;
 			
-			//set target values to this instance
-			if (instance_exists(weapon)) {
-				target_pos_x = _id.x - weapon.range / 2;
+			//set target values to this 
+				target_pos_x = _id.x;
 				target_pos_y = _id.y;
-				target_id = _id;				
-			}
+				target_id = _id
 			
 			#region visual only - add the path coordinates, and activate the path so we can draw it
 			// * visual only - add the path coordinates, and activate the path so we can draw it

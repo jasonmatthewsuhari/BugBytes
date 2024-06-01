@@ -1,4 +1,4 @@
-/// @description Initialise revolver
+/// @description Initialise shotgun
 
 // The following variables must be declared when creating an instance of this class
 /*
@@ -17,7 +17,7 @@ canshoot = 0;						// Shooting timer
 bullet_index = 0;					// Current bullet
 cooldown = 1 * game_get_speed(gamespeed_fps);					// Attack cooldown of the weapon in frames
 timer = cooldown;					// Timer for weapon cooldown (same as cooldown)
-range = 500;						// Range of the weapon
+range = 250;						// Range of the weapon
 
 
 bullet0 = {
@@ -30,18 +30,18 @@ bullet0 = {
 	damage: 30,						// Damage of the bullet
 	cooldown: 0 * game_get_speed(gamespeed_fps),				// Attack cooldown of the weapon in frames
 	timer: 0 * game_get_speed(gamespeed_fps),					// Timer for weapon cooldown (same as cooldown)
-	damage: 10						// Damage of the weapon
+	damage: 15						// Damage of the weapon
 };
 
 gun = {
-	name: "revolver",				// Name of the gun
-	sprite: revolver,				// Gun sprite to draw
+	name: "shotgun",				// Name of the gun
+	sprite: shotgun,				// Gun sprite to draw
 	y_offset: 20,					// Gun sprite y offset pos
 	ammo: [bullet0],				// Array of Ammo structs
 	inaccuracy: 0,					// Random bullet inaccuracy
 	kick: 2,						// Kickback to position and angle
-	sound: blaster,					// Shooting sound effect to play
-	spread_number: 1,				// Number of bullets in spread
+	sound: vine_boom,				// Shooting sound effect to play
+	spread_number: 3,				// Number of bullets in spread
 	spread_angle: 15,				// Angle between each bullet in spread
 	fullauto: false,				// Shoot while holding down or only when pressed
 	burst_number: 1,				// Number of bullets in burst

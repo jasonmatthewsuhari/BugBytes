@@ -1,4 +1,4 @@
-/// @description Initialise cool_roach
+/// @description Initialise blue_roach
 
 // The following variables must be declared when creating an instance of this class
 /*
@@ -10,10 +10,10 @@
 
 #region Health, points, movement variables
 
-health_bar = f_create_healthbar(self, 100);
+health_bar = f_create_healthbar(self, 200);
 
-point = 50;
-max_speed = 2;
+point = 30;
+max_speed = 3;
 curr_speed = max_speed;
 
 /*
@@ -71,19 +71,10 @@ path_clear = function() {
 
 #endregion
 
-#region Character sprite control
-face = SPRITE.RIGHT;								// index of the sprite based on where it is facing
-image_index = face;
-aim_direction = 0;						// aim direction (in degrees) of the sprite
-
-
-#endregion
-
-#region weapon sprite control
-
-weapon_x_offset = 28;					// offset x pos from player origin for weapons
-weapon_y_offset = -10;					// offset y pos from player origin for weapons
-weapon_x = x - weapon_x_offset;			// x pos for where weapon should be drawn 
-weapon_y = y + weapon_y_offset;			// y pos for where weapon should be drawn 
+#region initialise damage variables
+owner = noone;
+cooldown = 1.5 * game_get_speed(gamespeed_fps);				// Attack cooldown of the weapon in frames
+timer = cooldown;					// Timer for weapon cooldown
+damage = 20;						// Damage of the weapon
 
 #endregion

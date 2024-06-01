@@ -7,3 +7,5 @@ enum SPRITE			// handle sprite direction (should change)
 	UP = 2,
 	DOWN = 3
 }
+
+global.weapons = [obj_revolver, obj_shotgun];

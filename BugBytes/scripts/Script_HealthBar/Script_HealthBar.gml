@@ -25,8 +25,11 @@ function f_create_healthbar(_owner, _max_hp, _x_offset = 0, _y_offset = 10, _cur
 ///	@param {Id.Instance} _owner			The owner of this healthbar instance
 function f_draw_healthbar(_owner) 
 {
-		draw_set_halign(fa_center);
-		draw_text(x + health_bar.x_offset, y - sprite_height / 2 - health_bar.y_offset, string_concat("HP:", health_bar.curr_hp));
+		// draw_text(x + health_bar.x_offset, y - sprite_height / 2 - health_bar.y_offset, string_concat("HP:", health_bar.curr_hp));
+		var _x = x - health_bar.x_offset - 50;
+		var _y  = y - sprite_height / 2 - health_bar.y_offset;
+		var _health_percent = health_bar.curr_hp / health_bar.max_hp * 100;
+		draw_healthbar(_x, _y, _x + 100, _y - 15, _health_percent, c_white, c_red, c_green, 0, true, true);
 }
 
 ///	@func								f_check_healthbar(_owner)

@@ -154,7 +154,7 @@ if check_path and instance_exists(weapon) {
 				case obj_d_key:
 					_weight = round(map_value(_dis, range, 5, 0, 60));
 				break;
-				case obj_player:
+				case obj_singleplayer:
 					_weight = round(map_value(_dis, range, 5, 0, 60));
 				break;
 				case obj_flag:

@@ -78,7 +78,11 @@ else if (type == network_type_data) {
 			var _x = buffer_read(buffer, buffer_u8);
 			var _y = buffer_read(buffer, buffer_u8);
 			
-			instance_create_layer(_x, _y, "Instances", obj_enemy);
+			instance_create_layer(_x, _y, "Instances", obj_enemy_1);
+		break;
+		
+		case PACKETS.TIME:
+		
 		break;
 	}
 }

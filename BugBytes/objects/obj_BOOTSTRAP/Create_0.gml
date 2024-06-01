@@ -8,7 +8,8 @@ enum PACKETS {
 	INIT,
 	EVENT,
 	CONTINUOUS,
-	SPAWN
+	SPAWN,
+	TIME,
 }
 
 enum EVENTS {

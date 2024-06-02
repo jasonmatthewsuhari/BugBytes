@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if !global.time_stop {
+if !global.time_stop 
+{
 
 #region handle character HP tracking
 
@@ -189,3 +190,4 @@ image_yscale = lerp(image_yscale, 1, 0.1);
 
 #endregion
 }
+else { path_clear() }

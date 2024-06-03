@@ -2,4 +2,4 @@
 
 draw_self();
 
-f_draw_healthbar(self);
+// f_draw_healthbar(self);

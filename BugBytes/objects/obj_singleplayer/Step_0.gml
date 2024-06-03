@@ -98,7 +98,7 @@ with weapon
 
 #endregion
 
-#region handle useable controls
+#region handle useable control tracking
 useable = 
 {
 	left_arrow: instance_exists(obj_left_arrow) ? true : false,

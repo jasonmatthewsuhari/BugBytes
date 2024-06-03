@@ -9,4 +9,3 @@ hp = max_hp;
 
 depth = -1
 image_speed	 = 0;
-sprite_index = 0;

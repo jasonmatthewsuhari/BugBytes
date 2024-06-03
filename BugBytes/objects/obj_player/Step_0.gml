@@ -13,13 +13,13 @@ x += hspd * moveSpeed;
 y += vspd * moveSpeed;
 
 if (hspd == 1) {
-    image_index = 3;
-} else if (hspd == -1) {
     image_index = 1;
-} else if (vspd == 1) {
-    image_index = 2;
-} else if (vspd == -1) {
+} else if (hspd == -1) {
     image_index = 0;
+} else if (vspd == 1) {
+    image_index = 3;
+} else if (vspd == -1) {
+    image_index = 2;
 }
 
 if(global.IS_MULTIPLAYER) {

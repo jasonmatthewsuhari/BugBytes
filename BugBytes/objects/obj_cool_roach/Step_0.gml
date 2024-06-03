@@ -3,7 +3,8 @@
 
 image_index = face;
 
-if !global.time_stop {
+if !global.time_stop 
+{
 
 #region handle character HP tracking
 
@@ -54,6 +55,7 @@ if (face = SPRITE.LEFT) {
 	weapon_x = x;
 	weapon_y = y + weapon_y_offset;
 } else { }
+
 
 f_track_weapon(self, weapon);
 
@@ -243,3 +245,4 @@ image_yscale = lerp(image_yscale, 1, 0.1);
 
 #endregion
 }
+else { path_clear(); }

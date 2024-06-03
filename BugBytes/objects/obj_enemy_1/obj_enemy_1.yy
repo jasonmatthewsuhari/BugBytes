@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite8",
-    "path":"sprites/Sprite8/Sprite8.yy",
+    "name":"Cool_roach_sprite_sheet",
+    "path":"sprites/Cool_roach_sprite_sheet/Cool_roach_sprite_sheet.yy",
   },
   "spriteMaskId":null,
   "visible":true,

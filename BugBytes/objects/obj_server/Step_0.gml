@@ -2,7 +2,7 @@ if(room == rm_menu) {
 	if(keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)) {
 	switch(global.MENU_INDEX) {
 		case 0: // SINGLEPLAYER
-			room_goto(rm_game);
+			room_goto(rm_singleplayer);
 		break;
 		
 		case 1: // HOST

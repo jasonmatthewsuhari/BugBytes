@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite10",
-    "path":"sprites/Sprite10/Sprite10.yy",
+    "name":"Blue_roach",
+    "path":"sprites/Blue_roach/Blue_roach.yy",
   },
   "spriteMaskId":null,
   "visible":true,

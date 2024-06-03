@@ -1,5 +1,13 @@
 /// @description Initialise cool_roach
 
+// The following variables must be declared when creating an instance of this class
+/*
+{
+	weapon: f_create_weapon(self, weapon_to_create);			// Wielder of the weapon
+
+}
+*/
+
 #region Health, points, movement variables
 
 health_bar = f_create_healthbar(self, 100);
@@ -77,7 +85,5 @@ weapon_x_offset = 28;					// offset x pos from player origin for weapons
 weapon_y_offset = -10;					// offset y pos from player origin for weapons
 weapon_x = x - weapon_x_offset;			// x pos for where weapon should be drawn 
 weapon_y = y + weapon_y_offset;			// y pos for where weapon should be drawn 
-
-weapon = f_create_weapon(self, obj_revolver);
 
 #endregion

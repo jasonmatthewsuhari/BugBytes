@@ -1,8 +1,7 @@
-///	@func												f_create_weapon(_owner)
-///	@desc												Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
-///	@param {Id.Instance} _owner							The owner of this weapon instance
-///	@param {Asset.GMObject} _weapon_to_create			The owner of this weapon instance
-/// @return {Id.Instance}								The created weapon instance
+/// @desc  f_create_weapon(_owner)  Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
+/// @param {id.instance} _owner  The owner of this weapon instance
+/// @param {asset.gmobject} _weapon_to_create  The owner of this weapon instance
+/// @returns {id}  The created weapon instance
 function f_create_weapon(_owner, _weapon_to_create) 
 {
 		var _weapon = 

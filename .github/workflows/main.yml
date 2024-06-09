@@ -1,10 +1,12 @@
-name: Test Project
+name: Build Release
 
 on:
   push:
     # Sequence of patterns matched against refs/tags
     branches:
     - main
+    paths-ignore:
+      - '.github/workflows/main.yml'
       
 permissions:
   contents: write  # Ensure the action has write access to contents

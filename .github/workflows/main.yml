@@ -3,8 +3,8 @@ name: Test Project
 on:
   push:
     # Sequence of patterns matched against refs/tags
-    tags:
-      - 'v*.*.*' # Push events to matching v*, i.e. v1.0, v20.15.10
+    branches:
+    - main
       
 permissions:
   contents: write  # Ensure the action has write access to contents
@@ -16,13 +16,26 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Display ref name
-        run: echo "The ref name is ${{ github.ref_name }}"
+      - name: Get latest tag
+        id: get_latest_tag
+        run: |
+          latest_tag=$(git describe --tags --abbrev=0)
+          echo "::set-output name=tag::$latest_tag"
+      - name: Increment tag
+        id: increment_tag
+        run: |
+          latest_tag="${{ steps.get_latest_tag.outputs.tag }}"
+          major_version=$(echo "$latest_tag" | cut -d. -f1 | sed 's/v//')
+          next_major_version=$((major_version + 1))
+          new_tag="v$next_major_version.0.0"
+          echo "::set-output name=next_tag::$new_tag"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref_name }}
-          release_name: Release ${{ github.ref_name }}
+          tag_name: ${{ steps.increment_tag.outputs.next_tag }}
+          release_name: Release ${{ steps.increment_tag.outputs.next_tag }}
+          body: |
+            Example release notes

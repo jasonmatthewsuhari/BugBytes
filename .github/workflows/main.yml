@@ -7,7 +7,9 @@ on:
     - main
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-
+      
+permissions:
+  contents: write  # Ensure the action has write access to contents
 
 jobs:
   build:
@@ -20,7 +22,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
           tag_name: v${{ github.ref }}
           release_name: Release v${{ github.ref }}

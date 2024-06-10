@@ -18,6 +18,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
+      - name: Set up Git
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      
       - name: 'Get Previous tag'
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"

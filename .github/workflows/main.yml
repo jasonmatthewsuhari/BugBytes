@@ -16,12 +16,14 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        
       - name: Get latest tag
         id: get_latest_tag
         run: |
           latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
           echo "::set-output name=tag::$latest_tag"
+          
       - name: Bump version
         id: new_tag
         run: |
@@ -46,13 +48,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+        
       - name: Set up GameMaker CLI
         run: |
-          Invoke-WebRequest -Uri "https://accounts.yoyogames.com/downloads/cli/ReleaseNotes" -OutFile "gmcli.zip"
+          Invoke-WebRequest -Uri "https://gms.yoyogames.com/GMStudio2-IDE-2.3.1.409.zip" -OutFile "gmcli.zip"
           Expand-Archive -Path "gmcli.zip" -DestinationPath "gmcli"
           chmod +x gmcli/gm
-
+          
       - name: Build and Export GameMaker Project to Windows
         run: |
           gmcli/gm build --project BugBytes/BugBytes/BugBytes.yyp --output exports/windows --target=Windows --runtime=2.3.1.409
@@ -80,7 +82,7 @@ jobs:
 
       - name: Set up GameMaker CLI
         run: |
-          curl -L -o gmcli.zip "https://accounts.yoyogames.com/downloads/cli/ReleaseNotes"
+          curl -L -o gmcli.zip "https://gms.yoyogames.com/GMStudio2-IDE-2.3.1.409-mac.zip"
           unzip gmcli.zip -d gmcli
           chmod +x gmcli/gm
 

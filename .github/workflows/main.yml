@@ -42,6 +42,7 @@ jobs:
           
   create_release:
     name: Create GitHub Release
+    needs: [get_version]
     runs-on: ubuntu-latest
 
     steps:

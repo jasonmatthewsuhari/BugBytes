@@ -30,8 +30,8 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ steps.semvers.version }} 
-          release_name: Release ${{ steps.semvers.version }}
+          tag_name: ${{ steps.semvers.v_major }} 
+          release_name: Release ${{ steps.semvers.v_major }}
           body: Automated release notes. Add details about changes, fixes, etc.
           draft: false
           prerelease: false

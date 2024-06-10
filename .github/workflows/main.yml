@@ -20,24 +20,24 @@ jobs:
         id: find_tag
         run: |
           latest_tag=$(git describe --tags --abbrev=0 --always)
-          echo "::set-output name=latest_tag::$latest_tag"
+          echo "LATEST_TAG=$latest_tag" >> $GITHUB_ENV
 
       - name: Increment Tag
         id: increment_tag
         run: |
-          latest_tag=$(echo "${{ steps.find_tag.outputs.latest_tag }}")
+          latest_tag=$(echo "${LATEST_TAG}")
           major=$(echo $latest_tag | cut -d'.' -f1)
           minor=$(echo $latest_tag | cut -d'.' -f2)
           patch=$(echo $latest_tag | cut -d'.' -f3)
           new_tag="$major.$minor.$((patch + 1))"
-          echo "::set-output name=new_tag::$new_tag"
+          echo "NEW_TAG=$new_tag" >> $GITHUB_ENV
 
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ steps.increment_tag.outputs.new_tag }}
-          release_name: Release ${{ steps.increment_tag.outputs.new_tag }}
+          tag_name: ${{ env.NEW_TAG }}  # Use env.NEW_TAG from the environment file
+          release_name: Release ${{ env.NEW_TAG }}
           body: Automated release notes. Add details about changes, fixes, etc.
           draft: false
           prerelease: false

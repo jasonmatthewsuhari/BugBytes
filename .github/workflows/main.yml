@@ -11,33 +11,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Git
-        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-
-      - name: Find Latest Tag
-        id: find_tag
-        run: |
-          latest_tag=$(git describe --tags --abbrev=0 --always)
-          echo "LATEST_TAG=$latest_tag" >> $GITHUB_ENV
-
-      - name: Increment Tag
-        id: increment_tag
-        run: |
-          latest_tag=$(echo "${LATEST_TAG}")
-          major=$(echo $latest_tag | cut -d'.' -f1)
-          minor=$(echo $latest_tag | cut -d'.' -f2)
-          patch=$(echo $latest_tag | cut -d'.' -f3)
-          new_tag="$major.$minor.$((patch + 1))"
-          echo "NEW_TAG=$new_tag" >> $GITHUB_ENV
+        uses: actions/checkout@v4
+      
+      - name: 'Get Previous tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+        with:
+          fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
+          #workingDirectory: another/path/where/a/git/repo/is/checked/out # Optional alternative working directory
+          
+      - name: 'Get next minor version'
+        id: semvers
+        uses: "WyriHaximus/github-action-next-semvers@v1"
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
 
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ env.NEW_TAG }}  # Use env.NEW_TAG from the environment file
-          release_name: Release ${{ env.NEW_TAG }}
+          tag_name: ${{ steps.semvers.version }} 
+          release_name: Release ${{ steps.semvers.version }}
           body: Automated release notes. Add details about changes, fixes, etc.
           draft: false
           prerelease: false

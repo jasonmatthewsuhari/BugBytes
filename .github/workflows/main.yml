@@ -10,14 +10,14 @@ on:
 
 permissions:
   contents: write  # Ensure the action has write access to contents
+
 jobs:
-  build:
-    name: Create Release
+  increment_tag_and_release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Set up Git
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
 

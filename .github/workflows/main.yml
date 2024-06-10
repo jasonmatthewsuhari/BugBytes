@@ -39,71 +39,9 @@ jobs:
           fi
           echo "New tag: $new_tag"
           echo "::set-output name=tag::$new_tag"
-
-  build-and-export-for-Windows:
-    name: Build and Export for Windows
-    needs: get_version
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Set up GameMaker CLI
-        run: |
-          curl -L -o gmcli.zip "https://gms.yoyogames.com/GMStudio2-IDE-2.3.1.409.zip"
-          Expand-Archive -Path "gmcli.zip" -DestinationPath "gmcli"
-          chmod +x gmcli/gm
           
-      - name: Build and Export GameMaker Project to Windows
-        run: |
-          gmcli/gm build --project BugBytes/BugBytes/BugBytes.yyp --output exports/windows --target=Windows --runtime=2.3.1.409
-
-      - name: Compress Windows .exe
-        run: |
-          Compress-Archive -Path exports/windows/* -DestinationPath exports/windows/my_game.zip
-
-      - name: Upload Windows .zip to GitHub Release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ needs.get_version.outputs.new_tag }}
-          asset_path: exports/windows/BugBytes_Windows.zip
-          asset_name: BugBytes_Windows.zip
-          asset_content_type: application/zip
-
-  build-and-export-for-Mac:
-    name: Build and Export for Mac
-    needs: get_version
-    runs-on: macos-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up GameMaker CLI
-        run: |
-          curl -L -o gmcli.zip "https://gms.yoyogames.com/GMStudio2-IDE-2.3.1.409-mac.zip"
-          unzip gmcli.zip -d gmcli
-          chmod +x gmcli/gm
-
-      - name: Build and Export GameMaker Project to Mac
-        run: |
-          gmcli/gm build --project BugBytes/BugBytes/BugBytes.yyp --output exports/mac --target=Mac --runtime=2.3.1.409
-
-      - name: Compress Mac .app
-        run: zip -r exports/mac/my_game.zip exports/mac/*
-
-      - name: Upload Mac .zip to GitHub Release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ needs.get_version.outputs.new_tag }}
-          asset_path: exports/mac/BugBytes_Mac.zip
-          asset_name: BugBytes_Mac.zip
-          asset_content_type: application/zip
-
   create_release:
     name: Create GitHub Release
-    needs: [build-and-export-for-Windows, build-and-export-for-Mac]
     runs-on: ubuntu-latest
 
     steps:

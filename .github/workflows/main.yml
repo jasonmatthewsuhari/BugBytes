@@ -7,7 +7,8 @@ on:
     # paths-ignore:
       # - '.github/workflows/**' 
 
-permissions: write
+permissions:
+  contents: write  # Ensure the action has write access to contents
 
 jobs:
   get_version:

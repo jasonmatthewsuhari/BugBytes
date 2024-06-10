@@ -1,50 +1,39 @@
-name: Build and Export GameMaker Project
-
+name: Create Release
 on:
   push:
     # Sequence of patterns matched against refs/tags
     branches:
     - main
-    # paths-ignore:
-      # - '.github/workflows/main.yml'
-
+      
 permissions:
   contents: write  # Ensure the action has write access to contents
-
 jobs:
-  increment_tag_and_release:
+  build:
+    name: Create Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Set up Git
-        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-
-      - name: Find Latest Tag
-        id: find_tag
+      - name: Get latest tag
+        id: get_latest_tag
         run: |
-          latest_tag=$(git describe --tags --abbrev=0 --always)
-          echo "::set-output name=latest_tag::$latest_tag"
-
-      - name: Increment Tag
+          latest_tag=$(git describe --tags --abbrev=0)
+          echo "::set-output name=tag::$latest_tag"
+      - name: Increment tag
         id: increment_tag
         run: |
-          latest_tag=$(echo "${{ steps.find_tag.outputs.latest_tag }}")
-          major=$(echo $latest_tag | cut -d'.' -f1)
-          minor=$(echo $latest_tag | cut -d'.' -f2)
-          patch=$(echo $latest_tag | cut -d'.' -f3)
-          new_tag="$major.$minor.$((patch + 1))"
-          echo "::set-output name=new_tag::$new_tag"
-
+          latest_tag="${{ steps.get_latest_tag.outputs.tag }}"
+          major_version=$(echo "$latest_tag" | cut -d. -f1 | sed 's/v//')
+          next_major_version=$((major_version + 1))
+          new_tag="v$next_major_version.0.0"
+          echo "::set-output name=next_tag::$new_tag"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
-        with:
-          tag_name: ${{ steps.increment_tag.outputs.new_tag }}
-          release_name: Release ${{ steps.increment_tag.outputs.new_tag }}
-          body: Automated release notes. Add details about changes, fixes, etc.
-          draft: false
-          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.increment_tag.outputs.next_tag }}
+          release_name: Release ${{ steps.increment_tag.outputs.next_tag }}
+          body: |
+            Example release notes

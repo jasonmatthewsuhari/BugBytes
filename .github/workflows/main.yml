@@ -17,19 +17,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Get latest tag
-        id: get_latest_tag
+      
+      - name: Set up Git
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+
+      - name: Find Latest Tag
+        id: find_tag
         run: |
-          latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
-          echo "::set-output name=tag::$latest_tag"
-      - name: Increment tag
-        id: increment_tag
-        run: |
-          latest_tag="${{ steps.get_latest_tag.outputs.tag }}"
-          major_version=$(echo "$latest_tag" | cut -d. -f1 | sed 's/v//')
-          next_major_version=$((major_version + 1))
-          new_tag="v$next_major_version.0.0"
-          echo "::set-output name=next_tag::$new_tag"
+          latest_tag=$(git describe --tags --abbrev=0)
+          echo "::set-output name=latest_tag::$latest_tag"
+
+      - name: Use Latest Tag
+        run: echo "Latest tag is ${{ steps.find_tag.outputs.latest_tag }}"
+      
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

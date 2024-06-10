@@ -51,7 +51,7 @@ jobs:
         
       - name: Set up GameMaker CLI
         run: |
-          Invoke-WebRequest -Uri "https://gms.yoyogames.com/GMStudio2-IDE-2.3.1.409.zip" -OutFile "gmcli.zip"
+          curl -L -o gmcli.zip "https://gms.yoyogames.com/GMStudio2-IDE-2.3.1.409.zip"
           Expand-Archive -Path "gmcli.zip" -DestinationPath "gmcli"
           chmod +x gmcli/gm
           

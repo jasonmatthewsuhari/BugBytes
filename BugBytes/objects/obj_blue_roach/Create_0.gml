@@ -10,7 +10,6 @@
 
 #region Health, points, movement variables
 
-point = 30;
 max_speed = 3;
 curr_speed = max_speed;
 

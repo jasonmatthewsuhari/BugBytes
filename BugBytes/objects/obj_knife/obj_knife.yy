@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"obj_knife",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Melee","path":"objects/class_Melee/class_Melee.yy",},"propertyId":{"name":"damage","path":"objects/class_Melee/class_Melee.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
+  ],
   "parent":{
     "name":"Melee",
     "path":"folders/Objects/Weapons/Melee.yy",

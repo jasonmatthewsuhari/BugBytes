@@ -12,6 +12,7 @@
   "name":"obj_blue_roach",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"propertyId":{"name":"max_hp","path":"objects/class_Damageable/class_Damageable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"150",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable_Enemy","path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",},"propertyId":{"name":"point","path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"60",},
   ],
   "parent":{
     "name":"Enemy",

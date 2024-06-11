@@ -1,6 +1,6 @@
 /// @description Attack with weapon
 
-if (instance_exists(weapon))
+if (instance_exists(weapon) && useable.right_mouse_button)
 {
 
 	switch (object_get_parent(weapon.object_index)) 

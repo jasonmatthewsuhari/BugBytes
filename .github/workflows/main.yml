@@ -1,0 +1,47 @@
+name: Automate Tag Versioning and Release
+
+on:
+  push:
+    branches:
+      - main
+    # paths-ignore:
+      # - '.github/workflows/**'
+  
+
+permissions:
+  contents: write
+  
+jobs:
+  automate_versioning_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Git
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      
+      - name: 'Get Previous tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+        with:
+          fallback: 1.0.0 # Optional fallback tag to use when no tag can be found
+          #workingDirectory: another/path/where/a/git/repo/is/checked/out # Optional alternative working directory
+          
+      - name: 'Get next minor version'
+        id: semvers
+        uses: "WyriHaximus/github-action-next-semvers@v1"
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ steps.semvers.outputs.v_major }} 
+          release_name: Release ${{ steps.semvers.outputs.v_major }}
+          body: Automated release notes. Add details about changes, fixes, etc.
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

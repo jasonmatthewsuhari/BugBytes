@@ -2,7 +2,6 @@
 
 if (instance_exists(weapon))		instance_destroy(weapon);
 
-if (instance_exists(health_bar))	instance_destroy(health_bar);
 
 var _player_respawn = time_source_create(time_source_game, respawn_timer, time_source_units_seconds,	
 	function() {

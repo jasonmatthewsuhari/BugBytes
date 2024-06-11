@@ -64,8 +64,6 @@
     {"id":{"name":"class_Damageable_Enemy","path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",},},
     {"id":{"name":"class_Damageable_Friendly","path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",},},
     {"id":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},},
-    {"id":{"name":"class_Enemy","path":"objects/class_Enemy/class_Enemy.yy",},},
-    {"id":{"name":"class_Friendly","path":"objects/class_Friendly/class_Friendly.yy",},},
     {"id":{"name":"class_Gun","path":"objects/class_Gun/class_Gun.yy",},},
     {"id":{"name":"class_HealthDisplay","path":"objects/class_HealthDisplay/class_HealthDisplay.yy",},},
     {"id":{"name":"class_Immovable","path":"objects/class_Immovable/class_Immovable.yy",},},

@@ -37,9 +37,7 @@
   "ResourceOrderSettings":[
     {"name":"button_singleplayer","order":1,"path":"objects/button_singleplayer/button_singleplayer.yy",},
     {"name":"class_Damageable_Enemy","order":1,"path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",},
-    {"name":"class_Damageable_Friendly","order":2,"path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",},
-    {"name":"class_Enemy","order":3,"path":"objects/class_Enemy/class_Enemy.yy",},
-    {"name":"class_Friendly","order":4,"path":"objects/class_Friendly/class_Friendly.yy",},
+    {"name":"class_Damageable_Friendly","order":4,"path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",},
     {"name":"class_Gun","order":5,"path":"objects/class_Gun/class_Gun.yy",},
     {"name":"class_HealthDisplay","order":6,"path":"objects/class_HealthDisplay/class_HealthDisplay.yy",},
     {"name":"class_Immovable","order":7,"path":"objects/class_Immovable/class_Immovable.yy",},

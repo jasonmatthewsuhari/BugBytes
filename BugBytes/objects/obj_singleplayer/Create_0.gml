@@ -1,8 +1,6 @@
 /// @description Initialise player
 
-#region Health, spawning, and movement variables
-
-health_bar = f_create_healthbar(self, 100);
+#region Spawning, and movement variables
 
 max_speed = 3;
 curr_speed = max_speed;

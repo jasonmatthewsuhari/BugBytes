@@ -26,8 +26,8 @@
     "path":"folders/Objects/Friendly.yy",
   },
   "parentObjectId":{
-    "name":"class_Friendly",
-    "path":"objects/class_Friendly/class_Friendly.yy",
+    "name":"class_Damageable_Friendly",
+    "path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

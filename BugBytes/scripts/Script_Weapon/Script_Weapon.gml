@@ -43,7 +43,7 @@ function f_fire(_gun)
 					image_angle: _angle + random_range(- gun.inaccuracy, gun.inaccuracy),
 					sprite_index: gun.ammo[bullet_index].sprite,
 					spd: gun.ammo[bullet_index].spd,
-					damage: gun.ammo[bullet_index].damage
+					// damage: gun.ammo[bullet_index].damage
 				}
 			);
 		}
@@ -68,7 +68,7 @@ function f_attack(_melee)
 			timer--;
 			if (timer <= 0) {
 				timer = cooldown;
-				other.health_bar.curr_hp -= damage;
+				other._health.curr_hp -= damage;
 			}
 		}
 	}

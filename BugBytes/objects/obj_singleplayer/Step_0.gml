@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited()
+
 #region handle left mouse click movement
 
 var _dist_from_mouse = point_distance(x, y, curr_mouse_x, curr_mouse_y);
@@ -50,12 +52,6 @@ if (aim_direction <= 45 || aim_direction > 315) {
 } else { }
 
 image_index = face;
-
-#endregion
-
-#region handle character HP tracking
-
-f_check_healthbar(self);
 
 #endregion
 

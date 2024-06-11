@@ -30,7 +30,6 @@ bullet0 = {
 	damage: 30,						// Damage of the bullet
 	cooldown: 0 * game_get_speed(gamespeed_fps),				// Attack cooldown of the weapon in frames
 	timer: 0 * game_get_speed(gamespeed_fps),					// Timer for weapon cooldown (same as cooldown)
-	damage: 10						// Damage of the weapon
 };
 
 gun = {

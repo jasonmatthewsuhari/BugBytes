@@ -10,8 +10,6 @@
 
 #region Health, points, movement variables
 
-health_bar = f_create_healthbar(self, 200);
-
 point = 30;
 max_speed = 3;
 curr_speed = max_speed;

@@ -1,16 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited()
+
 image_index = face;
 
 if !global.time_stop 
 {
-
-#region handle character HP tracking
-
-f_check_healthbar(self);
-
-#endregion
 
 #region handle diagonal speed
 

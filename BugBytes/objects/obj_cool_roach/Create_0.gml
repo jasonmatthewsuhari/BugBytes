@@ -3,7 +3,7 @@
 // The following variables must be declared when creating an instance of this class
 /*
 {
-	weapon: f_create_weapon(self, weapon_to_create);			// Wielder of the weapon
+	weapon: f_create_weapon(weapon_to_create);			// Wielder of the weapon
 
 }
 */
@@ -24,10 +24,15 @@ if (instance_exists(obj_no_go)) {
 #endregion
 
 #region Target system variables
+
 //init weighting variables
 //set range distance we can scan, and set as an initial value so we can return to it
 range_initial = 500;
 range = range_initial;
+
+// set a random timer for when we calc a path
+calc_path_delay = 20;
+calc_path_timer = irandom(60);
 
 //setting a target range allows us to animate the range circle towards a target using lerp
 target_range = range;
@@ -71,7 +76,6 @@ path_clear = function() {
 #region Character sprite control
 face = SPRITE.RIGHT;								// index of the sprite based on where it is facing
 image_index = face;
-aim_direction = 0;						// aim direction (in degrees) of the sprite
 
 
 #endregion

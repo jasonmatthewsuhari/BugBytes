@@ -3,6 +3,8 @@
 
 event_inherited()
 
+#region handle movement options
+
 #region handle left mouse click movement
 
 var _dist_from_mouse = point_distance(x, y, curr_mouse_x, curr_mouse_y);
@@ -23,6 +25,9 @@ if (x != xprevious && y != yprevious) {
 } else {
 	curr_speed = max_speed;
 }
+
+#endregion
+
 
 #endregion
 

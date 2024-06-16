@@ -17,6 +17,15 @@ enum EVENTS {
 	
 }
 
+enum STATES
+{
+	IDLE,
+	MOVE,
+	ATTACK,
+	DEAD,
+	HURT,
+}
+
 enum SPRITE			// handle sprite direction (should change)
 {
 	LEFT = 0,

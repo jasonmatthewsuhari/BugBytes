@@ -17,10 +17,13 @@
     {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"obj_no_go","path":"objects/obj_no_go/obj_no_go.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":54,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_singleplayer",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"propertyId":{"name":"max_hp","path":"objects/class_Damageable/class_Damageable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
+  ],
   "parent":{
     "name":"Friendly",
     "path":"folders/Objects/Friendly.yy",

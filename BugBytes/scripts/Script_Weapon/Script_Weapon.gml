@@ -1,9 +1,9 @@
 /// @desc  f_create_weapon(_owner)  Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
-/// @param {id.instance} _owner  The owner of this weapon instance
 /// @param {asset.gmobject} _weapon_to_create  The owner of this weapon instance
 /// @returns {id}  The created weapon instance
-function f_create_weapon(_owner, _weapon_to_create) 
+function f_create_weapon(_weapon_to_create) 
 {
+		var _owner = self;
 		var _weapon = 
 			instance_create_depth(_owner.weapon_x, _owner.weapon_y, _owner.depth - 1, _weapon_to_create,
 				{
@@ -76,9 +76,8 @@ function f_attack(_melee)
 
 ///	@func								f_track_weapon(_owner)
 ///	@desc								Sprite control of the weapon in relation to the direction its owner is facing
-///	@param {Id.Instance} _owner			The owner of this weapon instance
 ///	@param {Id.Instance} _weapon		The weapon instance
-function f_track_weapon(_owner, _weapon) 
+function f_track_weapon(_weapon) 
 {
 
 	with _weapon 
@@ -86,7 +85,7 @@ function f_track_weapon(_owner, _weapon)
 			sprite_index = gun.sprite;
 
 			// If rotated to left, flip gun
-			if _owner.face = SPRITE.RIGHT image_xscale = 1;
+			if owner.face = SPRITE.RIGHT image_xscale = 1;
 			else image_xscale = -1;
 
 	}

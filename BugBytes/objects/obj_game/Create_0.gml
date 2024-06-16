@@ -5,4 +5,3 @@ global.point = 0;
 global.check_draw = false;
 
 global.time_stop = false;
-

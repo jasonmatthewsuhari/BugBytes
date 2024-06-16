@@ -11,7 +11,7 @@ if (type == network_type_connect) {
 	
 	buffer_delete(buffer);
 
-	var player = instance_create_layer(0, 0, "Instances", obj_player);
+	var player = instance_create_layer(0, 0, "Friendlies", obj_player);
 	player.playerID = ds_list_size(clients);
 	player.is_local = false;
 		
@@ -40,7 +40,7 @@ else if (type == network_type_data) {
 			obj_player.playerID = count;
 		
 			for (var i=0; i < count; i++) {
-				var plr = instance_create_layer(room_width/2, room_height/2, "Instances", obj_player);
+				var plr = instance_create_layer(room_width/2, room_height/2, "Friendlies", obj_player);
 				plr.playerID = i;
 				plr.is_local = false;
 			}
@@ -78,7 +78,7 @@ else if (type == network_type_data) {
 			var _x = buffer_read(buffer, buffer_u8);
 			var _y = buffer_read(buffer, buffer_u8);
 			
-			instance_create_layer(_x, _y, "Instances", obj_enemy_1);
+			instance_create_layer(_x, _y, "Enemies", obj_enemy_1);
 		break;
 		
 		case PACKETS.TIME:

@@ -210,8 +210,7 @@ if check_path and instance_exists(weapon) {
 			
 			#region visual only - add the path coordinates, and activate the path so we can draw it
 			// * visual only - add the path coordinates, and activate the path so we can draw it
-			path_add_point(path, target_pos_x, target_pos_y, move_spd);
-			path_start(path, move_spd, path_action_stop, false);
+			mp_potential_step(target_pos_x, target_pos_y, max_speed, false);
 			// * visual only end			
 			#endregion
 		}

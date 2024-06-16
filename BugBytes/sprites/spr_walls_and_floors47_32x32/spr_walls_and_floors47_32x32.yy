@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_grass_tileset",
+  "%Name":"spr_walls_and_floors47_32x32",
   "bboxMode":0,
-  "bbox_bottom":47,
+  "bbox_bottom":415,
   "bbox_left":0,
-  "bbox_right":111,
+  "bbox_right":255,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4c70883d-3603-4666-8835-075ab6fa7569","name":"4c70883d-3603-4666-8835-075ab6fa7569","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"6ae4f176-9449-4d45-8e8e-e56ae3bd588f","name":"6ae4f176-9449-4d45-8e8e-e56ae3bd588f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":48,
+  "height":512,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"4cd1a5ed-76f4-433f-b34d-886a9e0a680c","blendMode":0,"displayName":"default","isLocked":false,"name":"4cd1a5ed-76f4-433f-b34d-886a9e0a680c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"97828901-c6f2-41bd-ae00-75275e30a7ab","blendMode":0,"displayName":"default","isLocked":false,"name":"97828901-c6f2-41bd-ae00-75275e30a7ab","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_grass_tileset",
+  "name":"spr_walls_and_floors47_32x32",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_grass_tileset",
+    "%Name":"spr_walls_and_floors47_32x32",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_grass_tileset",
+    "name":"spr_walls_and_floors47_32x32",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4c70883d-3603-4666-8835-075ab6fa7569","path":"sprites/spr_grass_tileset/spr_grass_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"47580aac-d212-47bd-b5e9-edd7b34b31b7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6ae4f176-9449-4d45-8e8e-e56ae3bd588f","path":"sprites/spr_walls_and_floors47_32x32/spr_walls_and_floors47_32x32.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4c376906-3068-4393-a023-9b6175c7e862","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":112,
+  "width":256,
 }

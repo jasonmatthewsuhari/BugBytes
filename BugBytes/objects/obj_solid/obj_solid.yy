@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"class_Damageable_Friendly",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_solid",
+  "eventList":[],
   "managed":true,
-  "name":"class_Damageable_Friendly",
+  "name":"obj_solid",
   "overriddenProperties":[],
   "parent":{
-    "name":"Abstract Classes",
-    "path":"folders/Objects/Abstract Classes.yy",
+    "name":"Misc",
+    "path":"folders/Objects/Misc.yy",
   },
-  "parentObjectId":{
-    "name":"class_Damageable",
-    "path":"objects/class_Damageable/class_Damageable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +26,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
-  "spriteId":null,
+  "solid":false,
+  "spriteId":{
+    "name":"Collision",
+    "path":"sprites/Collision/Collision.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

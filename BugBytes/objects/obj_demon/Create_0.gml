@@ -41,8 +41,6 @@ range = range_initial;
 calc_path_delay = 20;
 calc_path_timer = irandom(30);
 
-attack_dis = 12;
-
 //setting a target range allows us to animate the range circle towards a target using lerp
 target_range = range;
 
@@ -80,10 +78,12 @@ path_clear = function() {
 
 #endregion
 
-#region initialise damage variables
-owner = noone;
-cooldown = 1.5 * game_get_speed(gamespeed_fps);				// Attack cooldown of the weapon in frames
-timer = cooldown;					// Timer for weapon cooldown
+#region initialise attack variables
+attack_frame = 6;						// Sprite attack frame 
+can_attack = true;
+cooldown = 2 * game_get_speed(gamespeed_fps);				// Attack cooldown of the weapon in frames
+timer = 0;					// Timer for weapon cooldown
 damage = 20;						// Damage of the weapon
+attack_dis = 12;
 
 #endregion

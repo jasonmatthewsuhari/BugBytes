@@ -166,7 +166,10 @@ function path_find()
 	// * visual only - if no path coordinates exists, set the path to the chars start position
 	if path_get_number(path) == 0 {
 		var _dis = distance_to_object(obj_flag);
-		if mp_grid_path(global.mp_grid, path, x, y, obj_flag.x, obj_flag.y, true) {
+		target_id = obj_flag;
+		target_pos_x = obj_flag.x;
+		target_pos_y = obj_flag.y;
+		if mp_grid_path(global.mp_grid, path, x, y, target_pos_x, target_pos_y, true) {
 			path_start(path, max_speed, path_action_stop, false);
 			}
 		}
@@ -250,9 +253,32 @@ function enemy_anim()
 			sprite_index = spr_dead;
 		break;
 	}	
-	
-	// update previous position
-	xp = x;
-	xp = y;
 		
 }
+
+/// @desc perform attack()
+/// Performs an attack (currently for pure melee enemies only)
+/// For the function to work, the object that calls this function must have the variables declared in 
+/// #region initialise attack variables and a valid target (see existing enemy objects for examples)
+function perform_attack() 
+{
+	if timer <= 0 and image_index >= attack_frame {
+		//reset for next attack
+		timer = cooldown;
+		
+		// get attack direction
+		var _dir = point_direction(x, y, target_pos_x, target_pos_y);
+		
+		// get attack position
+		var _xx = x + lengthdir_x(attack_dis, _dir);
+		var _yy = y + lengthdir_y(attack_dis, _dir);
+		
+		// create hitbox and pass variables to hitbox
+		var _inst = instance_create_layer(_xx, _yy, "Instances", obj_enemy_hitbox);
+		_inst.owner_id = id;
+		_inst.damage = damage;
+		
+	} else {
+		timer--
+	}
+}	

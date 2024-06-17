@@ -16,6 +16,7 @@ switch(state) {
 		if path_index == -1		state = STATES.IDLE;
 	break;
 	case STATES.ATTACK:
+		perform_attack();
 		enemy_anim();
 		
 	break;
@@ -28,3 +29,7 @@ switch(state) {
 		enemy_anim();
 	break;
 }
+
+// update previous position
+xp = x;
+xp = y;

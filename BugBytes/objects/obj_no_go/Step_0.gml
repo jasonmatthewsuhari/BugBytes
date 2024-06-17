@@ -14,19 +14,33 @@ if !global.time_stop {
 spawn_timer--;
 if (spawn_timer <= 0 && spawn_count < max_spawn) {
 	
+	var _xx_offset = irandom_range(-200, 200);
+	var _yy_offset = irandom_range(-200, 200);
+	
+	var _xx = x + _xx_offset;
+	var _yy = y + _yy_offset;
+	
+	while place_meeting(_xx, _yy, obj_solid) {
+		_xx_offset = irandom_range(-200, 200);
+		_yy_offset = irandom_range(-200, 200);
+	
+		_xx = x + _xx_offset;
+		_yy = y + _yy_offset;
+	}
+	
 	if (irandom(100) > 120) {
-		with instance_create_layer(x + irandom_range(-200, 200), y + irandom_range(-200, 200), "Enemies", obj_cool_roach) 
+		with instance_create_layer(_xx, _yy, "Enemies", obj_cool_roach) 
 		{
 			weapon = f_create_weapon(global.weapons[irandom(array_length(global.weapons) - 1)]);
 			has_weapon = true;
 			attack_dis = weapon.range;
 		}
 	} else {
-		instance_create_layer(x + irandom_range(-200, 200), y + irandom_range(-200, 200), "Enemies", obj_demon);
+		instance_create_layer(_xx, _yy, "Enemies", obj_demon);
 	}
 	
 	spawn_timer = cooldown;
-	spawn_count++;
+	// spawn_count++;
 }
 
 #endregion

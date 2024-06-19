@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"EventPacket",
+  "%Name":"HandlePacket",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"EventPacket",
+  "name":"HandlePacket",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

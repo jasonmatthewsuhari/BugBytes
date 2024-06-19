@@ -1,0 +1,2 @@
+menu_index = 0;
+menu_options = ["SINGLEPLAYER", "MULTIPLAYER HOST", "MULTIPLAYER JOIN", "SETTINGS", "CREDITS", "EXIT"];

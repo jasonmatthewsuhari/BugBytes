@@ -70,7 +70,7 @@
   "tvosmaccompilerflags":"",
   "tvosmaclinkerflags":"",
   "tvosplistinject":"",
-  "tvosProps":false,
+  "tvosProps":true,
   "tvosSystemFrameworkEntries":[],
   "tvosThirdPartyFrameworkEntries":[],
 }

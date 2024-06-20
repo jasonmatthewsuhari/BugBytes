@@ -9,7 +9,7 @@
   "managed":true,
   "name":"obj_s_key",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"propertyId":{"name":"max_hp","path":"objects/class_Damageable/class_Damageable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"200",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"propertyId":{"name":"max_hp","path":"objects/class_Damageable/class_Damageable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2000",},
   ],
   "parent":{
     "name":"UI Elements",

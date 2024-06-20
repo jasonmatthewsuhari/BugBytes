@@ -16,7 +16,7 @@ knockback_angle = 0;				// Angle of knockback
 canshoot = 0;						// Shooting timer
 bullet_index = 0;					// Current bullet
 cooldown = 1 * game_get_speed(gamespeed_fps);					// Attack cooldown of the weapon in frames
-timer = cooldown;					// Timer for weapon cooldown (same as cooldown)
+timer = 0;					// Timer for weapon cooldown (same as cooldown)
 range = 250;						// Range of the weapon
 
 

@@ -16,9 +16,8 @@ knockback_angle = 0;				// Angle of knockback
 canshoot = 0;						// Shooting timer
 bullet_index = 0;					// Current bullet
 cooldown = 1 * game_get_speed(gamespeed_fps);					// Attack cooldown of the weapon in frames
-timer = cooldown;					// Timer for weapon cooldown (same as cooldown)
+timer = 0;					// Timer for weapon cooldown (same as cooldown)
 range = 500;						// Range of the weapon
-
 
 bullet0 = {
 	sprite: bullet_1,				// Bullet sprite to draw
@@ -46,4 +45,3 @@ gun = {
 	burst_number: 1,				// Number of bullets in burst
 	burst_delay: 0,					// Delay between bullets in burst
 };
-

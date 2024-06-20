@@ -1,3 +1,5 @@
 /// @description Draw all info related to down_arrow
 
-event_inherited()
+event_inherited();
+
+draw_self();

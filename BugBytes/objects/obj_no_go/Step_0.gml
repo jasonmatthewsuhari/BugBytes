@@ -28,15 +28,17 @@ if (spawn_timer <= 0 && spawn_count < max_spawn) {
 		_yy = y + _yy_offset;
 	}
 	
-	if (irandom(100) > 120) {
-		with instance_create_layer(_xx, _yy, "Enemies", obj_cool_roach) 
-		{
-			weapon = f_create_weapon(global.weapons[irandom(array_length(global.weapons) - 1)]);
-			has_weapon = true;
-			attack_dis = weapon.range;
+	if !place_meeting(_xx, _yy, obj_solid) {
+		if (irandom(100) > 90) {
+			with instance_create_layer(_xx, _yy, "Enemies", obj_big_zombie) 
+			{
+				weapon = f_create_weapon(global.weapons[irandom(array_length(global.weapons) - 1)]);
+				has_weapon = true;
+				attack_dis = weapon.range / 2;
+			}
+		} else {
+			instance_create_layer(_xx, _yy, "Enemies", obj_demon);
 		}
-	} else {
-		instance_create_layer(_xx, _yy, "Enemies", obj_demon);
 	}
 	
 	spawn_timer = cooldown;

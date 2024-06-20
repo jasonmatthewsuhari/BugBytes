@@ -2,8 +2,14 @@
 // You can write your code in this editor
 
 if (curr_hp <= 0)	state = STATES.DEAD;
-check_facing();
-
+// check_facing();
+	var _face = sign(x - xp);
+	if _face != 0	face = _face;
+	//if _face != 0	face = _face;
+	// update previous position
+xp = x;
+xp = y;
+	
 switch(state) {
 	case STATES.IDLE:
 		path_find();
@@ -30,6 +36,3 @@ switch(state) {
 	break;
 }
 
-// update previous position
-xp = x;
-xp = y;

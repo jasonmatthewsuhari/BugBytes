@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_inherited()
+event_inherited();
+check_facing();
 
 #region handle movement options
 
@@ -31,51 +32,26 @@ if (x != xprevious && y != yprevious) {
 
 #endregion
 
+
 #region handle character sprite control
 
-// sprite control when moving
-if (x > xprevious) {
-	face = SPRITE.RIGHT;
-} else if (x < xprevious) {
-	face = SPRITE.LEFT;
-} else if (y < yprevious) {
-	face = SPRITE.UP;
-} else if (y > yprevious) {
-	face = SPRITE.DOWN;
-} else { };
 
 aim_direction = point_direction(x, y, mouse_x, mouse_y);
 
-if (aim_direction <= 45 || aim_direction > 315) {
-	face = SPRITE.RIGHT;
-} else if (aim_direction <= 135) {
-	face = SPRITE.UP;
-} else if (aim_direction <= 225) {
-	face = SPRITE.LEFT;
-} else if (aim_direction <= 315) {
-	face = SPRITE.DOWN;
+if (aim_direction <= 90 || aim_direction > 270) {
+	face = 1;
+} else if (aim_direction <= 270) {
+	face = -1;
 } else { }
 
-image_index = face;
 
 #endregion
 
 #region handle weapon tracking
 
-// handle origin for weapon
-if (face = SPRITE.LEFT) {
-	weapon_x = x - weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (face = SPRITE.RIGHT) {
-	weapon_x = x + weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (face = SPRITE.UP) {
-	weapon_x = x;
-	weapon_y = y - weapon_y_offset;
-} else if (face = SPRITE.DOWN) {
-	weapon_x = x;
-	weapon_y = y + weapon_y_offset;
-} else { }
+weapon_x = x + face * weapon_x_offset;
+weapon_y = y + weapon_y_offset;
+
 
 with weapon 
 {

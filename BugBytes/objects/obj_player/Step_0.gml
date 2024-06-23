@@ -22,26 +22,12 @@ if (hspd == 1) {
     image_index = 2;
 }
 
-if(global.IS_MULTIPLAYER) {
-	var buffer = buffer_create(7, buffer_fixed, 1);
+var buffer = buffer_create(100, buffer_fixed, 1);
+buffer_write(buffer, buffer_u8, PACKETS.CONTINUOUS);
+buffer_write(buffer, buffer_s16, x);
+//buffer_write(buffer, buffer_s16, y);
+//buffer_write(buffer, buffer_u8, sprite_index);
 
-	buffer_write(buffer, buffer_u8, PACKETS.CONTINUOUS);
-	buffer_write(buffer, buffer_u8, playerID);
-	buffer_write(buffer, buffer_s16, x);
-	buffer_write(buffer, buffer_s16, y);
-	buffer_write(buffer, buffer_u8, image_index);
+network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
 
-	if (!obj_server.is_server) {
-		network_send_packet(obj_server.server, buffer, buffer_get_size(buffer));
-	}
-	else {
-		for (var i = 0; i < ds_list_size(obj_server.clients); i++) {
-			var soc = obj_server.clients[| i];
-			if (soc < 0) continue;
-		
-			network_send_packet(soc, buffer, buffer_get_size(buffer));
-		}
-	}
-
-	buffer_delete(buffer);
-}
+buffer_delete(buffer);

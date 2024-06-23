@@ -1,9 +1,30 @@
-if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) {
-	show_message("Client ready");
+switch(room) {
+	case rm_lobby:
+		selected = (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space));
+		if(selected && !client_ready) {
+			client_ready = true;
+			if(server_ready) {
+				room_goto(rm_game);	
+			}
+			
+			// Creates a buffer of ID 0, indicating that server is ready
+			ready_buffer = buffer_create(1, buffer_fixed, 1);
+			buffer_seek(ready_buffer, buffer_seek_start,0);
+			buffer_write(ready_buffer, buffer_u8, PACKETS.READY);
+			network_send_udp(global.socket, "127.0.0.1", 8000, ready_buffer, buffer_tell(ready_buffer));
+		
+			buffer_delete(ready_buffer);
+		}
 	
-	buffer = buffer_create(4, buffer_fixed, 1);
-	buffer_seek(buffer, buffer_seek_start, 0);
-	buffer_write(buffer, buffer_bool, true);
-
-	network_send_udp(socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
+	break;
+	
+	case rm_game:
+		selected = (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space));
+		if(selected) {
+			buffer = buffer_create(1, buffer_fixed, 1);
+			buffer_write(buffer, buffer_u8, PACKETS.TIME);
+			network_send_udp(global.socket, remote_ip, remote_port, buffer, buffer_tell(buffer));
+			buffer_delete(buffer);
+		}
+	break;
 }

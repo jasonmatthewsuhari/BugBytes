@@ -1,4 +1,6 @@
-var buffer = async_load[? "buffer"];
-buffer_seek(buffer, buffer_seek_start,0);
+remote_port = async_load[? "port"];
+remote_ip = string(async_load[? "ip"]);
 
-room_goto(rm_game);
+var buffer = async_load[? "buffer"];
+
+ClientPacketHandle(buffer);

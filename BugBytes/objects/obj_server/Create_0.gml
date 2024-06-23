@@ -1,9 +1,7 @@
-SERVER_IP = "127.0.0.1";
 MAX_CLIENTS = 2;
 
-clients = ds_list_create();
-elapsed_time = 0;
+global.socket = network_create_socket_ext(network_socket_udp, 8000);
+alarm[0] = 2 * game_get_speed(gamespeed_fps);
 
-socket = network_create_socket_ext(network_socket_udp, 8000);
-
-server_ready = true;
+server_ready = false;
+client_ready = false;

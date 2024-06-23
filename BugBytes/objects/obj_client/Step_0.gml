@@ -19,12 +19,5 @@ switch(room) {
 	break;
 	
 	case rm_game:
-		selected = (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space));
-		if(selected) {
-			buffer = buffer_create(1, buffer_fixed, 1);
-			buffer_write(buffer, buffer_u8, PACKETS.TIME);
-			network_send_udp(global.socket, remote_ip, remote_port, buffer, buffer_tell(buffer));
-			buffer_delete(buffer);
-		}
 	break;
 }

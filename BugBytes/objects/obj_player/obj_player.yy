@@ -3,7 +3,6 @@
   "%Name":"obj_player",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
@@ -13,7 +12,10 @@
     "name":"Multiplayer",
     "path":"folders/Objects/Multiplayer.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"class_Friendly",
+    "path":"objects/class_Friendly/class_Friendly.yy",
+  },
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

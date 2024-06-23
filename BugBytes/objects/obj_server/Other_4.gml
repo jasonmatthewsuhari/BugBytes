@@ -1,5 +1,6 @@
 switch(room) {
 	case rm_game:
-		global.player = instance_create_layer(room_width / 2, room_height / 2, "Instances", obj_player);
+		alarm[0] = 2 * game_get_speed(gamespeed_fps);
+		
 	break;
 }

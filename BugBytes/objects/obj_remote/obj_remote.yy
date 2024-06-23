@@ -3,6 +3,7 @@
   "%Name":"obj_remote",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_remote",
@@ -11,7 +12,10 @@
     "name":"Multiplayer",
     "path":"folders/Objects/Multiplayer.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"class_Friendly",
+    "path":"objects/class_Friendly/class_Friendly.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite36",
-    "path":"sprites/Sprite36/Sprite36.yy",
+    "name":"player_sprite_sheet",
+    "path":"sprites/player_sprite_sheet/player_sprite_sheet.yy",
   },
   "spriteMaskId":null,
   "visible":true,

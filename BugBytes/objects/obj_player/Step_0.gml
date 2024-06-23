@@ -25,9 +25,16 @@ if (hspd == 1) {
 var buffer = buffer_create(100, buffer_fixed, 1);
 buffer_write(buffer, buffer_u8, PACKETS.CONTINUOUS);
 buffer_write(buffer, buffer_s16, x);
-//buffer_write(buffer, buffer_s16, y);
-//buffer_write(buffer, buffer_u8, sprite_index);
+buffer_write(buffer, buffer_s16, y);
+buffer_write(buffer, buffer_u8, image_index);
 
-network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
+if(instance_exists(obj_server)) {
+	network_send_udp(global.socket, obj_server.remote_ip, obj_server.remote_port, buffer, buffer_tell(buffer));
+}
+else if(instance_exists(obj_client)) {
+	network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
+}
+
+
 
 buffer_delete(buffer);

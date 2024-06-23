@@ -9,29 +9,39 @@ function ServerPacketHandle(buffer){
 		
 		case PACKETS.READY:
 		// U8
-		show_debug_message("SERVER IS HANDLING A PACKET...");
 			with(obj_server) {
 				client_ready = true;
-				if(server_ready) {
-					room_goto(rm_game);	
-				}
+			}
+			
+			if(server_ready) {
+				room_goto(rm_game);	
 			}
 		break;
 		
 		case PACKETS.INIT:
-		//show_message("Remote object initiated");
-		remote_player = instance_create_layer(room_width / 2, room_height / 2, "Instances", obj_remote);
+			remote_player = instance_create_layer(room_width / 2 + 100, room_height / 2, "Instances", obj_remote);
+			remote_player.name = "Player";
+			remote_player.depth = -1;
 		break;
 		
 		case PACKETS.EVENT:
-		
+			type_of_event = buffer_read(buffer, buffer_u8);
+			switch(type_of_event) {
+				case EVENTS.PLAYER_DAMAGED:
+					damage = buffer_read(buffer, buffer_u8);
+					remote_player.hp -= damage;
+			}
 		break;
 		
 		case PACKETS.CONTINUOUS:
 		remote_x = buffer_read(buffer, buffer_s16);
+		remote_y = buffer_read(buffer, buffer_s16);
+		remote_sprite = buffer_read(buffer, buffer_u8);
 		
 		if(instance_exists(obj_remote)) {
-			obj_remote.x = remote_x;
+			remote_player.x = remote_x;
+			remote_player.y = remote_y;
+			remote_player.image_index = remote_sprite;
 		}
 		
 		/*

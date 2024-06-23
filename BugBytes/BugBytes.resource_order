@@ -87,7 +87,6 @@
     {"name":"Script_Misc","order":3,"path":"scripts/Script_Misc/Script_Misc.yy",},
     {"name":"Script_Pathfinding","order":4,"path":"scripts/Script_Pathfinding/Script_Pathfinding.yy",},
     {"name":"Script_Weapon","order":5,"path":"scripts/Script_Weapon/Script_Weapon.yy",},
-    {"name":"SendPacket","order":7,"path":"scripts/SendPacket/SendPacket.yy",},
     {"name":"SpawnRemoteEntity","order":1,"path":"scripts/SpawnRemoteEntity/SpawnRemoteEntity.yy",},
     {"name":"vine_boom","order":1,"path":"sounds/vine_boom/vine_boom.yy",},
     {"name":"Camera","order":1,"path":"sprites/Camera/Camera.yy",},

@@ -121,7 +121,6 @@
     {"id":{"name":"Script_Misc","path":"scripts/Script_Misc/Script_Misc.yy",},},
     {"id":{"name":"Script_Pathfinding","path":"scripts/Script_Pathfinding/Script_Pathfinding.yy",},},
     {"id":{"name":"Script_Weapon","path":"scripts/Script_Weapon/Script_Weapon.yy",},},
-    {"id":{"name":"SendPacket","path":"scripts/SendPacket/SendPacket.yy",},},
     {"id":{"name":"ServerPacketHandle","path":"scripts/ServerPacketHandle/ServerPacketHandle.yy",},},
     {"id":{"name":"SpawnRemoteEntity","path":"scripts/SpawnRemoteEntity/SpawnRemoteEntity.yy",},},
     {"id":{"name":"blaster","path":"sounds/blaster/blaster.yy",},},

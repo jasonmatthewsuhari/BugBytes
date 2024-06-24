@@ -14,8 +14,8 @@
     "path":"folders/Objects/Friendly/UI Elements.yy",
   },
   "parentObjectId":{
-    "name":"class_Damageable_Friendly",
-    "path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",
+    "name":"class_UI_Element",
+    "path":"objects/class_UI_Element/class_UI_Element.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

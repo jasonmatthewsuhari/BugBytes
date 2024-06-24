@@ -40,7 +40,7 @@ gun = {
 	ammo: [bullet0],				// Array of Ammo structs
 	inaccuracy: 0,					// Random bullet inaccuracy
 	kick: 2,						// Kickback to position and angle
-	sound: vine_boom,				// Shooting sound effect to play
+	sound: snd_vine_boom,				// Shooting sound effect to play
 	spread_number: 3,				// Number of bullets in spread
 	spread_angle: 15,				// Angle between each bullet in spread
 	fullauto: false,				// Shoot while holding down or only when pressed

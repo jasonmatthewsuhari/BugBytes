@@ -8,8 +8,8 @@ x_pos = x - 128;	// x pos to draw item sprite
 y_pos = y;			// y pos to draw item sprite
 x_pos_offset = 64	// x offset to draw next item sprite
 
-inventory.item_add("Revolver", 1, spr_revolver);
-inventory.item_add("Shotgun", 1, spr_shotgun);
+inventory.item_add("Revolver", 1, global.weapon_list.revolver);
+inventory.item_add("Shotgun", 1, global.weapon_list.shotgun);
 
 show_debug_message(inventory);
 

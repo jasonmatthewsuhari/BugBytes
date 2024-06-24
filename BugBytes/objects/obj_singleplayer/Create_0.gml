@@ -35,7 +35,7 @@ weapon_y_offset = 17;					// offset y pos from player origin for weapons
 weapon_x = x + face * weapon_x_offset;			// x pos for where weapon should be drawn 
 weapon_y = y + weapon_y_offset;			// y pos for where weapon should be drawn 
 
-weapon = f_create_weapon(obj_shotgun);
+weapon = global.weapon_list.revolver;
 
 #endregion
 
@@ -57,6 +57,3 @@ useable =
 };
 
 #endregion
-
-
-	

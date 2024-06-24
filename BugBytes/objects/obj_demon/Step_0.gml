@@ -2,13 +2,7 @@
 // You can write your code in this editor
 
 if (curr_hp <= 0)	state = STATES.DEAD;
-// check_facing();
-	var _face = sign(x - xp);
-	if _face != 0	face = _face;
-	//if _face != 0	face = _face;
-	// update previous position
-xp = x;
-xp = y;
+check_facing();
 	
 switch(state) {
 	case STATES.IDLE:
@@ -36,3 +30,5 @@ switch(state) {
 	break;
 }
 
+weapon_x = x;
+weapon_y = y;

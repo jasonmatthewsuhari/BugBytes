@@ -39,13 +39,26 @@ if (instance_exists(obj_no_go)) {
 
 #endregion
 
+
+#region weapon sprite control
+
+weapon_x_offset = 20;					// offset x pos from player origin for weapons
+weapon_y_offset = 30;					// offset y pos from player origin for weapons
+weapon_x = x + face * weapon_x_offset;			// x pos for where weapon should be drawn 
+weapon_y = y + weapon_y_offset;			// y pos for where weapon should be drawn 
+aim_direction = 0;			
+
+weapon = global.weapon_list.revolver;
+
+#endregion
+
 #region Target system variables
 
 //init weighting variables
 //set range distance we can scan, and set as an initial value so we can return to it
-range_initial = 250;
+range_initial = 800;
 range = range_initial;
-
+attack_dis = weapon.range;
 // set a random timer for when we calc a path
 calc_path_delay = 1;
 calc_path_timer = irandom(30);
@@ -89,13 +102,4 @@ path_clear = function() {
 
 #endregion
 
-#region weapon sprite control
-
-weapon_x_offset = 28;					// offset x pos from player origin for weapons
-weapon_y_offset = 10;					// offset y pos from player origin for weapons
-weapon_x = x + face * weapon_x_offset;			// x pos for where weapon should be drawn 
-weapon_y = y + weapon_y_offset;			// y pos for where weapon should be drawn 
-
-
-#endregion
 

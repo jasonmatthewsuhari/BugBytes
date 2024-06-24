@@ -223,11 +223,15 @@ function map_value(_in, _ins, _ine, _outs, _oute)
 
 /// @desc check_facing()
 /// Checks where the entity is facing and set its face value accordingly
-/// For the function to work, the object that calls this function must have the variables face and xp
+/// For the function to work, the object that calls this function must have the variables face, target_pos_x and target_pos_y
 function check_facing() 
 {
-	var _face = sign(x - xp);
-	if _face != 0	face = _face;
+	aim_direction = point_direction(weapon_x, weapon_y, target_pos_x, target_pos_y);
+	if aim_direction < 270 and aim_direction > 90 {
+		face = -1;
+	} else {
+		face = 1;
+	}
 }
 
 /// @desc enemy_anim()

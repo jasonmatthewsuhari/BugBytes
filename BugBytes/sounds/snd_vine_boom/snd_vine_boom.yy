@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"vine_boom",
+  "%Name":"snd_vine_boom",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,7 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.306122,
-  "name":"vine_boom",
+  "name":"snd_vine_boom",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"vine_boom.mp3",
+  "soundFile":"snd_vine_boom.mp3",
   "type":0,
   "volume":0.1,
 }

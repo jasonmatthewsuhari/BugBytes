@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"blaster",
+  "%Name":"snd_blaster",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,7 +10,7 @@
   "compression":0,
   "conversionMode":0,
   "duration":1.332245,
-  "name":"blaster",
+  "name":"snd_blaster",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"blaster.mp3",
+  "soundFile":"snd_blaster.mp3",
   "type":0,
   "volume":0.05,
 }

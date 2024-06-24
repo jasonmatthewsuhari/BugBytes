@@ -1,12 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (curr_hp <= 0)	state = STATES.DEAD;
-f_track_weapon(weapon);
+if (curr_hp <= 0)	{ state = STATES.DEAD; }
 check_facing();
-var _face = sign(x - xprevious);
-if _face != 0	face = _face;
-
+			
 switch(state) {
 	case STATES.IDLE:
 		path_find();
@@ -19,7 +16,7 @@ switch(state) {
 		if path_index == -1		state = STATES.IDLE;
 	break;
 	case STATES.ATTACK:
-		f_fire(weapon);
+		fire_weapon(class_Damageable_Friendly);
 		enemy_anim();
 		
 	break;
@@ -32,10 +29,6 @@ switch(state) {
 		enemy_anim();
 	break;
 }
-
-// update previous position
-xp = x;
-xp = y;
 
 weapon_x = x + face * weapon_x_offset;
 weapon_y = y + weapon_y_offset;

@@ -7,7 +7,7 @@ if (irandom(100) > 70) {
 	
 	with instance_create_layer(x, y, "Enemies", obj_big_zombie) 
 	{
-		weapon = f_create_weapon(global.weapons[irandom(array_length(global.weapons) - 1)]);
+		weapon = global.weapon_list.shotgun;
 		has_weapon = true;
 		attack_dis = weapon.range / 2;
 	}

@@ -1,20 +1,21 @@
 /// @func		Inventory()
 /// @desc		creates an inventory system
-function Inventory() constructor {
+function Inventory() constructor 
+{
 	
 	_inventory_items = [];
 	
 	///	@func								item_set(_name, _quantity, _sprite)
 	///	@desc								sets the item into the inventory
 	/// @param {String}	_name				name of the item
+	/// @param {Struct}	_item				the item
 	/// @param {String}	_quantity			quantity of the item
-	/// @param {String}	_sprite				sprite of the item
 	/// @return								Nothing
-	item_set = function(_name, _quantity, _sprite) {
+	item_set = function(_name, _item, _quantity) {
 		array_push(_inventory_items, {
 			name: _name,
 			quantity: _quantity,
-			sprite: _sprite,
+			item: _item,
 		});
 	}
 	
@@ -36,15 +37,15 @@ function Inventory() constructor {
 	///	@desc								adds the item variables into the inventory
 	/// @param {String}	_name				name of the item
 	/// @param {String}	_quantity			quantity of the item
-	/// @param {String}	_sprite				sprite of the item
+	/// @param {Struct}	_item				the item
 	/// @return								Nothing
-	item_add = function(_name, _quantity, _sprite) {
+	item_add = function(_name, _quantity, _item) {
 		var _index = item_find(_name);
 		
 		if (_index >= 0) {
 			_inventory_items[_index].quantity += _quantity;
 		} else {
-			item_set(_name, _quantity, _sprite);
+			item_set(_name, _item, _quantity);
 		}
 	}
 	
@@ -93,14 +94,14 @@ function Inventory() constructor {
 	///	@func								item_get(_name)
 	///	@desc								gets the item from the inventory
 	/// @param {String}	_name				name of the item
-	/// @return								item if found, noone if not found
+	/// @return	{Struct}					the item struct if found, noone if not found
 	item_get = function(_name) {
 		var _index = item_find(_name);
 		
 		if (_index >= 0) {
 			return _inventory_items[_index];
 		} 
-		return noone;
+		return {};
 	}
 	
 	toString = function() {

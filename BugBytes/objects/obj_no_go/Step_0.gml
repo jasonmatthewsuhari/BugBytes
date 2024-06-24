@@ -9,7 +9,6 @@ f_check_healthbar(self);
 #endregion
 */
 
-if !global.time_stop {
 #region enemy spawning
 spawn_timer--;
 if (spawn_timer <= 0 && spawn_count < max_spawn) {
@@ -29,10 +28,10 @@ if (spawn_timer <= 0 && spawn_count < max_spawn) {
 	}
 	
 	if !place_meeting(_xx, _yy, obj_solid) {
-		if (irandom(100) > 90) {
+		if (irandom(100) > 80) {
 			with instance_create_layer(_xx, _yy, "Enemies", obj_big_zombie) 
 			{
-				weapon = f_create_weapon(global.weapons[irandom(array_length(global.weapons) - 1)]);
+				weapon = global.weapon_list.revolver
 				has_weapon = true;
 				attack_dis = weapon.range / 2;
 			}
@@ -46,4 +45,3 @@ if (spawn_timer <= 0 && spawn_count < max_spawn) {
 }
 
 #endregion
-}

@@ -84,5 +84,7 @@ cooldown = 2 * game_get_speed(gamespeed_fps);				// Attack cooldown of the weapo
 timer = 0;					// Timer for weapon cooldown
 damage = 40;						// Damage of the weapon
 attack_dis = 12;
+weapon_x = x;
+weapon_y = y;
 
 #endregion

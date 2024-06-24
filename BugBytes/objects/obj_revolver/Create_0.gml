@@ -20,7 +20,7 @@ timer = 0;					// Timer for weapon cooldown (same as cooldown)
 range = 500;						// Range of the weapon
 
 bullet0 = {
-	sprite: bullet_1,				// Bullet sprite to draw
+	sprite: spr_bullet_1,				// Bullet sprite to draw
 	spd: 20,						// Speed of the bullet
 	rate_start: 20,					// Initial firerate of bullet
 	rate_end: 20,					// Max firerate of bullet
@@ -33,7 +33,7 @@ bullet0 = {
 
 gun = {
 	name: "revolver",				// Name of the gun
-	sprite: revolver,				// Gun sprite to draw
+	sprite: spr_revolver,				// Gun sprite to draw
 	y_offset: 20,					// Gun sprite y offset pos
 	ammo: [bullet0],				// Array of Ammo structs
 	inaccuracy: 0,					// Random bullet inaccuracy

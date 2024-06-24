@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"knife",
-    "path":"sprites/knife/knife.yy",
+    "name":"spr_knife",
+    "path":"sprites/spr_knife/spr_knife.yy",
   },
   "spriteMaskId":null,
   "visible":true,

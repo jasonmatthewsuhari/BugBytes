@@ -82,7 +82,7 @@ path_clear = function() {
 attack_frame = 6;						// Sprite attack frame 
 cooldown = 2 * game_get_speed(gamespeed_fps);				// Attack cooldown of the weapon in frames
 timer = 0;					// Timer for weapon cooldown
-damage = 20;						// Damage of the weapon
+damage = 40;						// Damage of the weapon
 attack_dis = 12;
 
 #endregion

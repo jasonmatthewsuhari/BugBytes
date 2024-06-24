@@ -1,6 +1,7 @@
 /// @description Initialise player
 
-#region Spawning, and movement variables
+#region Spawning, inventory and movement variables
+
 
 max_speed = 3;
 curr_speed = max_speed;

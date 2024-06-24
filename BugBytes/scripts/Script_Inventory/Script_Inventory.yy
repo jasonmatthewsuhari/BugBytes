@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"Script_HealthBar",
+  "%Name":"Script_Inventory",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script_HealthBar",
+  "name":"Script_Inventory",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

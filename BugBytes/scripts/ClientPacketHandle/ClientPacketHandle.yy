@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ClientPacketHandle",
   "parent":{
-    "name":"Packet Handling",
-    "path":"folders/Scripts/Packet Handling.yy",
+    "name":"Defunct",
+    "path":"folders/Scripts/Packet Handling/Defunct.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

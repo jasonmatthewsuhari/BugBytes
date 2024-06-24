@@ -108,6 +108,7 @@
     {"id":{"name":"obj_server","path":"objects/obj_server/obj_server.yy",},},
     {"id":{"name":"obj_shotgun","path":"objects/obj_shotgun/obj_shotgun.yy",},},
     {"id":{"name":"obj_singleplayer","path":"objects/obj_singleplayer/obj_singleplayer.yy",},},
+    {"id":{"name":"obj_stopwatch","path":"objects/obj_stopwatch/obj_stopwatch.yy",},},
     {"id":{"name":"obj_up_arrow","path":"objects/obj_up_arrow/obj_up_arrow.yy",},},
     {"id":{"name":"obj_w_key","path":"objects/obj_w_key/obj_w_key.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},

@@ -23,3 +23,4 @@ enum SPRITE			// handle sprite direction (should change)
 }
 
 global.weapons = [obj_revolver, obj_shotgun];
+global.enemies = [obj_enemy_1, obj_enemy_2];

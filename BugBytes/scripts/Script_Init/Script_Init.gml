@@ -3,7 +3,7 @@ global.weapon_list = {
 	revolver: new Weapon(
 	"Revolver",
 	spr_revolver,
-	30,
+	45,
 	500,
 	snd_blaster	
 	),

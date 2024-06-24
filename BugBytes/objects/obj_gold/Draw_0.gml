@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-with instance_create_depth(x, y, depth, obj_gold) {
-	amount = 50;
-}
+draw_self();
+draw_text(x, y + sprite_height / 3, amount);

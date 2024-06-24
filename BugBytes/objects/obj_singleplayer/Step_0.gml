@@ -46,12 +46,10 @@ if (aim_direction <= 90 || aim_direction > 270) {
 
 #endregion
 
-#region handle weapon tracking
+#region handle weapon tracking and weapon swap
 
 weapon_x = x + face * weapon_x_offset;
 weapon_y = y + weapon_y_offset;
-
-
 
 #region handle useable control tracking
 useable = 
@@ -67,7 +65,26 @@ useable =
 	d_key: instance_exists(obj_d_key) ? true : false,
 	
 	left_mouse_button: instance_exists(obj_left_mouse_button) ? true : false,
-	right_mouse_button: instance_exists(obj_right_mouse_button) ? true : false
+	right_mouse_button: instance_exists(obj_right_mouse_button) ? true : false,
+	inventory: instance_exists(obj_inventory) ? true : false
 };
 
 #endregion
+
+if useable.inventory {
+	var _len = obj_inventory.inventory.curr_capacity();
+	if (keyboard_check_pressed(ord("1"))) {
+		if _len >= 1		weapon = obj_inventory.inventory._inventory_items[0].item;
+	} else if (keyboard_check_pressed(ord("2"))) {
+		if _len	>=2			weapon = obj_inventory.inventory._inventory_items[1].item;
+	} else if (keyboard_check_pressed(ord("3"))) {
+		if _len >= 3		weapon = obj_inventory.inventory._inventory_items[2].item;
+	} else if (keyboard_check_pressed(ord("4"))) {
+		if _len >= 4		weapon = obj_inventory.inventory._inventory_items[3].item;
+	} else if (keyboard_check_pressed(ord("5"))) {
+		if _len >= 5		weapon = obj_inventory.inventory._inventory_items[4].item;
+	} else { }
+}
+
+#endregion
+

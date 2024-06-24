@@ -1,21 +1,3 @@
-/// @desc  f_create_weapon(_owner)  Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
-/// @param {asset.gmobject} _weapon_to_create  The owner of this weapon instance
-/// @returns {id}  The created weapon instance
-function f_create_weapon(_weapon_to_create) 
-{
-		var _owner = self;
-		var _weapon = 
-			instance_create_depth(_owner.weapon_x, _owner.weapon_y, _owner.depth - 1, _weapon_to_create,
-				{
-					owner: _owner,					// Wielder of the weapon
-					ox: _owner.weapon_x,			// Original x position (owner must have .weapon_x)
-					oy: _owner.weapon_y	+ 20		// Original y position (owner must have .weapon_y)
-				});
-				
-		return _weapon;
-}
-
-
 ///	@func								f_attack(_melee)
 ///	@desc								Attacks with the melee weapon, note that the sprite y origin must be set at the same height as the barrel of the gun
 ///	@param {Id.Instance} _gun			The melee weapon that is used to attack

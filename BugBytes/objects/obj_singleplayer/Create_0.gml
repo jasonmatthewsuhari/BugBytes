@@ -53,7 +53,8 @@ useable =
 	d_key: instance_exists(obj_d_key) ? true : false,
 	
 	left_mouse_button: instance_exists(obj_left_mouse_button) ? true : false,
-	right_mouse_button: instance_exists(obj_right_mouse_button) ? true : false
+	right_mouse_button: instance_exists(obj_right_mouse_button) ? true : false,
+	inventory: instance_exists(obj_inventory) ? true : false
 };
 
 #endregion

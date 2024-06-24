@@ -5,7 +5,7 @@ function Inventory() constructor
 	
 	_inventory_items = [];
 	
-	///	@func								item_set(_name, _quantity, _sprite)
+	///	@func								item_set(_name, _item, _quantity)
 	///	@desc								sets the item into the inventory
 	/// @param {String}	_name				name of the item
 	/// @param {Struct}	_item				the item
@@ -33,7 +33,7 @@ function Inventory() constructor
 		return -1;
 	}
 	
-	///	@func								item_add(_name, _quantity, _sprite)
+	///	@func								item_add(_name, _quantity, _item)
 	///	@desc								adds the item variables into the inventory
 	/// @param {String}	_name				name of the item
 	/// @param {String}	_quantity			quantity of the item
@@ -104,8 +104,16 @@ function Inventory() constructor
 		return {};
 	}
 	
+	/// @func								curr_capacity()
+	/// @desc								gets the current length of inventory array
+	/// @return {Real}						the current length of inventory array
+	curr_capacity = function() {
+		return array_length(_inventory_items);
+	}
+	
 	toString = function() {
 		return json_stringify(_inventory_items);
 	}
+	
 	
 }

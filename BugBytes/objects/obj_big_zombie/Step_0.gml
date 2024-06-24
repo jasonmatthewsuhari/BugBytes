@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 if (curr_hp <= 0)	{ state = STATES.DEAD; }
-check_facing();
 			
 switch(state) {
 	case STATES.IDLE:
@@ -11,6 +10,7 @@ switch(state) {
 		enemy_anim();
 	break;
 	case STATES.MOVE:
+		check_facing();
 		enemy_anim();
 		path_find();
 		if path_index == -1		state = STATES.IDLE;

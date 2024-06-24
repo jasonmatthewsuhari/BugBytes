@@ -1,7 +1,7 @@
 /// @description Initialise demon
 
 
-#region Health, points, sprite, state variables
+#region Health, sprite, state variables
 
 max_speed = 1.5;
 curr_speed = max_speed;

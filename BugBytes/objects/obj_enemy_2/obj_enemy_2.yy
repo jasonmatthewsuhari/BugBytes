@@ -5,15 +5,15 @@
   "managed":true,
   "name":"obj_enemy_2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"propertyId":{"name":"collision_dmg","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Enemy","path":"objects/class_Enemy/class_Enemy.yy",},"propertyId":{"name":"damage","path":"objects/class_Enemy/class_Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"Enemies",
     "path":"folders/Objects/Enemies.yy",
   },
   "parentObjectId":{
-    "name":"obj_enemy_parent",
-    "path":"objects/obj_enemy_parent/obj_enemy_parent.yy",
+    "name":"class_Enemy",
+    "path":"objects/class_Enemy/class_Enemy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

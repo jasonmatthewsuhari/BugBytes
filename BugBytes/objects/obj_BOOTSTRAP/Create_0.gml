@@ -11,7 +11,7 @@ enum PACKETS {
 
 enum EVENTS {
 	PLAYER_DAMAGED,
-	
+	PLAYER_DESTROYED,
 }
 
 enum SPRITE			// handle sprite direction (should change)

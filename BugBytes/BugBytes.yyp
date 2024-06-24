@@ -88,7 +88,6 @@
     {"id":{"name":"obj_down_arrow","path":"objects/obj_down_arrow/obj_down_arrow.yy",},},
     {"id":{"name":"obj_enemy_1","path":"objects/obj_enemy_1/obj_enemy_1.yy",},},
     {"id":{"name":"obj_enemy_2","path":"objects/obj_enemy_2/obj_enemy_2.yy",},},
-    {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_flag","path":"objects/obj_flag/obj_flag.yy",},},
     {"id":{"name":"obj_flame","path":"objects/obj_flame/obj_flame.yy",},},
     {"id":{"name":"obj_knife","path":"objects/obj_knife/obj_knife.yy",},},

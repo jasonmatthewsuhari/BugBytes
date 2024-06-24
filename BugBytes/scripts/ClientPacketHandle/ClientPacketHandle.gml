@@ -24,7 +24,17 @@ function ClientPacketHandle(buffer){
 		break;
 		
 		case PACKETS.EVENT:
-		
+			type_of_event = buffer_read(buffer, buffer_u8);
+			switch(type_of_event) {
+				case EVENTS.PLAYER_DAMAGED:
+					damage = buffer_read(buffer, buffer_u8);
+					remote_player.hp -= damage;
+				break;
+				
+				case EVENTS.PLAYER_DESTROYED:
+					instance_destroy(remote_player);
+				break;
+			}
 		break;
 		
 		case PACKETS.CONTINUOUS:

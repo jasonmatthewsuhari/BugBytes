@@ -30,6 +30,11 @@ function ServerPacketHandle(buffer){
 				case EVENTS.PLAYER_DAMAGED:
 					damage = buffer_read(buffer, buffer_u8);
 					remote_player.hp -= damage;
+				break;
+				
+				case EVENTS.PLAYER_DESTROYED:
+					instance_destroy(remote_player);
+				break;
 			}
 		break;
 		

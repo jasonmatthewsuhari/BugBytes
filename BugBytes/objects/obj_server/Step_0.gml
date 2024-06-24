@@ -19,6 +19,13 @@ switch(room) {
 	break;
 	
 	case rm_game:
-	
+		// Enemy spawning system
+		// --> the current number of minutes elapsed (starts from 0) is the
+		// index of the global.waves array being used.
+		
+		if(can_spawn) {
+			// make spawning system here
+		}
+		
 	break;
 }

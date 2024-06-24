@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"SpawnRemoteEntity",
+  "%Name":"DecideWaves",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"SpawnRemoteEntity",
+  "name":"DecideWaves",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Waves",
+    "path":"folders/Scripts/Waves.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

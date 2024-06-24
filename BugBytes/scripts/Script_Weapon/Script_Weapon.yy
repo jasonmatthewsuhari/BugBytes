@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Script_Weapon",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Singleplayer",
+    "path":"folders/Scripts/Singleplayer.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

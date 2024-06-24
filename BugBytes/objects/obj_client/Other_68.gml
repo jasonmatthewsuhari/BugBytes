@@ -3,4 +3,4 @@ remote_ip = string(async_load[? "ip"]);
 
 var buffer = async_load[? "buffer"];
 
-ClientPacketHandle(buffer);
+HandlePacket(buffer);

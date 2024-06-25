@@ -1,4 +1,7 @@
-function DecideWaves(count, enemy_list){
+function DecideWaves(wave_info){
+	// wave_info = [count, enemy_list]
+	count = wave_info[0];
+	enemy_list = wave_info[1];
 	number_of_enemies = array_length(enemy_list);
 	
 	if(number_of_enemies <= 0) {

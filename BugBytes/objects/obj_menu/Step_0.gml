@@ -1,8 +1,8 @@
-if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || mouse_wheel_up()) {
+if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
     menu_index -= 1;
 }
 
-if(keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || mouse_wheel_down()) {
+if(keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
     menu_index += 1;
 }
 

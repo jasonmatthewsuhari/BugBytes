@@ -1,11 +1,11 @@
-timer += 1;
+global.timer += 1;
 
 // Update seconds and minutes
-if (timer >= room_speed) {
-    timer = 0;
-    seconds += 1;
-    if (seconds >= 60) {
-        seconds = 0;
-        minutes += 1;
+if (global.timer >= room_speed) {
+    global.timer = 0;
+    global.seconds += 1;
+    if (global.seconds >= 60) {
+        global.seconds = 0;
+        global.minutes += 1;
     }
 }

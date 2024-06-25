@@ -23,8 +23,22 @@ switch(room) {
 		// --> the current number of minutes elapsed (starts from 0) is the
 		// index of the global.waves array being used.
 		
-		if(can_spawn) {
+		count = global.waves[global.minutes][0];
+		enemy_list = global.waves[global.minutes][1];
+		ratio = DecideWaves(count, enemy_list);
+		
+		if(can_spawn && !AllZero(ratio)) {
 			// make spawning system here
+			can_spawn = false;
+			time_between_spawns = 60 / count;
+			
+			
+			index = irandom(array_length(enemy_list) - 1);
+			if(ratio[index] > 0) {
+				alarm[1] = time_between_spawns * game_get_speed(gamespeed_fps);
+			}
+			
+			
 		}
 		
 	break;

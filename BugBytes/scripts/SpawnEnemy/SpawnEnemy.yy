@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"SpawnEnemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpawnEnemy",
+  "parent":{
+    "name":"Waves",
+    "path":"folders/Scripts/Waves.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

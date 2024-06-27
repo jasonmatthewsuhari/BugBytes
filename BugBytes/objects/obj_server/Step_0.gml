@@ -22,9 +22,16 @@ switch(room) {
 		// Enemy spawning system
 		// --> the current number of minutes elapsed (starts from 0) is the
 		// index of the global.waves array being used.
+		wave_info = global.waves[global.minutes];
+		count = wave_info[0];
+		enemy_list = wave_info[1];
+		ratio = DecideWaves(count, enemy_list);
+		delay = 60 / count;
 		
 		if(can_spawn) {
-			// make spawning system here
+			can_spawn = false;
+			SpawnEnemy(enemy_list, ratio, delay);
+			alarm[1] = delay * game_get_speed(gamespeed_fps);
 		}
 		
 	break;

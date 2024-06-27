@@ -8,8 +8,8 @@
   "name":"obj_readycount",
   "overriddenProperties":[],
   "parent":{
-    "name":"Multiplayer",
-    "path":"folders/Objects/Multiplayer.yy",
+    "name":"GUI",
+    "path":"folders/Objects/Multiplayer/GUI.yy",
   },
   "parentObjectId":null,
   "persistent":false,

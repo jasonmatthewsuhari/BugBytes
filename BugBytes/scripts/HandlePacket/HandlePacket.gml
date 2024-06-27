@@ -47,6 +47,14 @@ function HandlePacket(buffer){
 				case EVENTS.PLAYER_DESTROYED:
 					instance_destroy(remote_player);
 				break;
+				
+				case EVENTS.ENEMY_SPAWNED:
+					spawn_x = buffer_read(buffer, buffer_s16);
+					spawn_y = buffer_read(buffer, buffer_s16);
+					enemy_id = buffer_read(buffer, buffer_u8);
+					
+					instance_create_layer(spawn_x, spawn_y, "Instances", enemy_id);
+				break;
 			}
 		break;
 		

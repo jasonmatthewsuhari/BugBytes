@@ -10,8 +10,8 @@
   "name":"obj_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Multiplayer",
-    "path":"folders/Objects/Multiplayer.yy",
+    "name":"GUI",
+    "path":"folders/Objects/Multiplayer/GUI.yy",
   },
   "parentObjectId":null,
   "persistent":false,

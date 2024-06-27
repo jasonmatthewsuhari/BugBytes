@@ -6,4 +6,6 @@ else if(instance_exists(obj_client)) {
 	var sum = obj_client.server_ready + obj_client.client_ready;
 }
 
+draw_text(room_width / 2, room_height / 2 - 100, "Write your username:");
+draw_text(room_width / 2, room_height / 2 - 50, global.username);
 draw_text(room_width / 2, room_height / 2, "Players Ready: (" + string(sum) + "/2)");

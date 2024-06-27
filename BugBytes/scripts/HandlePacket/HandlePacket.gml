@@ -32,7 +32,7 @@ function HandlePacket(buffer){
 		
 		case PACKETS.INIT:
 			remote_player = instance_create_layer(room_width / 2 + 100, room_height / 2, "Instances", obj_remote);
-			remote_player.name = "Player";
+			remote_player.name = buffer_read(buffer, buffer_string);
 			remote_player.depth = -1;
 		break;
 		

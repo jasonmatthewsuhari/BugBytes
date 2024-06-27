@@ -39,6 +39,12 @@ function HandlePacket(buffer){
 		case PACKETS.EVENT:
 			type_of_event = buffer_read(buffer, buffer_u8);
 			switch(type_of_event) {
+				case EVENTS.PLAYER_SHOOTS:
+					cursor_x = buffer_read(buffer, buffer_s16);
+					cursor_y = buffer_read(buffer, buffer_s16);
+					SpawnBullet(remote_player.x, remote_player.y, cursor_x, cursor_y);
+				break;
+				
 				case EVENTS.PLAYER_DAMAGED:
 					damage = buffer_read(buffer, buffer_u8);
 					remote_player.hp -= damage;

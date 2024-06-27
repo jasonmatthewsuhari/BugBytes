@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"SpawnBullet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpawnBullet",
+  "parent":{
+    "name":"Gameplay",
+    "path":"folders/Scripts/Gameplay.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

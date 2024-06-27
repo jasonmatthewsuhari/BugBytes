@@ -12,6 +12,7 @@ enum PACKETS {
 }
 
 enum EVENTS {
+	PLAYER_SHOOTS,
 	PLAYER_DAMAGED,
 	PLAYER_DESTROYED,
 	ENEMY_SPAWNED,
@@ -33,7 +34,7 @@ global.camera_on = true;
 
 // lowkey this is ugly but currently too lazy to make a whole new struct
 global.waves = [
-	[20, [obj_enemy_1]], // at minute 0
+	[20, [obj_enemy_1, obj_enemy_2]], // at minute 0
 	[60, [obj_enemy_1, obj_enemy_2]], // at minute 1
 	[20, []], // at minute 2
 	[20, []], // at minute 3

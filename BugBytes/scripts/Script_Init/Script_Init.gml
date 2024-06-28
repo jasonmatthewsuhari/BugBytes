@@ -3,7 +3,7 @@ global.weapon_list = {
 	revolver: new Weapon(
 	"Revolver",
 	spr_revolver,
-	45,
+	25,
 	500,
 	snd_blaster	
 	),
@@ -17,5 +17,14 @@ global.weapon_list = {
 	obj_shotgun_bullet,
 	3,
 	15
+	),
+	
+	heal_gun: new Weapon(
+	"Heal Gun",
+	spr_heal_gun,
+	30,
+	800,
+	snd_blaster,
+	obj_heal_gun_bullet
 	)
 }

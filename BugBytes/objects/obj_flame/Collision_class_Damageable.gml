@@ -1,4 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_inherited();
+
+timer--;
+if (timer <= 0) {
+	timer = cooldown;
+	other.curr_hp -= damage;
+}

@@ -10,8 +10,8 @@ items = ds_list_create();
 apple = {
 	name: "apple",
 	sprite: spr_apple,
-	description: "Replenishes health",
-	price: 10,
+	description: "Replenishes 10 healthpoints",
+	price: 30,
 	use: function() {
 		var index = obj_inventory.inventory.item_find(name);
 		if (index >= 0) {
@@ -20,11 +20,12 @@ apple = {
 		}
 	}
 }
+
 water = {
 	name: "water",
 	sprite: spr_water,
-	description: "Quenches thirst",
-	price: 30,
+	description: "Fully restores health",
+	price: 50,
 	use: function() {
 		var index = obj_inventory.inventory.item_find(name);
 		if (index >= 0) {
@@ -33,19 +34,25 @@ water = {
 		}
 	}
 }
-thing = {
-	name: "thing",
-	sprite: spr_thing,
-	description: "It really do be like that",
-	price: 60,
+
+flame = {
+	name: "flame",
+	sprite: spr_flame,
+	description: "Sets down a flame that deals constant damage to everything",
+	price: 400,
 	use: function() {
+		var index = obj_inventory.inventory.item_find(name);
+		if (index >= 0) {
+			instance_create_layer(obj_singleplayer.x, obj_singleplayer.y, "Enemies", obj_flame);
+			obj_inventory.inventory.item_subtract(name, 1);
+		}
 	}
 }
 
 
-ds_list_add(items, apple);
+// ds_list_add(items, apple);
 ds_list_add(items, water);
-ds_list_add(items, thing);
+ds_list_add(items, flame);
 
 itemCount = ds_list_size(items);
 

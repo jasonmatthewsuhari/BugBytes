@@ -286,3 +286,9 @@ function perform_attack()
 		timer--
 	}
 }	
+
+
+function spawn_enemies() 
+{
+	
+}

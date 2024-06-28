@@ -88,6 +88,6 @@ function Weapon(_name, _sprite, _cooldown, _range, _sound, _bullet = obj_revolve
 	spread_angle = _spread_angle;				// Angle between each bullet in spread
 	timer = 0;
 	weapon_length = sprite_get_bbox_right(sprite) - sprite_get_xoffset(sprite);
-	
+		
 }
 

@@ -3,6 +3,21 @@
 
 event_inherited();
 
+if global.shop exit;			// if shop open, exit step
+
+#region fire weapon
+
+if is_instanceof(weapon, Weapon) {
+	if weapon == (global.weapon_list.heal_gun) {
+		fire_weapon(class_Damageable_Friendly);
+	} else {
+		fire_weapon(class_Damageable_Enemy);
+	}
+	
+}
+
+#endregion
+
 #region handle movement options
 
 #region handle left mouse click movement

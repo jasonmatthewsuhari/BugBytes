@@ -16,12 +16,11 @@ knockback_angle = 0;				// Angle of knockback
 canshoot = 0;						// Shooting timer
 bullet_index = 0;					// Current bullet
 cooldown = 1 * game_get_speed(gamespeed_fps);					// Attack cooldown of the weapon in frames
-timer = cooldown;					// Timer for weapon cooldown (same as cooldown)
+timer = 0;					// Timer for weapon cooldown (same as cooldown)
 range = 500;						// Range of the weapon
-
-
+/*
 bullet0 = {
-	sprite: bullet_1,				// Bullet sprite to draw
+	sprite: spr_bullet_1,				// Bullet sprite to draw
 	spd: 20,						// Speed of the bullet
 	rate_start: 20,					// Initial firerate of bullet
 	rate_end: 20,					// Max firerate of bullet
@@ -30,12 +29,12 @@ bullet0 = {
 	damage: 30,						// Damage of the bullet
 	cooldown: 0 * game_get_speed(gamespeed_fps),				// Attack cooldown of the weapon in frames
 	timer: 0 * game_get_speed(gamespeed_fps),					// Timer for weapon cooldown (same as cooldown)
-	damage: 10						// Damage of the weapon
 };
-
+*/
+/*
 gun = {
 	name: "revolver",				// Name of the gun
-	sprite: revolver,				// Gun sprite to draw
+	sprite: spr_revolver,				// Gun sprite to draw
 	y_offset: 20,					// Gun sprite y offset pos
 	ammo: [bullet0],				// Array of Ammo structs
 	inaccuracy: 0,					// Random bullet inaccuracy
@@ -47,4 +46,4 @@ gun = {
 	burst_number: 1,				// Number of bullets in burst
 	burst_delay: 0,					// Delay between bullets in burst
 };
-
+*/

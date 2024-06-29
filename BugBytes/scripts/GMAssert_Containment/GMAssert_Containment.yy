@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GMAssert_Containment",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMAssert_Containment",
+  "parent":{
+    "name":"GMAssert",
+    "path":"folders/Libraries/GMAssert.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

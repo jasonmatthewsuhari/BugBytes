@@ -6,14 +6,16 @@
   ],
   "managed":true,
   "name":"class_UI_Element",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"propertyId":{"name":"max_hp","path":"objects/class_Damageable/class_Damageable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2000",},
+  ],
   "parent":{
     "name":"Abstract Classes",
     "path":"folders/Objects/Abstract Classes.yy",
   },
   "parentObjectId":{
-    "name":"class_Friendly",
-    "path":"objects/class_Friendly/class_Friendly.yy",
+    "name":"class_Damageable_Friendly",
+    "path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

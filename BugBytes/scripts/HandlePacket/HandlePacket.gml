@@ -51,6 +51,7 @@ function HandlePacket(buffer){
 				break;
 				
 				case EVENTS.PLAYER_DESTROYED:
+					instance_destroy(remote_player.weapon);
 					instance_destroy(remote_player);
 				break;
 				
@@ -65,20 +66,19 @@ function HandlePacket(buffer){
 		break;
 		
 		case PACKETS.CONTINUOUS:
+		
 		remote_x = buffer_read(buffer, buffer_s16);
 		remote_y = buffer_read(buffer, buffer_s16);
 		remote_sprite = buffer_read(buffer, buffer_u8);
+		remote_mouse_x = buffer_read(buffer, buffer_s16);
+		remote_mouse_y = buffer_read(buffer, buffer_s16);
 		
 		if(instance_exists(obj_remote)) {
 			remote_player.x = remote_x;
 			remote_player.y = remote_y;
 			remote_player.image_index = remote_sprite;
+			remote_player.remote_mouse_x = remote_mouse_x;
+			remote_player.remote_mouse_y = remote_mouse_y;
 		}
-		
-		/*
-		show_debug_message("client x: " + string(remote_x));
-		show_debug_message("client y: " + string(remote_y));
-		show_debug_message("client sprite: " + string(remote_sprite));
-		*/
 	}
 }

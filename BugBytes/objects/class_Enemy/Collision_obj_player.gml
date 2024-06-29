@@ -2,7 +2,6 @@
 if(can_attack) {
 	can_attack = false;
 	if(obj_player.hp - damage <= 0) {
-		instance_destroy(obj_player.weapon);
 		instance_destroy(obj_player);	
 		buffer = buffer_create(2, buffer_fixed, 1);
 		buffer_write(buffer, buffer_u8, PACKETS.EVENT);

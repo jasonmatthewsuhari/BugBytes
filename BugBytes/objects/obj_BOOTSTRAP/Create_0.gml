@@ -1,5 +1,5 @@
-// HOST AND JOIN TO BE COMBINED INTO JUST "MULTIPLAYER" LATER
 randomize();
+AutomatedTesting();
 
 enum PACKETS {
 	JOIN,

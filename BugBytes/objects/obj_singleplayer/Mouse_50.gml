@@ -1,5 +1,4 @@
 /// @description Left mouse click movement
-if global.shop exit;			// if shop open, exit step
 
 if (useable.left_mouse_button) {
 	speed = curr_speed;

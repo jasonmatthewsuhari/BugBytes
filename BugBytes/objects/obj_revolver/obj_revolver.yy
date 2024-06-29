@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_revolver",
-    "path":"sprites/spr_revolver/spr_revolver.yy",
+    "name":"revolver",
+    "path":"sprites/revolver/revolver.yy",
   },
   "spriteMaskId":null,
   "visible":true,

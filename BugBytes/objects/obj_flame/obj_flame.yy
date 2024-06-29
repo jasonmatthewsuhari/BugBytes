@@ -3,14 +3,11 @@
   "%Name":"obj_flame",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"class_Damageable_Friendly","path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_flame",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"clsss_Weapon","path":"objects/clsss_Weapon/clsss_Weapon.yy",},"propertyId":{"name":"cooldown","path":"objects/clsss_Weapon/clsss_Weapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1.5 * game_get_speed(gamespeed_fps);\t",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Melee","path":"objects/class_Melee/class_Melee.yy",},"propertyId":{"name":"damage","path":"objects/class_Melee/class_Melee.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"Melee",
     "path":"folders/Objects/Weapons/Melee.yy",
@@ -37,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_flame",
-    "path":"sprites/spr_flame/spr_flame.yy",
+    "name":"Fire",
+    "path":"sprites/Fire/Fire.yy",
   },
   "spriteMaskId":null,
   "visible":true,

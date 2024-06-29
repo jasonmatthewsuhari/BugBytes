@@ -16,12 +16,12 @@ knockback_angle = 0;				// Angle of knockback
 canshoot = 0;						// Shooting timer
 bullet_index = 0;					// Current bullet
 cooldown = 1 * game_get_speed(gamespeed_fps);					// Attack cooldown of the weapon in frames
-timer = 0;					// Timer for weapon cooldown (same as cooldown)
+timer = cooldown;					// Timer for weapon cooldown (same as cooldown)
 range = 250;						// Range of the weapon
 
 
 bullet0 = {
-	sprite: spr_bullet_1,				// Bullet sprite to draw
+	sprite: bullet_1,				// Bullet sprite to draw
 	spd: 20,						// Speed of the bullet
 	rate_start: 20,					// Initial firerate of bullet
 	rate_end: 20,					// Max firerate of bullet
@@ -35,12 +35,12 @@ bullet0 = {
 
 gun = {
 	name: "shotgun",				// Name of the gun
-	sprite: spr_shotgun,				// Gun sprite to draw
+	sprite: shotgun,				// Gun sprite to draw
 	y_offset: 20,					// Gun sprite y offset pos
 	ammo: [bullet0],				// Array of Ammo structs
 	inaccuracy: 0,					// Random bullet inaccuracy
 	kick: 2,						// Kickback to position and angle
-	sound: snd_vine_boom,				// Shooting sound effect to play
+	sound: vine_boom,				// Shooting sound effect to play
 	spread_number: 3,				// Number of bullets in spread
 	spread_angle: 15,				// Angle between each bullet in spread
 	fullauto: false,				// Shoot while holding down or only when pressed

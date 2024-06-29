@@ -1,5 +1,5 @@
 /// @description Draw all info related to up_arrow
 
-event_inherited();
-
 draw_self();
+
+f_draw_healthbar(self);

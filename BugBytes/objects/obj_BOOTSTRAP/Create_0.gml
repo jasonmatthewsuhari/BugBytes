@@ -18,13 +18,12 @@ enum EVENTS {
 	ENEMY_SPAWNED,
 }
 
-enum STATES
+enum SPRITE			// handle sprite direction (should change)
 {
-	IDLE,
-	MOVE,
-	ATTACK,
-	DEAD,
-	HURT,
+	LEFT = 0,
+	RIGHT = 1,
+	UP = 2,
+	DOWN = 3
 }
 
 global.weapons = [obj_revolver, obj_shotgun];

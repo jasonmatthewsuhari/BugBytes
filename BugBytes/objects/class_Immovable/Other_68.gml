@@ -1,0 +1,1 @@
+var event = async_load[? "type"];

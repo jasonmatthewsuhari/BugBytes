@@ -1,5 +1,3 @@
 /// @description Initialise up_arrow
 
-event_inherited();
-
-draw_self();
+health_bar = f_create_healthbar(self, 200, ,10);

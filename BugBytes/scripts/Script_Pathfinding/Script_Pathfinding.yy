@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Script_Pathfinding",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_Pathfinding",
+  "parent":{
+    "name":"Singleplayer",
+    "path":"folders/Scripts/Singleplayer.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

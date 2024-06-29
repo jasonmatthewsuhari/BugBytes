@@ -38,6 +38,18 @@ if (hspd == 1) {
     image_index = 2;
 }
 
+aim_direction = point_direction(x, y, mouse_x, mouse_y);
+
+if (aim_direction <= 45 || aim_direction > 315) {
+	image_index = 1;
+} else if (aim_direction <= 135) {
+	image_index = 2;
+} else if (aim_direction <= 225) {
+	image_index = 0;
+} else if (aim_direction <= 315) {
+	image_index = 3;
+} else { }
+
 var buffer = buffer_create(6, buffer_fixed, 1);
 buffer_write(buffer, buffer_u8, PACKETS.CONTINUOUS);
 buffer_write(buffer, buffer_s16, x);

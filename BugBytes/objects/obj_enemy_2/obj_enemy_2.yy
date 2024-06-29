@@ -5,16 +5,13 @@
   "managed":true,
   "name":"obj_enemy_2",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Enemy","path":"objects/class_Enemy/class_Enemy.yy",},"propertyId":{"name":"damage","path":"objects/class_Enemy/class_Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"Enemies",
     "path":"folders/Objects/Enemies.yy",
   },
-  "parentObjectId":{
-    "name":"class_Enemy",
-    "path":"objects/class_Enemy/class_Enemy.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

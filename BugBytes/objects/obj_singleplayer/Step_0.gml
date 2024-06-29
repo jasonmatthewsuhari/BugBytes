@@ -1,6 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited();
+player_movement_test();
+
+if global.shop exit;			// if shop open, exit step
+
+#region fire weapon
+
+if is_instanceof(weapon, Weapon) {
+	if weapon == (global.weapon_list.heal_gun) {
+		fire_weapon(class_Damageable_Friendly);
+	} else {
+		fire_weapon(class_Damageable_Enemy);
+	}
+	
+}
+
+#endregion
+
+#region handle movement options
+
 #region handle left mouse click movement
 
 var _dist_from_mouse = point_distance(x, y, curr_mouse_x, curr_mouse_y);
@@ -24,79 +44,28 @@ if (x != xprevious && y != yprevious) {
 
 #endregion
 
+
+#endregion
+
+
 #region handle character sprite control
 
-// sprite control when moving
-if (x > xprevious) {
-	face = SPRITE.RIGHT;
-} else if (x < xprevious) {
-	face = SPRITE.LEFT;
-} else if (y < yprevious) {
-	face = SPRITE.UP;
-} else if (y > yprevious) {
-	face = SPRITE.DOWN;
-} else { };
 
 aim_direction = point_direction(x, y, mouse_x, mouse_y);
 
-if (aim_direction <= 45 || aim_direction > 315) {
-	face = SPRITE.RIGHT;
-} else if (aim_direction <= 135) {
-	face = SPRITE.UP;
-} else if (aim_direction <= 225) {
-	face = SPRITE.LEFT;
-} else if (aim_direction <= 315) {
-	face = SPRITE.DOWN;
+if (aim_direction <= 90 || aim_direction > 270) {
+	face = 1;
+} else if (aim_direction <= 270) {
+	face = -1;
 } else { }
 
-image_index = face;
 
 #endregion
 
-#region handle character HP tracking
+#region handle weapon tracking and weapon swap
 
-f_check_healthbar(self);
-
-#endregion
-
-#region handle weapon tracking
-
-// handle origin for weapon
-if (face = SPRITE.LEFT) {
-	weapon_x = x - weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (face = SPRITE.RIGHT) {
-	weapon_x = x + weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (face = SPRITE.UP) {
-	weapon_x = x;
-	weapon_y = y - weapon_y_offset;
-} else if (face = SPRITE.DOWN) {
-	weapon_x = x;
-	weapon_y = y + weapon_y_offset;
-} else { }
-
-with weapon 
-{
-	
-		sprite_index = gun.sprite;
-
-		// If rotated to left, flip gun
-		if mouse_x > x image_yscale = 1;
-		else image_yscale = -1;
-
-		// Lerp angle to mouse and kickback angle to zero
-		mouse_angle -= angle_difference(mouse_angle, point_direction(x, y, mouse_x, mouse_y)) * 0.5;
-		knockback_angle -= angle_difference(knockback_angle, 0) * 0.05;
-		image_angle = mouse_angle + knockback_angle;
-
-		//Lerp position
-		x = lerp(x, ox, 0.05);
-		y = lerp(y, oy, 0.05);
-}
-
-
-#endregion
+weapon_x = x + face * weapon_x_offset;
+weapon_y = y + weapon_y_offset;
 
 #region handle useable control tracking
 useable = 
@@ -112,7 +81,26 @@ useable =
 	d_key: instance_exists(obj_d_key) ? true : false,
 	
 	left_mouse_button: instance_exists(obj_left_mouse_button) ? true : false,
-	right_mouse_button: instance_exists(obj_right_mouse_button) ? true : false
+	right_mouse_button: instance_exists(obj_right_mouse_button) ? true : false,
+	inventory: instance_exists(obj_inventory) ? true : false
 };
 
 #endregion
+
+if useable.inventory {
+	var _len = obj_inventory.inventory.curr_capacity();
+	if (keyboard_check_pressed(ord("1"))) {
+		if _len >= 1		weapon = obj_inventory.inventory._inventory_items[0].item;
+	} else if (keyboard_check_pressed(ord("2"))) {
+		if _len	>=2			weapon = obj_inventory.inventory._inventory_items[1].item;
+	} else if (keyboard_check_pressed(ord("3"))) {
+		if _len >= 3		weapon = obj_inventory.inventory._inventory_items[2].item;
+	} else if (keyboard_check_pressed(ord("4"))) {
+		if _len >= 4		weapon = obj_inventory.inventory._inventory_items[3].item;
+	} else if (keyboard_check_pressed(ord("5"))) {
+		if _len >= 5		weapon = obj_inventory.inventory._inventory_items[4].item;
+	} else { }
+}
+
+#endregion
+

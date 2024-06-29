@@ -12,10 +12,7 @@
     "name":"Multiplayer",
     "path":"folders/Objects/Multiplayer.yy",
   },
-  "parentObjectId":{
-    "name":"class_Friendly",
-    "path":"objects/class_Friendly/class_Friendly.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"player_sprite_sheet",
-    "path":"sprites/player_sprite_sheet/player_sprite_sheet.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

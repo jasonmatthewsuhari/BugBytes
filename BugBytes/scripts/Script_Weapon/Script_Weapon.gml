@@ -1,63 +1,3 @@
-/// @desc  f_create_weapon(_owner)  Creates a weapon instance and assign it to an owner, owner must have the variables weapon_x and weapon_y
-/// @param {id.instance} _owner  The owner of this weapon instance
-/// @param {asset.gmobject} _weapon_to_create  The owner of this weapon instance
-/// @returns {id}  The created weapon instance
-function f_create_weapon(_owner, _weapon_to_create) 
-{
-		var _weapon = 
-			instance_create_depth(_owner.weapon_x, _owner.weapon_y, _owner.depth - 1, _weapon_to_create,
-				{
-					owner: _owner,					// Wielder of the weapon
-					ox: _owner.weapon_x,			// Original x position (owner must have .weapon_x)
-					oy: _owner.weapon_y	+ 20		// Original y position (owner must have .weapon_y)
-				});
-				
-		return _weapon;
-}
-
-
-///	@func								f_fire(_gun)
-///	@desc								Fires the gun, note that the sprite y origin must be set at the same height as the barrel of the gun
-///	@param {Id.Instance} _gun			The gun that is being fired
-function f_fire(_gun) 
-{
-	
-	with _gun {
-		// Play sound
-		audio_play_sound(gun.sound, 10, false, random_range(0.8, 1), 0, random_range(0.8, 1));		// Play shooting sound at random gain and pitch
-		
-		// Calculate distance from centre to tip of gun
-		var _dist = sprite_get_width(gun.sprite) - sprite_get_xoffset(gun.sprite);					// Distance to edge of gun sprite
-		
-		// Calculate bullet spread
-		for (var i = 0; i < gun.spread_number; i++) 
-		{
-			var _angle = image_angle + (i * gun.spread_angle) - ((gun.spread_number - 1) * (gun.spread_angle / 2));
-			instance_create_depth(
-				x + lengthdir_x(_dist, image_angle),
-				y + lengthdir_y(_dist, image_angle),
-				depth - 1,
-				obj_bullet,
-				{
-					owner: _gun,
-					image_angle: _angle + random_range(- gun.inaccuracy, gun.inaccuracy),
-					sprite_index: gun.ammo[bullet_index].sprite,
-					spd: gun.ammo[bullet_index].spd,
-					damage: gun.ammo[bullet_index].damage
-				}
-			);
-		}
-		
-		// Gun kick and knockback
-		x -= gun.kick * image_yscale;
-		knockback_angle += gun.kick * image_yscale;
-		
-		// Iterate through ammo types
-		if bullet_index < array_length(gun.ammo) - 1 bullet_index++;
-		else bullet_index = 0;
-	}
-}
-
 ///	@func								f_attack(_melee)
 ///	@desc								Attacks with the melee weapon, note that the sprite y origin must be set at the same height as the barrel of the gun
 ///	@param {Id.Instance} _gun			The melee weapon that is used to attack
@@ -68,26 +8,86 @@ function f_attack(_melee)
 			timer--;
 			if (timer <= 0) {
 				timer = cooldown;
-				other.health_bar.curr_hp -= damage;
+				other._health.curr_hp -= damage;
 			}
 		}
 	}
 }
 
+///	@func									fire_weapon(_damage_to) 
+///	@desc									Fires the gun, note that the sprite y origin must be set at the same height as the barrel of the gun
+/// @param	{Assest.GMObject} _damage_to	The target type to deal damage to
+function fire_weapon(_damage_to) 
+{
+	if (weapon.timer <= 0) 
+	{
+		weapon.timer = weapon.cooldown;
+		// audio_play_sound(weapon.sound, 10, false, random_range(0.8, 1), 0, random_range(0.8, 1));
+	
+		var _x_offset = lengthdir_x(weapon.weapon_length, aim_direction);
+		var _y_offset = lengthdir_y(weapon.weapon_length, aim_direction);
+	
+		for (var i = 0; i < weapon.spread_number; i++) 
+			{
+				var _angle = aim_direction + (i * weapon.spread_angle) - ((weapon.spread_number - 1) * (weapon.spread_angle / 2));
+				var _bullet = instance_create_depth(
+				weapon_x + _x_offset, 
+				weapon_y + _y_offset, 
+				depth - 100, 
+				weapon.bullet
+				);
+				with (_bullet) 
+				{
+					image_angle = _angle;
+					dir = _angle;
+					damage_to = _damage_to;
+				}
+			}
+	} else {
+		weapon.timer--
+	}
+}
+
 ///	@func								f_track_weapon(_owner)
 ///	@desc								Sprite control of the weapon in relation to the direction its owner is facing
-///	@param {Id.Instance} _owner			The owner of this weapon instance
 ///	@param {Id.Instance} _weapon		The weapon instance
-function f_track_weapon(_owner, _weapon) 
+function f_track_weapon() 
 {
-
-	with _weapon 
+	with weapon 
 	{
-			sprite_index = gun.sprite;
-
 			// If rotated to left, flip gun
-			if _owner.face = SPRITE.RIGHT image_xscale = 1;
-			else image_xscale = -1;
+			image_angle = point_direction(x, y, owner.target_pos_x, owner.target_pos_y);
+			if image_angle <= 270 and image_angle > 90 {
+				image_yscale = -1;
+			}
+
 
 	}
 }
+
+
+/// @func								Weapon(_name, _sprite, _cooldown, _range, _sound, _bullet = obj_bullet, _spread_number = 1, _spread_angle = 15)
+/// @desc								creates a weapon
+/// @param {String} _name				name of weapon
+///	@param {Asset.GMSprite} _sprite		sprite of weapon
+/// @param {Real}_cooldown				cooldown of weapon
+/// @param {Real} _range				range of weapon
+/// @param {Asset.GMSound} _sound		Shooting sound effect to play
+/// @param {Asset.GMObject}_bullet		bullet object of weapon
+/// @param {Real} _spread_number;		Number of bullets in spread
+/// @param {Real} _spread_angle;		Angle between each bullet in 
+function Weapon(_name, _sprite, _cooldown, _range, _sound, _bullet = obj_revolver_bullet, _spread_number = 1, _spread_angle = 15) constructor 
+{
+	name = _name;								// name of weapon
+	sprite = _sprite;							// sprite of weapon
+	bullet = _bullet;							// bullet object of weapon
+	cooldown = _cooldown;						// cooldown of weapon
+	range = _range;								// range of weapon
+	sound = _sound;								// Shooting sound effect to play
+	spread_number = _spread_number;				// Number of bullets in spread
+	spread_angle = _spread_angle;				// Angle between each bullet in spread
+	timer = 0;
+	weapon_length = sprite_get_bbox_right(sprite) - sprite_get_xoffset(sprite);
+		
+}
+

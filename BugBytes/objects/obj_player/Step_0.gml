@@ -38,6 +38,7 @@ if (hspd == 1) {
     image_index = 2;
 }
 
+<<<<<<< HEAD
 aim_direction = point_direction(x, y, mouse_x, mouse_y);
 
 if (aim_direction <= 45 || aim_direction > 315) {
@@ -83,6 +84,9 @@ with weapon
 }
 
 var buffer = buffer_create(10, buffer_fixed, 1);
+=======
+var buffer = buffer_create(6, buffer_fixed, 1);
+>>>>>>> parent of 738eda8 (Aim Sprite Control)
 buffer_write(buffer, buffer_u8, PACKETS.CONTINUOUS);
 buffer_write(buffer, buffer_s16, x);
 buffer_write(buffer, buffer_s16, y);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"__GMA_SETTINGS__",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__GMA_SETTINGS__",
+  "parent":{
+    "name":"GMAssert",
+    "path":"folders/Libraries_config/GMAssert.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

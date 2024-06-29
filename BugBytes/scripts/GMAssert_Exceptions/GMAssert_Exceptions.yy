@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GMAssert_Exceptions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMAssert_Exceptions",
+  "parent":{
+    "name":"GMAssert",
+    "path":"folders/Libraries/GMAssert.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

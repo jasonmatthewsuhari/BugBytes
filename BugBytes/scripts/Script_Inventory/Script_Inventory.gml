@@ -72,13 +72,11 @@ function Inventory() constructor
 	item_subtract = function(_name, _quantity) {
 		var _index = item_find(_name);
 		
-		if (_index >= 0) {
-			if (item_has(_name, _quantity)) {
-				_inventory_items[_index].quantity -= _quantity;
+		if (_index >= 0 and _quantity >= 0 ) {
+			_inventory_items[_index].quantity -= _quantity;
 				
-				if (_inventory_items[_index].quantity <= 0) {
-					item_remove(_index);
-				}
+			if (_inventory_items[_index].quantity <= 0) {
+				item_remove(_index);
 			}
 		}
 	}

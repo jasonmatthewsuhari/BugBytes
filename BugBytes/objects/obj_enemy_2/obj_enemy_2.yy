@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Blue_roach",
-    "path":"sprites/Blue_roach/Blue_roach.yy",
+    "name":"spr_cockroach",
+    "path":"sprites/spr_cockroach/spr_cockroach.yy",
   },
   "spriteMaskId":null,
   "visible":true,

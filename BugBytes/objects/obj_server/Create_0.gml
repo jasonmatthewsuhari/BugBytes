@@ -6,5 +6,3 @@ server_ready = false;
 client_ready = false;
 
 can_spawn = true;
-
-global.coolness = "Woah this works lol";

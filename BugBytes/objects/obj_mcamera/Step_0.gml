@@ -3,6 +3,8 @@ if(target != noone) {
 	yTo = target.y;
 }
 
+
+show_debug_message(target);
 x += (xTo - x) / camera_speed;
 y += (yTo - y) / camera_speed;
 

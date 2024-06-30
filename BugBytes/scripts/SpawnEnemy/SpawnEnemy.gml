@@ -5,7 +5,13 @@ function SpawnEnemy(enemy_list, ratio){
 		spawn_y = random(room_height);
 		enemy_id = enemy_list[index];
 		
-		instance_create_layer(spawn_x, spawn_y, "Enemies", enemy_id);
+		while(place_meeting(spawn_x,spawn_y, obj_solid)) {
+			spawn_x = random(room_width);
+			spawn_y = random(room_height);
+		}
+		else {
+			instance_create_layer(spawn_x, spawn_y, "Enemies", enemy_id);
+		}
 		ratio[index] =  ratio[index] - 1;
 		
 		buffer = buffer_create(7, buffer_fixed, 1);

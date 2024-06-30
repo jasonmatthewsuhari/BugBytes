@@ -6,3 +6,6 @@ server_ready = false;
 client_ready = false;
 
 can_spawn = true;
+
+remote_ip = "127.0.0.1";
+remote_port = 8000;

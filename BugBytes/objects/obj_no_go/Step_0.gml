@@ -27,7 +27,9 @@ if (spawn_timer <= 0 && global.spawn_count < global.max_spawn) {
 		_yy = y + _yy_offset;
 	}
 	
-	if !place_meeting(_xx, _yy, obj_solid) {
+	if(!(instance_exists(obj_server) || instance_exists(obj_client))) {
+		show_debug_message("oh shit still spawning");
+		if !place_meeting(_xx, _yy, obj_solid) {
 		if (irandom(100) > 80 and global.wave_count >= 3) {
 			with instance_create_layer(_xx, _yy, "Enemies", obj_big_zombie) 
 			{
@@ -42,6 +44,8 @@ if (spawn_timer <= 0 && global.spawn_count < global.max_spawn) {
 	
 	spawn_timer = cooldown;
 	global.spawn_count++;
+	}
+	
 }
 
 #endregion

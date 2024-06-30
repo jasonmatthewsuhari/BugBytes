@@ -36,18 +36,18 @@ global.camera_on = true;
 
 // lowkey this is ugly but currently too lazy to make a whole new struct
 global.waves = [
-	[20, [obj_enemy_1, obj_enemy_2]], // at minute 0
-	[60, [obj_enemy_1, obj_enemy_2]], // at minute 1
-	[20, []], // at minute 2
-	[20, []], // at minute 3
-	[15, []], // at minute 4
-	[1, []], // boss number 1
-	[25, []], // at minute 5
-	[25, []], // at minute 6
-	[35, []], // at minute 7
-	[10, []], // at minute 8
-	[25, []], // at minute 9
-	[1, []], // boss number 2
+	[20, [obj_demon]], // at minute 0
+	[60, [obj_demon, obj_big_zombie]], // at minute 1
+	[20, [obj_demon, obj_big_zombie]], // at minute 2
+	[20, [obj_demon, obj_big_zombie]], // at minute 3
+	[15, [obj_demon, obj_big_zombie]], // at minute 4
+	[1, [obj_demon, obj_big_zombie]], // boss number 1
+	[25, [obj_demon, obj_big_zombie]], // at minute 5
+	[25, [obj_demon, obj_big_zombie]], // at minute 6
+	[35, [obj_demon, obj_big_zombie]], // at minute 7
+	[10, [obj_demon, obj_big_zombie]], // at minute 8
+	[25, [obj_demon, obj_big_zombie]], // at minute 9
+	[1, [obj_demon, obj_big_zombie]], // boss number 2
 	[25, []], // at minute 10
 	[5, []], // at minute 11
 	[40, []], // at minute 12

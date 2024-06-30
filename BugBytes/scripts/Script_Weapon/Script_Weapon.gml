@@ -43,6 +43,24 @@ function fire_weapon(_damage_to)
 					damage_to = _damage_to;
 				}
 			}
+		
+		/*
+		var buffer = buffer_create(4, buffer_fixed, 1);
+		buffer_write(buffer, buffer_u8, PACKETS.EVENT);
+		buffer_write(buffer, buffer_u8, EVENTS.PLAYER_SHOOTS);
+		buffer_write(buffer, buffer_u8, aim_direction);
+		buffer_write(buffer, buffer_u8, _damage_to);
+		
+		if(instance_exists(obj_server)) {
+			network_send_udp(global.socket, obj_server.remote_ip, obj_server.remote_port, buffer, buffer_tell(buffer));
+		}
+		else if(instance_exists(obj_client)) {
+			network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
+		}
+		
+		buffer_delete(buffer);
+		*/
+
 	} else {
 		weapon.timer--
 	}

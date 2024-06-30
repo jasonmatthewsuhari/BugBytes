@@ -17,8 +17,6 @@ weapon_y = y + weapon_y_offset;
 
 weapon = global.weapon_list.revolver;
 
-// DEBUG
-if(global.camera_on) {
-	instance_create_layer(0,0,"Instances",obj_mcamera);
-	obj_mcamera.target = self;
-}
+
+instance_create_layer(0,0,"Instances",obj_mcamera);
+obj_mcamera.target = self;

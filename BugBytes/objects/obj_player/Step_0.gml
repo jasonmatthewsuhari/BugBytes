@@ -1,22 +1,3 @@
-// wasd = 0123
-if(mouse_check_button_pressed(mb_right)) {
-	cursor_x = mouse_x;
-	cursor_y = mouse_y;
-	SpawnBullet(x, y, cursor_x, cursor_y);
-	
-	var buffer = buffer_create(6, buffer_fixed, 1);
-	buffer_write(buffer, buffer_u8, PACKETS.EVENT);
-	buffer_write(buffer, buffer_u8, EVENTS.PLAYER_SHOOTS);
-	buffer_write(buffer, buffer_s16, cursor_x);
-	buffer_write(buffer, buffer_s16, cursor_y);
-	if(instance_exists(obj_server)) {
-		network_send_udp(global.socket, obj_server.remote_ip, obj_server.remote_port, buffer, buffer_tell(buffer));
-	}
-	else if(instance_exists(obj_client)) {
-		network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
-	}
-}
-
 movement_array[0] = (keyboard_check(ord("W")) || keyboard_check(vk_up));
 movement_array[1] = (keyboard_check(ord("A")) || keyboard_check(vk_left));
 movement_array[2] = (keyboard_check(ord("S")) || keyboard_check(vk_down));
@@ -48,6 +29,28 @@ if (aim_direction <= 90 || aim_direction > 270) {
 
 weapon_x = x + face * weapon_x_offset;
 weapon_y = y + weapon_y_offset;
+
+var buffer = buffer_create(2, buffer_fixed, 1);
+buffer_write(buffer, buffer_u8, PACKETS.EVENT);
+buffer_write(buffer, buffer_u8, EVENTS.PLAYER_SHOOTS);
+
+if(instance_exists(obj_server)) {
+	network_send_udp(global.socket, obj_server.remote_ip, obj_server.remote_port, buffer, buffer_tell(buffer));
+}
+else if(instance_exists(obj_client)) {
+	network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
+}
+
+buffer_delete(buffer);
+
+if is_instanceof(weapon, Weapon) {
+	if weapon == (global.weapon_list.heal_gun) {
+		fire_weapon(class_Damageable_Friendly);
+	} else {
+		fire_weapon(class_Damageable_Enemy);
+	}
+	
+}
 
 var buffer = buffer_create(10, buffer_fixed, 1);
 

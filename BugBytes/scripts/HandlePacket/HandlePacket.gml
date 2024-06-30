@@ -41,9 +41,17 @@ function HandlePacket(buffer){
 			type_of_event = buffer_read(buffer, buffer_u8);
 			switch(type_of_event) {
 				case EVENTS.PLAYER_SHOOTS:
-					cursor_x = buffer_read(buffer, buffer_s16);
-					cursor_y = buffer_read(buffer, buffer_s16);
-					SpawnBullet(remote_player.x, remote_player.y, cursor_x, cursor_y);
+				show_debug_message("Shooty wooty");
+					with(remote_player) {
+						if is_instanceof(weapon, Weapon) {
+							if weapon == (global.weapon_list.heal_gun) {
+								fire_weapon(class_Damageable_Friendly);
+							} else {
+								fire_weapon(class_Damageable_Enemy);
+							}
+	
+						}
+					}
 				break;
 				
 				case EVENTS.PLAYER_DAMAGED:
@@ -67,7 +75,6 @@ function HandlePacket(buffer){
 		break;
 		
 		case PACKETS.CONTINUOUS:
-		
 		remote_x = buffer_read(buffer, buffer_s16);
 		remote_y = buffer_read(buffer, buffer_s16);
 		remote_sprite = buffer_read(buffer, buffer_u8);

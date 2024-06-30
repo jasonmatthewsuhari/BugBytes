@@ -1,4 +1,6 @@
 /// @description Initialise flag
 
 
-instance_create_layer(x, y, "Friendlies", obj_singleplayer);
+if(room == rm_singleplayer) {
+	instance_create_layer(x, y, "Friendlies", obj_singleplayer);	
+}

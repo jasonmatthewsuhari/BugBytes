@@ -1,0 +1,10 @@
+Inventory Test 1 (Adding empty item struct): Passed
+Inventory Test 2 (Adding filled item struct): Passed
+Inventory Test 3 (Add with wrong name and description for item struct): Passed
+Inventory Test 4 (Adding more items into inventory): Passed
+Inventory Test 5 (Add same item into current inventory): Passed
+Inventory Test 6 (Subtract non existing item from inventory): Passed
+Inventory Test 7 (Subtract quantity from inventory): Passed
+Inventory Test 8 (Subtract overlimit quantity from inventory): Passed
+Inventory Test 9 (Subtract negative quantity should not work): Passed
+Inventory Test 10 (Subtract from an already removed item): Passed

@@ -1,4 +1,4 @@
-name: Automate Tag Versioning and Release
+name: Automate Unit Test, Tag Versioning and Release
 
 on:
   push:

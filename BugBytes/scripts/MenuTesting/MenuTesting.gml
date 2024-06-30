@@ -1,7 +1,6 @@
 function MenuTesting(){
 	// SECTION 1: MENU TESTING
-	file_text_write_string(global.file, "SECTION 1: MENU TESTING\n");
-	
+	global.file = file_text_open_write(working_directory + "menu_test.txt");
 	/// Test 1 - Navigating up on the menu with W / Up Arrow
 	file_text_write_string(global.file, "Test 1 - Navigating Up with W / Up-Arrow: " + boolstr(MenuNavigateUp(obj_menu) == array_length(obj_menu.menu_options) - 1) + "\n"); 
 	

@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"MenuTesting",
+  "%Name":"LobbyTesting",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"MenuTesting",
+  "name":"LobbyTesting",
   "parent":{
     "name":"Testing",
     "path":"folders/Scripts/Testing.yy",

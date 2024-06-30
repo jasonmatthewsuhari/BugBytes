@@ -38,55 +38,19 @@ if (hspd == 1) {
     image_index = 2;
 }
 
-<<<<<<< HEAD
 aim_direction = point_direction(x, y, mouse_x, mouse_y);
 
-if (aim_direction <= 45 || aim_direction > 315) {
-	image_index = 1;
-} else if (aim_direction <= 135) {
-	image_index = 2;
-} else if (aim_direction <= 225) {
-	image_index = 0;
-} else if (aim_direction <= 315) {
-	image_index = 3;
+if (aim_direction <= 90 || aim_direction > 270) {
+	face = 1;
+} else if (aim_direction <= 270) {
+	face = -1;
 } else { }
 
-if (image_index == 1) {
-	weapon_x = x - weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (image_index == 2) {
-	weapon_x = x + weapon_x_offset;
-	weapon_y = y + weapon_y_offset;
-} else if (image_index == 0) {
-	weapon_x = x;
-	weapon_y = y - weapon_y_offset;
-} else if (image_index == 3) {
-	weapon_x = x;
-	weapon_y = y + weapon_y_offset;
-} else { }
-
-with weapon 
-{
-	sprite_index = gun.sprite;
-
-	// If rotated to left, flip gun
-	if mouse_x > x image_yscale = 1;
-	else image_yscale = -1;
-
-	// Lerp angle to mouse and kickback angle to zero
-	mouse_angle -= angle_difference(mouse_angle, point_direction(x, y, mouse_x, mouse_y)) * 0.5;
-	knockback_angle -= angle_difference(knockback_angle, 0) * 0.05;
-	image_angle = mouse_angle + knockback_angle;
-
-	//Lerp position
-	x = lerp(x, ox, 0.05);
-	y = lerp(y, oy, 0.05);
-}
+weapon_x = x + face * weapon_x_offset;
+weapon_y = y + weapon_y_offset;
 
 var buffer = buffer_create(10, buffer_fixed, 1);
-=======
-var buffer = buffer_create(6, buffer_fixed, 1);
->>>>>>> parent of 738eda8 (Aim Sprite Control)
+
 buffer_write(buffer, buffer_u8, PACKETS.CONTINUOUS);
 buffer_write(buffer, buffer_s16, x);
 buffer_write(buffer, buffer_s16, y);

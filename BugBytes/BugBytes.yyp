@@ -39,7 +39,6 @@
     {"$GMFolder":"","%Name":"Defunct","folderPath":"folders/Scripts/Packet Handling/Defunct.yy","name":"Defunct","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Singleplayer","folderPath":"folders/Scripts/Singleplayer.yy","name":"Singleplayer","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Testing","folderPath":"folders/Scripts/Testing.yy","name":"Testing","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Menu","folderPath":"folders/Scripts/Testing/Menu.yy","name":"Menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Waves","folderPath":"folders/Scripts/Waves.yy","name":"Waves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sounds","folderPath":"folders/Sounds.yy","name":"Sounds","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -69,7 +68,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.0.137",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"BugBytes",
   "resources":[
@@ -128,6 +127,7 @@
     {"id":{"name":"obj_singleplayer","path":"objects/obj_singleplayer/obj_singleplayer.yy",},},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
     {"id":{"name":"obj_stopwatch","path":"objects/obj_stopwatch/obj_stopwatch.yy",},},
+    {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},},
     {"id":{"name":"obj_up_arrow","path":"objects/obj_up_arrow/obj_up_arrow.yy",},},
     {"id":{"name":"obj_w_key","path":"objects/obj_w_key/obj_w_key.yy",},},
     {"id":{"name":"obj_wkey","path":"objects/obj_wkey/obj_wkey.yy",},},
@@ -151,6 +151,7 @@
     {"id":{"name":"GMAssert_Internal","path":"scripts/GMAssert_Internal/GMAssert_Internal.yy",},},
     {"id":{"name":"GMAssert_Typecheck","path":"scripts/GMAssert_Typecheck/GMAssert_Typecheck.yy",},},
     {"id":{"name":"HandlePacket","path":"scripts/HandlePacket/HandlePacket.yy",},},
+    {"id":{"name":"LobbyTesting","path":"scripts/LobbyTesting/LobbyTesting.yy",},},
     {"id":{"name":"MenuNavigateDown","path":"scripts/MenuNavigateDown/MenuNavigateDown.yy",},},
     {"id":{"name":"MenuNavigateUp","path":"scripts/MenuNavigateUp/MenuNavigateUp.yy",},},
     {"id":{"name":"MenuSelect","path":"scripts/MenuSelect/MenuSelect.yy",},},

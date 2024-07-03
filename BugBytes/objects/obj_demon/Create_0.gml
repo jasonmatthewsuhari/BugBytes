@@ -6,11 +6,11 @@
 max_speed = 1.5;
 curr_speed = max_speed;
 
-spr_idle = spr_demon_idle;
-spr_attack = spr_demon_attack;
-spr_dead = spr_demon_dead;
-spr_hurt = spr_demon_hurt;
-spr_move = spr_demon_walk;
+spr_idle = spr_ant;
+spr_attack = spr_ant;
+spr_dead = spr_ant;
+spr_hurt = spr_ant;
+spr_move = spr_ant;
 
 state = STATES.IDLE;
 face = 1;

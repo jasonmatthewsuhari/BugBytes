@@ -41,7 +41,6 @@ function HandlePacket(buffer){
 			type_of_event = buffer_read(buffer, buffer_u8);
 			switch(type_of_event) {
 				case EVENTS.PLAYER_SHOOTS:
-				show_debug_message("Shooty wooty");
 					with(remote_player) {
 						if is_instanceof(weapon, Weapon) {
 							if weapon == (global.weapon_list.heal_gun) {

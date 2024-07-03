@@ -1,8 +1,15 @@
 {
-  "FolderOrderSettings":[],
+  "FolderOrderSettings":[
+    {"name":"Screens","order":1,"path":"folders/Sprites/Screens.yy",},
+  ],
   "ResourceOrderSettings":[
     {"name":"obj_test","order":1,"path":"objects/obj_test/obj_test.yy",},
     {"name":"LobbyTesting","order":3,"path":"scripts/LobbyTesting/LobbyTesting.yy",},
     {"name":"MenuTesting","order":2,"path":"scripts/MenuTesting/MenuTesting.yy",},
+    {"name":"spr_menu_base","order":1,"path":"sprites/spr_menu_base/spr_menu_base.yy",},
+    {"name":"spr_menu_host","order":3,"path":"sprites/spr_menu_host/spr_menu_host.yy",},
+    {"name":"spr_menu_join","order":4,"path":"sprites/spr_menu_join/spr_menu_join.yy",},
+    {"name":"spr_menu_settings","order":5,"path":"sprites/spr_menu_settings/spr_menu_settings.yy",},
+    {"name":"spr_menu_singleplayer","order":2,"path":"sprites/spr_menu_singleplayer/spr_menu_singleplayer.yy",},
   ],
 }

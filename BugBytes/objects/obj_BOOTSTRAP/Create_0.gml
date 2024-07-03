@@ -1,6 +1,8 @@
 randomize();
 AutomatedTesting();
 
+window_set_fullscreen(true);
+
 enum PACKETS {
 	JOIN,
 	READY,

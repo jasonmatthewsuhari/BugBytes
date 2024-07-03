@@ -1,4 +1,4 @@
-name: Automate Tag Versioning and Release
+name: Automate Unit Test, Tag Versioning and Release
 
 on:
   push:
@@ -10,14 +10,38 @@ on:
 
 permissions:
   contents: write
-  
+
 jobs:
+  check_inventory_testing:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run inventory check script
+      run: |
+        # Read the inventory_testing.txt file line by line
+        while IFS= read -r line
+        do
+          # Remove trailing whitespace
+          line=$(echo "$line" | sed 's/[[:space:]]*$//')
+          # Extract the last word from each line
+          last_word=$(echo "$line" | awk '{print $NF}')
+          # Check if the last word is "Passed"
+          if [ "$last_word" != "Passed" ]; then
+            echo "Error: The line '$line' does not end with 'Passed'"
+            exit 1
+          fi
+        done < inventory_testing.txt
+        
   automate_versioning_and_release:
     runs-on: ubuntu-latest
     steps:
+    
       - name: Checkout code
         uses: actions/checkout@v4
-      
+    
       - name: Set up Git
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       

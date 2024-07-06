@@ -6,6 +6,8 @@
     {"name":"obj_test","order":1,"path":"objects/obj_test/obj_test.yy",},
     {"name":"LobbyTesting","order":3,"path":"scripts/LobbyTesting/LobbyTesting.yy",},
     {"name":"MenuTesting","order":2,"path":"scripts/MenuTesting/MenuTesting.yy",},
+    {"name":"snd_bootup","order":2,"path":"sounds/snd_bootup/snd_bootup.yy",},
+    {"name":"snd_navigate","order":1,"path":"sounds/snd_navigate/snd_navigate.yy",},
     {"name":"spr_menu_base","order":1,"path":"sprites/spr_menu_base/spr_menu_base.yy",},
     {"name":"spr_menu_host","order":3,"path":"sprites/spr_menu_host/spr_menu_host.yy",},
     {"name":"spr_menu_join","order":4,"path":"sprites/spr_menu_join/spr_menu_join.yy",},

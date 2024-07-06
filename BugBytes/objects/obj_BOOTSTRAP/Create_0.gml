@@ -1,7 +1,9 @@
 randomize();
 AutomatedTesting();
 
-window_set_fullscreen(true);
+//debug
+//window_set_fullscreen(true);
+audio_play_sound(snd_bootup, 1, false);
 
 enum PACKETS {
 	JOIN,

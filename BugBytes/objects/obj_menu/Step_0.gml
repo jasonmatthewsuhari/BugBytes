@@ -1,3 +1,4 @@
+show_debug_message(menu_index);
 if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
 	MenuNavigateUp(self);
 }

@@ -41,7 +41,7 @@ global.camera_on = true;
 
 // lowkey this is ugly but currently too lazy to make a whole new struct
 global.waves = [
-	[20, [obj_ant]], // at minute 0
+	[30, [obj_ant, obj_fleaswarm]], // at minute 0
 	[60, [obj_ant, obj_big_zombie]], // at minute 1
 	[20, [obj_ant, obj_big_zombie]], // at minute 2
 	[20, [obj_ant, obj_big_zombie]], // at minute 3

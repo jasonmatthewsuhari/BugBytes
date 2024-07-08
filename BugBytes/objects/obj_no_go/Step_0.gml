@@ -10,42 +10,17 @@ f_check_healthbar(self);
 */
 
 #region enemy spawning
-spawn_timer--;
-if (spawn_timer <= 0 && global.spawn_count < global.max_spawn) {
-	
-	var _xx_offset = irandom_range(-200, 200);
-	var _yy_offset = irandom_range(-200, 200);
-	
-	var _xx = x + _xx_offset;
-	var _yy = y + _yy_offset;
-	
-	while place_meeting(_xx, _yy, obj_solid) {
-		_xx_offset = irandom_range(-200, 200);
-		_yy_offset = irandom_range(-200, 200);
-	
-		_xx = x + _xx_offset;
-		_yy = y + _yy_offset;
+	wave_info = global.waves[global.minutes];
+	count = wave_info[0];
+	enemy_list = wave_info[1];
+	ratio = DecideWaves(count, enemy_list);
+	delay = 60 / count;
+		
+	if(can_spawn) {
+		can_spawn = false;
+		global.spawn_count++;
+		SpawnEnemy(enemy_list, ratio, delay);
+		alarm[1] = delay * game_get_speed(gamespeed_fps);
 	}
-	
-	if(!(instance_exists(obj_server) || instance_exists(obj_client))) {
-		show_debug_message("oh shit still spawning");
-		if !place_meeting(_xx, _yy, obj_solid) {
-		if (irandom(100) > 80 and global.wave_count >= 3) {
-			with instance_create_layer(_xx, _yy, "Enemies", obj_big_zombie) 
-			{
-				weapon = global.weapon_list.shotgun
-				has_weapon = true;
-				attack_dis = weapon.range / 2;
-			}
-		} else {
-			instance_create_layer(_xx, _yy, "Enemies", obj_ant);
-		}
-	}
-	
-	spawn_timer = cooldown;
-	global.spawn_count++;
-	}
-	
-}
 
 #endregion

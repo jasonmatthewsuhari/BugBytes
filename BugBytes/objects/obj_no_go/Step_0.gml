@@ -38,7 +38,7 @@ if (spawn_timer <= 0 && global.spawn_count < global.max_spawn) {
 				attack_dis = weapon.range / 2;
 			}
 		} else {
-			instance_create_layer(_xx, _yy, "Enemies", obj_demon);
+			instance_create_layer(_xx, _yy, "Enemies", obj_ant);
 		}
 	}
 	

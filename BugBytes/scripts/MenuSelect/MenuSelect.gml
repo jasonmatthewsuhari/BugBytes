@@ -1,4 +1,5 @@
 function MenuSelect(menu){
+	audio_play_sound(snd_bootup, 1, false);
 	switch(menu.menu_index) {
 		// SINGLEPLAYER
 		case 0:

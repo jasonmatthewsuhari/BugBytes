@@ -2,6 +2,7 @@
 
 #region Spawning, inventory and movement variables
 
+event_inherited();
 
 max_speed = 3;
 curr_speed = max_speed;

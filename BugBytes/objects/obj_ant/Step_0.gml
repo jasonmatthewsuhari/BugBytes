@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited();
+
 if (curr_hp <= 0)	state = STATES.DEAD;
 check_facing();
 	
@@ -21,7 +23,7 @@ switch(state) {
 		
 	break;
 	case STATES.HURT:
-		path_speed = 0;
+		path_speed = 0.75 * max_speed;
 		enemy_anim();
 	break;
 	case STATES.DEAD:

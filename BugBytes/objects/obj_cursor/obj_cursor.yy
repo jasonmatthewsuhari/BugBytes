@@ -9,8 +9,8 @@
   "name":"obj_cursor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Misc",
-    "path":"folders/Objects/Misc.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Multiplayer/GUI/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Aim_Cursor",
-    "path":"sprites/Aim_Cursor/Aim_Cursor.yy",
+    "name":"spr_cursor_click",
+    "path":"sprites/spr_cursor_click/spr_cursor_click.yy",
   },
   "spriteMaskId":null,
   "visible":true,

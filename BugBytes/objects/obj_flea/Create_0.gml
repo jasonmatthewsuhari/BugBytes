@@ -1,5 +1,5 @@
 /// @description Initialise demon
-
+event_inherited();
 
 #region Health, sprite, state variables
 
@@ -49,7 +49,7 @@ target_pos_x = x;
 target_pos_y = y;
 target_id = obj_flag;
 
-//the path we draw to show where we want to move
+//the path we draw to show where we wflea to move
 path = path_add();
 //add our current position as the first path point
 path_add_point(path, x, y, max_speed);
@@ -82,7 +82,7 @@ path_clear = function() {
 attack_frame = 6;						// Sprite attack frame 
 cooldown = 2 * game_get_speed(gamespeed_fps);				// Attack cooldown of the weapon in frames
 timer = 0;					// Timer for weapon cooldown
-damage = 40;						// Damage of the weapon
+damage = 20;						// Damage of the weapon
 attack_dis = 12;
 weapon_x = x;
 weapon_y = y;

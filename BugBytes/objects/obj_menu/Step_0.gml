@@ -1,4 +1,3 @@
-show_debug_message(menu_index);
 if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
 	MenuNavigateUp(self);
 }
@@ -7,10 +6,25 @@ else if(keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
 	MenuNavigateDown(self);
 }
 
-else if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) {
+else if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left)) {
 	MenuSelect(self);
 }
 
+if(instance_position(mouse_x, mouse_y, obj_menu_select_singleplayer)) {
+	menu_index = obj_menu_select_singleplayer.index;
+}
+
+if(instance_position(mouse_x, mouse_y, obj_menu_select_host)) {
+	menu_index = obj_menu_select_host.index;
+}
+
+if(instance_position(mouse_x, mouse_y, obj_menu_select_join)) {
+	menu_index = obj_menu_select_join.index;
+}
+
+if(instance_position(mouse_x, mouse_y, obj_menu_select_settings)) {
+	menu_index = obj_menu_select_settings.index;
+}
 
 switch(menu_index) {
 	case 0:

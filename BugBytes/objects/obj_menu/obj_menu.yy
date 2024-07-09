@@ -9,8 +9,8 @@
   "name":"obj_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"GUI",
-    "path":"folders/Objects/Multiplayer/GUI.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Multiplayer/GUI/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

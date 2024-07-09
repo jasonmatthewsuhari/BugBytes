@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited();
 shopOpen = false; //Is this shop open?
 global.shop = false; //Is any shop open?
 

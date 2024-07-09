@@ -21,7 +21,7 @@ switch(state) {
 		
 	break;
 	case STATES.HURT:
-		path_speed = 0;
+		path_speed = 0.3;
 		enemy_anim();
 	break;
 	case STATES.DEAD:

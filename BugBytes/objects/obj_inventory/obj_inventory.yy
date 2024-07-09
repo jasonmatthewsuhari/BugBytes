@@ -8,7 +8,10 @@
   ],
   "managed":true,
   "name":"obj_inventory",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_UI_Element","path":"objects/class_UI_Element/class_UI_Element.yy",},"propertyId":{"name":"ui_position_x","path":"objects/class_UI_Element/class_UI_Element.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"300",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_UI_Element","path":"objects/class_UI_Element/class_UI_Element.yy",},"propertyId":{"name":"ui_position_y","path":"objects/class_UI_Element/class_UI_Element.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+  ],
   "parent":{
     "name":"UI Elements",
     "path":"folders/Objects/Friendly/UI Elements.yy",

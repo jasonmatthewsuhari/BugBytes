@@ -1,1 +1,0 @@
-/// @description Initialise left_arrow

@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_demon_idle",
-    "path":"sprites/spr_demon_idle/spr_demon_idle.yy",
+    "name":"spr_flea_walk",
+    "path":"sprites/spr_flea_walk/spr_flea_walk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

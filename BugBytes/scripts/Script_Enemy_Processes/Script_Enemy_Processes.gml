@@ -252,6 +252,7 @@ function enemy_anim()
 		break;
 		case STATES.HURT:
 			sprite_index = spr_hurt;
+			flash_alpha = 1;
 		break;
 		case STATES.DEAD:
 			sprite_index = spr_dead;

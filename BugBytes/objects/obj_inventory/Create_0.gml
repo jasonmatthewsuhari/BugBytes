@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+event_inherited();
+ui_position_y = camera_get_view_height(view_camera[0]) - 50;
 inventory = new Inventory();
 
 x_pos = x - 128;	// x pos to draw item sprite 

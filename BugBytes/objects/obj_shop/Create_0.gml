@@ -50,10 +50,54 @@ flame = {
 	}
 }
 
+piercing = {
+	name: "piercing",
+	sprite: spr_apple,
+	description: "Adds Piercing effect to all your damage bullets, increase healing on heal gun",
+	price: 0,
+	use: function() {
+		var index = obj_inventory.inventory.item_find(name);
+		if (index >= 0) {
+			global.piercing += 1;
+			obj_inventory.inventory.item_subtract(name, 1);
+		}
+	}
+	
+}
+
+speed_potion = {
+	name: "speed potion",
+	sprite: spr_grass_tileset,
+	description: "Increase movement speed for 30s",
+	price: 0,
+	use: function() {
+		var index = obj_inventory.inventory.item_find(name);
+		if (index >= 0) {
+			obj_singleplayer.max_speed = obj_singleplayer.max_speed * 2;
+			obj_inventory.inventory.item_subtract(name, 1);
+			// this could cause bugs if another array_delete is triggered before this time source executes
+			array_push(obj_powers.powers, new Power("speed up", spr_grass_tileset, "x2"));
+			
+			reset_speed = time_source_create(time_source_game, 5, time_source_units_seconds, function() 
+			{
+				if (instance_exists(obj_singleplayer)) {
+					if (obj_singleplayer.max_speed > obj_singleplayer.o_max_speed) { obj_singleplayer.max_speed = obj_singleplayer.max_speed / 2 };
+					array_delete(obj_powers.powers, array_length(obj_powers.powers) - 1, 1);
+				}
+	
+			}, [], 1);
+
+			time_source_start(reset_speed);
+		}
+	}
+}
+
 
 // ds_list_add(items, apple);
 ds_list_add(items, water);
 ds_list_add(items, flame);
+ds_list_add(items, piercing);
+ds_list_add(items, speed_potion);
 
 itemCount = ds_list_size(items);
 

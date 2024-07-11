@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"SpawnBullet",
   "isCompatibility":false,
   "isDnD":false,

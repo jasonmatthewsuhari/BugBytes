@@ -17,5 +17,8 @@ function MenuSelect(menu){
 			room_goto(rm_lobby);
 			instance_create_layer(0, 0, "Instances", obj_client);
 		break;
+		
+		case 3:
+			instance_create_layer(0,0,"Instances",obj_settings);
 	}
 }

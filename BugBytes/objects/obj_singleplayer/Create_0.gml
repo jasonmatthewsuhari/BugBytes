@@ -4,8 +4,10 @@
 
 event_inherited();
 
-max_speed = 3;
+o_max_speed = 3;
+max_speed = o_max_speed;
 curr_speed = max_speed;
+
 
 respawn_timer = 3;						// respawn timer in seconds
 

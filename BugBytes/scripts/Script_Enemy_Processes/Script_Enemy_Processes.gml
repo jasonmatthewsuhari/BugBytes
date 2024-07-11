@@ -61,40 +61,40 @@ function path_find()
 			//set a weight value, based on the object type, and how far away we are, scaling for each object
 			switch(_id.object_index) {
 				case obj_right_mouse_button:
-					_weight = round(map_value(_dis, range, 5, 0, 20));	
+					_weight = round(map_value(_dis, range, 5, 0, 20)) * _id.in_wall;	
 				break;
 				case obj_left_mouse_button:
-					_weight = round(map_value(_dis, range, 5, 0, 50));
+					_weight = round(map_value(_dis, range, 5, 0, 50)) * _id.in_wall;
 				break;
 				case obj_left_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * _id.in_wall;
 				break;
 				case obj_right_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * _id.in_wall;
 				break;
 				case obj_up_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * _id.in_wall;
 				break;
 				case obj_down_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * _id.in_wall;
 				break;
 				case obj_w_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * _id.in_wall;
 				break;
 				case obj_a_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * _id.in_wall;
 				break;
 				case obj_s_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * _id.in_wall;
 				break;
 				case obj_d_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * _id.in_wall;
 				break;
 				case obj_singleplayer:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * _id.in_wall;
 				break;
 				case obj_flag:
-					_weight = round(map_value(_dis, range, 5, 0, 20));
+					_weight = round(map_value(_dis, range, 5, 0, 20)) * _id.in_wall;
 				break;
 			}
 			
@@ -176,7 +176,9 @@ function path_find()
 		if _dis <= attack_dis {
 			path_end();
 			state = STATES.ATTACK;
-			}
+		} else {
+			state = STATES.MOVE;
+		}
 	
 
 			

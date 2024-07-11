@@ -4,7 +4,11 @@ AutomatedTesting();
 
 //debug
 //window_set_fullscreen(true);
-audio_play_sound(snd_menu, 1, true);
+
+audio_group_load(Music);
+audio_group_load(SFX);
+
+
 
 enum PACKETS {
 	JOIN,
@@ -34,6 +38,10 @@ enum STATES
 
 global.weapons = [obj_revolver, obj_shotgun];
 global.username = "";
+
+global.master_volume = 0.95;
+global.music_volume = 0.95;
+global.sfx_volume = 0.95;
 
 
 

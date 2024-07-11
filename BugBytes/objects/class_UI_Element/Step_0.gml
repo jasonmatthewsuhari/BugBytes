@@ -1,14 +1,22 @@
-event_inherited();
+in_wall = place_meeting(x,y,obj_solid);
+
+if(flash_alpha > 0) {
+	flash_alpha -= 0.1;	
+}
 
 if(curr_hp <= 0) {
 	
 	if(grounded) { 
 		instance_destroy(); 
-		}
-	curr_hp = max_hp;
-	grounded = true;
+	}
+	else {
+		Screenshake(7,15,0.2);
+		curr_hp = max_hp;
+		grounded = true;
+	}
+	
 }
-
+	
 else {
 	if(!grounded) {
 		var vx = camera_get_view_x(view_camera[0]);

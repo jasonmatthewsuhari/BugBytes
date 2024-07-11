@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"MultiClientGetClientID",
   "isCompatibility":false,
   "isDnD":false,

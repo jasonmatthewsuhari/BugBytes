@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_navigate",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"SFX",
+    "path":"audiogroups/SFX",
   },
   "bitDepth":1,
   "bitRate":128,

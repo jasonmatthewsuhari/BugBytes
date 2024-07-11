@@ -1,8 +1,8 @@
-in_wall = place_meeting(x,y,obj_solid);
 
 if(flash_alpha > 0) {
 	flash_alpha -= 0.1;	
 }
+in_wall = place_meeting(x,y,obj_solid);
 
 if(curr_hp <= 0) {
 	

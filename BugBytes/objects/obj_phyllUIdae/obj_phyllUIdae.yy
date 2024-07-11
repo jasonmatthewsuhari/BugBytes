@@ -16,7 +16,10 @@
     "name":"Enemy",
     "path":"folders/Objects/Enemy.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"class_Damageable_Enemy",
+    "path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,7 +37,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_demon_idle",
+    "path":"sprites/spr_demon_idle/spr_demon_idle.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

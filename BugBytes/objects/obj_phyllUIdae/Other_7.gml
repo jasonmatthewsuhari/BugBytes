@@ -10,6 +10,8 @@ switch(state) {
 		state = STATES.MOVE;
 	break;
 	case STATES.ATTACK:
-		state = STATES.IDLE;
+		// if !place_meeting(x, y, target_id) {
+			state = STATES.IDLE;
+		// }
 	break;
 }

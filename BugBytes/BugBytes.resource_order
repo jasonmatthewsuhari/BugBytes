@@ -18,7 +18,6 @@
     {"name":"Settings","order":6,"path":"folders/Sprites/Menu/Settings.yy",},
     {"name":"Menu Cursor","order":1,"path":"folders/Sprites/Misc/Menu Cursor.yy",},
     {"name":"Screens","order":1,"path":"folders/Sprites/Screens.yy",},
-    {"name":"Steamworks","order":16,"path":"folders/Steamworks.yy",},
     {"name":"Tile Sets","order":11,"path":"folders/Tile Sets.yy",},
     {"name":"Unused (Temp)","order":12,"path":"folders/Unused (Temp).yy",},
   ],

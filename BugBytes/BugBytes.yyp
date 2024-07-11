@@ -62,7 +62,6 @@
     {"$GMFolder":"","%Name":"Screens","folderPath":"folders/Sprites/Screens.yy","name":"Screens","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Sprites/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Weapon","folderPath":"folders/Sprites/Weapon.yy","name":"Weapon","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Steamworks","folderPath":"folders/Steamworks.yy","name":"Steamworks","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Unused (Temp)","folderPath":"folders/Unused (Temp).yy","name":"Unused (Temp)","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Unused (Temp)/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -85,7 +84,6 @@
   "name":"BugBytes",
   "resources":[
     {"id":{"name":"MultiClient","path":"extensions/MultiClient/MultiClient.yy",},},
-    {"id":{"name":"Steamworks","path":"extensions/Steamworks/Steamworks.yy",},},
     {"id":{"name":"button_exit","path":"objects/button_exit/button_exit.yy",},},
     {"id":{"name":"button_singleplayer","path":"objects/button_singleplayer/button_singleplayer.yy",},},
     {"id":{"name":"class_Damageable_Enemy","path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",},},

@@ -12,7 +12,7 @@ switch(state) {
 	break;
 	case STATES.MOVE:
 		spr_idle = spr_demon_idle;
-		spr_attack = D_key;
+		spr_attack = spr_demon_attack;
 		spr_dead = spr_demon_dead;
 		spr_hurt = spr_demon_hurt;
 		spr_move = spr_demon_walk;
@@ -21,12 +21,14 @@ switch(state) {
 		if path_index == -1		state = STATES.IDLE;
 	break;
 	case STATES.ATTACK:
+		if instance_exists(target_id) {
+			spr_idle = target_id.sprite_index;
+			spr_attack = target_id.sprite_index;
+			spr_dead = target_id.sprite_index;
+			spr_hurt = target_id.sprite_index;
+			spr_move = target_id.sprite_index;
+		}
 		perform_attack();
-		spr_idle = target_id.sprite_index;
-		spr_attack = target_id.sprite_index;
-		spr_dead = target_id.sprite_index;
-		spr_hurt = target_id.sprite_index;
-		spr_move = target_id.sprite_index;
 		enemy_anim();
 		
 	break;

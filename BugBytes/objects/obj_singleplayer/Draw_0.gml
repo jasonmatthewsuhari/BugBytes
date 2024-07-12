@@ -7,4 +7,8 @@ if (aim_direction > 90 && aim_direction < 270) {
 	_weaponYscl = -1;
 }
 //draw_sprite_ext(sprite_index, image_index, x, y, face, 1, 0, c_white, 1);
-draw_sprite_ext(weapon.sprite, -1, weapon_x, weapon_y, 1, _weaponYscl, aim_direction, c_white, 1);
+if (useable.inventory and obj_inventory.inventory.item_has(weapon.name, 1)) {
+	draw_sprite_ext(weapon.sprite, -1, weapon_x, weapon_y, 1, _weaponYscl, aim_direction, c_white, 1);
+} else if (!useable.inventory) {
+	draw_sprite_ext(weapon.sprite, -1, weapon_x, weapon_y, 1, _weaponYscl, aim_direction, c_white, 1);
+}

@@ -8,6 +8,8 @@ global.max_spawn = 3;
 global.spawn_count = 0;
 global.wave_count = 1;
 global.piercing = 1;
+global.showhp = false;
+
 
 wave_time_source = time_source_create(time_source_game, 60, time_source_units_seconds, function() 
 {

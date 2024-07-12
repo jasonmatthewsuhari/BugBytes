@@ -31,6 +31,8 @@ water = {
 		var index = obj_inventory.inventory.item_find(name);
 		if (index >= 0) {
 			obj_singleplayer.curr_hp = obj_singleplayer.max_hp;
+			obj_singleplayer.heal = true;
+			obj_singleplayer.flash_alpha = 1;
 			obj_inventory.inventory.item_subtract(name, 1);
 		}
 	}
@@ -40,7 +42,7 @@ flame = {
 	name: "flame",
 	sprite: spr_flame,
 	description: "Sets down a flame that deals constant damage to everything",
-	price: 400,
+	price: 300,
 	use: function() {
 		var index = obj_inventory.inventory.item_find(name);
 		if (index >= 0) {
@@ -54,7 +56,7 @@ piercing = {
 	name: "piercing",
 	sprite: spr_apple,
 	description: "Adds Piercing effect to all your damage bullets, increase healing on heal gun",
-	price: 0,
+	price: 200,
 	use: function() {
 		var index = obj_inventory.inventory.item_find(name);
 		if (index >= 0) {
@@ -69,7 +71,7 @@ speed_potion = {
 	name: "speed potion",
 	sprite: spr_grass_tileset,
 	description: "Increase movement speed for 30s",
-	price: 0,
+	price: 120,
 	use: function() {
 		var index = obj_inventory.inventory.item_find(name);
 		if (index >= 0) {

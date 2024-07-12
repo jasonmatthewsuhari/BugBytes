@@ -3,7 +3,7 @@ function MenuSelect(menu){
 	switch(menu.menu_index) {
 		// SINGLEPLAYER
 		case 0:
-			room_goto(rm_singleplayer);
+			room_goto(rm_singleplayer_placeholder);
 		break;
 		
 		// MULTIPLAYER HOST

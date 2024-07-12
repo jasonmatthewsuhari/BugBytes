@@ -7,7 +7,9 @@
   ],
   "managed":true,
   "name":"class_UI_Element",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"propertyId":{"name":"max_hp","path":"objects/class_Damageable/class_Damageable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"900",},
+  ],
   "parent":{
     "name":"Abstract Classes",
     "path":"folders/Objects/Abstract Classes.yy",
@@ -32,6 +34,7 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"ui_position_x","filters":[],"listItems":[],"multiselect":false,"name":"ui_position_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"ui_position_y","filters":[],"listItems":[],"multiselect":false,"name":"ui_position_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"grounded","filters":[],"listItems":[],"multiselect":false,"name":"grounded","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

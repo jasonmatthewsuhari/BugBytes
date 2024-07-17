@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"__GMA_BREAKPOINT__",
   "isCompatibility":false,
   "isDnD":false,

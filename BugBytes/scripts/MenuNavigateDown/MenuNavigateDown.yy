@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"MenuNavigateDown",
   "isCompatibility":false,
   "isDnD":false,

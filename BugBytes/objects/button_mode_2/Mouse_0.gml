@@ -1,3 +1,3 @@
 /// @description Go to singleplayer room
 
-room_goto(rm_singleplayer_2);
+room_goto(rm_singleplayer_3);

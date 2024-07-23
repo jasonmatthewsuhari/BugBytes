@@ -5,6 +5,7 @@
 timer--;
 if (timer <= 0) {
 	timer = cooldown;
-	other.curr_hp -= damage
+	other.curr_hp -= damage;
 	other.flash_alpha = 1;
+	other.heal = false;
 }

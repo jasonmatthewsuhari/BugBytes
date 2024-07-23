@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Screenshake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Screenshake",
+  "parent":{
+    "name":"Gameplay",
+    "path":"folders/Scripts/Gameplay.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

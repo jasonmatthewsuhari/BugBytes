@@ -4,7 +4,11 @@ AutomatedTesting();
 
 //debug
 //window_set_fullscreen(true);
-audio_play_sound(snd_menu, 1, true);
+
+audio_group_load(Music);
+audio_group_load(SFX);
+
+
 
 enum PACKETS {
 	JOIN,
@@ -35,18 +39,22 @@ enum STATES
 global.weapons = [obj_revolver, obj_shotgun];
 global.username = "";
 
+global.master_volume = 0.95;
+global.music_volume = 0.95;
+global.sfx_volume = 0.95;
+
 
 
 global.camera_on = true;
 
 // lowkey this is ugly but currently too lazy to make a whole new struct
 global.waves = [
-	[30, [obj_ant]], // at minute 0
-	[60, [obj_ant, obj_big_zombie]], // at minute 1
-	[20, [obj_ant, obj_big_zombie]], // at minute 2
-	[20, [obj_ant, obj_big_zombie]], // at minute 3
-	[15, [obj_ant, obj_big_zombie]], // at minute 4
-	[1, [obj_ant, obj_big_zombie]], // boss number 1
+	[2, [obj_ant]], // at minute 0
+	[4, [obj_ant, obj_phyllUIdae]], // at minute 1
+	[5, [obj_ant, obj_phyllUIdae]], // at minute 2
+	[1, [obj_big_zombie]], // at minute 3
+	[2, [obj_ant, obj_big_zombie]], // at minute 4
+	[2, [obj_phyllUIdae, obj_big_zombie]], // boss number 1
 	[25, [obj_ant, obj_big_zombie]], // at minute 5
 	[25, [obj_ant, obj_big_zombie]], // at minute 6
 	[35, [obj_ant, obj_big_zombie]], // at minute 7

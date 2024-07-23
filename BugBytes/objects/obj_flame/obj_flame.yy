@@ -9,7 +9,7 @@
   "name":"obj_flame",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"clsss_Weapon","path":"objects/clsss_Weapon/clsss_Weapon.yy",},"propertyId":{"name":"cooldown","path":"objects/clsss_Weapon/clsss_Weapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1.5 * game_get_speed(gamespeed_fps);\t",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Melee","path":"objects/class_Melee/class_Melee.yy",},"propertyId":{"name":"damage","path":"objects/class_Melee/class_Melee.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Melee","path":"objects/class_Melee/class_Melee.yy",},"propertyId":{"name":"damage","path":"objects/class_Melee/class_Melee.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"Melee",

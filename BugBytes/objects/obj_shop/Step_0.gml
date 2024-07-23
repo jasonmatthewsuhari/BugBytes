@@ -6,7 +6,7 @@ if (!shopOpen && place_meeting(x, y + 10, obj_singleplayer) && keyboard_check_pr
 	global.shop = true;
 }
 //Close shop
-else if (shopOpen && keyboard_check_pressed(vk_escape)) {
+else if (shopOpen && keyboard_check_pressed(ord("Q"))) {
 	shopOpen = false;
 	global.shop = false;
 }
@@ -16,13 +16,13 @@ if (shopOpen) {
 	selectedAnim = lerp(selectedAnim, selected, 0.1);
 	
 	//Down
-	if (keyboard_check_pressed(vk_down)){
+	if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))){
 		selected++;
 		if (selected == itemCount) selected = 0;
 	}
 	
 	//Up
-	if (keyboard_check_pressed(vk_up)){
+	if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))){
 		selected--;
 		if (selected < 0) selected = itemCount-1;
 	}
@@ -32,7 +32,7 @@ if (shopOpen) {
 	var name = item.name;
 	var price = item.price;
 	
-	if (keyboard_check_pressed(vk_enter) && global.point >= price && instance_exists(obj_inventory)) {
+	if (keyboard_check_pressed(vk_enter) && shopOpen && global.point >= price && instance_exists(obj_inventory) && obj_inventory.inventory.curr_capacity() < 5) {
 		//Add to inventory
 		obj_inventory.inventory.item_add(name, 1, item);
 		

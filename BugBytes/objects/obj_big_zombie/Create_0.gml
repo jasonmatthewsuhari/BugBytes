@@ -9,6 +9,7 @@
 }
 */
 
+event_inherited();
 
 #region Health, points, sprite, state variables
 
@@ -48,7 +49,7 @@ weapon_x = x + face * weapon_x_offset;			// x pos for where weapon should be dra
 weapon_y = y + weapon_y_offset;			// y pos for where weapon should be drawn 
 aim_direction = 0;			
 
-weapon = global.weapon_list.revolver;
+weapon = global.weapon_list.shotgun;
 
 #endregion
 
@@ -58,7 +59,7 @@ weapon = global.weapon_list.revolver;
 //set range distance we can scan, and set as an initial value so we can return to it
 range_initial = 800;
 range = range_initial;
-attack_dis = weapon.range;
+attack_dis = weapon.range / 2;
 // set a random timer for when we calc a path
 calc_path_delay = 1;
 calc_path_timer = irandom(30);

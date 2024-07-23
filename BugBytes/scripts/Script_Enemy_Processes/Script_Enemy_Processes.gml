@@ -61,40 +61,43 @@ function path_find()
 			//set a weight value, based on the object type, and how far away we are, scaling for each object
 			switch(_id.object_index) {
 				case obj_right_mouse_button:
-					_weight = round(map_value(_dis, range, 5, 0, 20));	
+					_weight = round(map_value(_dis, range, 5, 0, 20)) * !in_wall;	
 				break;
 				case obj_left_mouse_button:
-					_weight = round(map_value(_dis, range, 5, 0, 50));
+					_weight = round(map_value(_dis, range, 5, 0, 50)) * !in_wall;
 				break;
 				case obj_left_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * !in_wall;
 				break;
 				case obj_right_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * !in_wall;
 				break;
 				case obj_up_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * !in_wall;
 				break;
 				case obj_down_arrow:
-					_weight = round(map_value(_dis, range, 5, 0, 90));
+					_weight = round(map_value(_dis, range, 5, 0, 90)) * !in_wall;
 				break;
 				case obj_w_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * !in_wall;
 				break;
 				case obj_a_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * !in_wall;
 				break;
 				case obj_s_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * !in_wall;
 				break;
 				case obj_d_key:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * !in_wall;
+				break;
+				case obj_inventory:
+					_weight = round(map_value(_dis, range, 5, 0, 15)) * !in_wall;
 				break;
 				case obj_singleplayer:
-					_weight = round(map_value(_dis, range, 5, 0, 60));
+					_weight = round(map_value(_dis, range, 5, 0, 60)) * !in_wall;
 				break;
 				case obj_flag:
-					_weight = round(map_value(_dis, range, 5, 0, 20));
+					_weight = round(map_value(_dis, range, 5, 0, 20)) * !in_wall;
 				break;
 			}
 			
@@ -118,7 +121,8 @@ function path_find()
 	if _num > 0 {
 		//init a default highest weight
 		var _highest = 0;
-		
+
+
 		//ensure we found some instances
 		if array_length(options_arr) > 0 {
 			//loop through the found instances and get the highest weight
@@ -129,6 +133,7 @@ function path_find()
 		
 		//if we found a weight that was the highest, set as the target if the weight is not 0
 		if options_arr[_highest].weight != 0 {
+			
 			#region
 			// * visual only - clears the old path points, and add the players position as first point 
 			path_clear_points(path);
@@ -146,6 +151,7 @@ function path_find()
 				target_pos_x = _id.x;
 				target_pos_y = _id.y;
 				target_id = _id
+				
 			
 			
 			#region visual only - add the path coordinates, and activate the path so we can draw it
@@ -176,7 +182,9 @@ function path_find()
 		if _dis <= attack_dis {
 			path_end();
 			state = STATES.ATTACK;
-			}
+		} else {
+			state = STATES.MOVE;
+		}
 	
 
 			

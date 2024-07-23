@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 event_inherited();
-player_movement_test();
 
 if global.shop exit;			// if shop open, exit step
 

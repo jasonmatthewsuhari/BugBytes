@@ -115,3 +115,10 @@ function Inventory() constructor
 	
 	
 }
+
+function Power(_name, _sprite, _amount) constructor 
+{
+	name = _name;								// name of power
+	sprite = _sprite;							// sprite of power
+	amount = _amount;							// modifier amount
+}

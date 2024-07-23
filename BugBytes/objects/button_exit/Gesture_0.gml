@@ -1,3 +1,3 @@
 /// @description Exit game
 
-game_end();
+room_goto(rm_menu);

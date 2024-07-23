@@ -1,0 +1,1 @@
+piercing.amount = global.piercing;

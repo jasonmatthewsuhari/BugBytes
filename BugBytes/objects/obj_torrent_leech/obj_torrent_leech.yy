@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_big_zombie",
+  "%Name":"obj_torrent_leech",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_big_zombie",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable_Enemy","path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",},"propertyId":{"name":"point","path":"objects/class_Damageable_Enemy/class_Damageable_Enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
-  ],
+  "name":"obj_torrent_leech",
+  "overriddenProperties":[],
   "parent":{
     "name":"Enemy",
     "path":"folders/Objects/Enemy.yy",
@@ -40,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_big_zombie_idle",
-    "path":"sprites/spr_big_zombie_idle/spr_big_zombie_idle.yy",
+    "name":"spr_demon_idle",
+    "path":"sprites/spr_demon_idle/spr_demon_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

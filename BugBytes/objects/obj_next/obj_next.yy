@@ -1,19 +1,23 @@
 {
   "$GMObject":"",
   "%Name":"obj_next",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_next",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_Damageable","path":"objects/class_Damageable/class_Damageable.yy",},"propertyId":{"name":"curr_hp","path":"objects/class_Damageable/class_Damageable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_UI_Element","path":"objects/class_UI_Element/class_UI_Element.yy",},"propertyId":{"name":"ui_position_x","path":"objects/class_UI_Element/class_UI_Element.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1250",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"class_UI_Element","path":"objects/class_UI_Element/class_UI_Element.yy",},"propertyId":{"name":"ui_position_y","path":"objects/class_UI_Element/class_UI_Element.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"600",},
   ],
   "parent":{
     "name":"Tutorial",
     "path":"folders/Objects/Misc/Tutorial.yy",
   },
   "parentObjectId":{
-    "name":"class_Damageable_Friendly",
-    "path":"objects/class_Damageable_Friendly/class_Damageable_Friendly.yy",
+    "name":"class_UI_Element",
+    "path":"objects/class_UI_Element/class_UI_Element.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

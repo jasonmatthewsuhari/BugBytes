@@ -29,7 +29,6 @@ switch(room) {
 		delay = 60 / count;
 		
 		if(can_spawn) {
-			show_debug_message("Enemy spawned");
 			can_spawn = false;
 			global.spawn_count++;
 			SpawnEnemy(enemy_list, ratio, delay);

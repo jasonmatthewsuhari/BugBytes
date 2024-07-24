@@ -36,7 +36,7 @@
   "origin":9,
   "parent":{
     "name":"Enemy",
-    "path":"folders/Sprites/Enemy.yy",
+    "path":"folders/Sounds/Enemy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

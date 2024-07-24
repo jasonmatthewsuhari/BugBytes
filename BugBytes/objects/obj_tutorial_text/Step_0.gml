@@ -41,4 +41,3 @@ switch(current_line) {
 	   break;
 	
 }
-show_debug_message(current_line);

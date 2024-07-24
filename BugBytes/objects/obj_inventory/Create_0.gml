@@ -13,6 +13,4 @@ inventory.item_add("Revolver", 1, global.weapon_list.revolver);
 inventory.item_add("Shotgun", 1, global.weapon_list.shotgun);
 inventory.item_add("Heal Gun", 1, global.weapon_list.heal_gun);
 
-show_debug_message(inventory);
-
 

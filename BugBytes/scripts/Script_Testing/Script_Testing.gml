@@ -98,8 +98,6 @@ function player_movement_test()
 		with obj_singleplayer {
 			var _curr_x = x;
 			var _curr_y = y;
-			
-			show_debug_message(x - xprevious);
 		}
 
 	#endregion	

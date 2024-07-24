@@ -20,5 +20,14 @@ function MenuSelect(menu){
 		
 		case 3:
 			instance_create_layer(0,0,"Instances",obj_settings);
+		break;
+		
+		case 4:
+			room_goto(rm_tutorial);
+		break;
+		
+		case 5:
+			game_end();
+		break;
 	}
 }

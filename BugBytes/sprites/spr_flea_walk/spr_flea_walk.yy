@@ -34,7 +34,7 @@
   "origin":9,
   "parent":{
     "name":"Flea",
-    "path":"folders/Sprites/Enemy/Flea.yy",
+    "path":"folders/Sounds/Enemy/Flea.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

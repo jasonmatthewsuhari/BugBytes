@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"SpawnBody",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpawnBody",
+  "parent":{
+    "name":"Singleplayer",
+    "path":"folders/Scripts/Singleplayer.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

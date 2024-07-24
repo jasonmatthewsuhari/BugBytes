@@ -17,25 +17,35 @@ if(!instance_exists(obj_settings)) {
 
 	if(instance_position(mouse_x, mouse_y, obj_menu_select_singleplayer) && menu_index != 0) {
 		selected_with_mouse = true;
-		menu_index = obj_menu_select_singleplayer.index
+		menu_index = 0;
 		audio_play_sound(snd_navigate, 1, false);
 	}
 
 	else if(instance_position(mouse_x, mouse_y, obj_menu_select_host) && menu_index != 1) {
 		selected_with_mouse = true;
-		menu_index = obj_menu_select_host.index;
+		menu_index = 1;
 		audio_play_sound(snd_navigate, 1, false);
 	}
 
 	else if(instance_position(mouse_x, mouse_y, obj_menu_select_join) && menu_index != 2) {
 		selected_with_mouse = true;
-		menu_index = obj_menu_select_join.index;
+		menu_index = 2;
 		audio_play_sound(snd_navigate, 1, false);
 	}
 
 	else if(instance_position(mouse_x, mouse_y, obj_menu_select_settings) && menu_index != 3) {
 		selected_with_mouse = true;
-		menu_index = obj_menu_select_settings.index;
+		menu_index = 3;
+		audio_play_sound(snd_navigate, 1, false);
+	}
+	else if(instance_position(mouse_x, mouse_y, obj_menu_select_tutorial) && menu_index != 4) {
+		selected_with_mouse = true;
+		menu_index = 4;
+		audio_play_sound(snd_navigate, 1, false);
+	}
+	else if(instance_position(mouse_x, mouse_y, obj_menu_select_exit) && menu_index != 5) {
+		selected_with_mouse = true;
+		menu_index = 5;
 		audio_play_sound(snd_navigate, 1, false);
 	}
 	else {
@@ -58,9 +68,17 @@ if(!instance_exists(obj_settings)) {
 		case 3:
 		layer_background_sprite(layer_background_get_id(layer_get_id("Background")), spr_menu_settings);
 		break;
+		
+		case 4:
+		layer_background_sprite(layer_background_get_id(layer_get_id("Background")), spr_menu_tutorial);
+		break;
+		
+		case 5:
+		layer_background_sprite(layer_background_get_id(layer_get_id("Background")), spr_menu_exit);
+		break;
 	}	
 }
 
-if(keyboard_check_pressed(vk_escape)) {
+if(keyboard_check_pressed(vk_escape) && instance_exists(obj_settings)) {
 	instance_destroy(obj_settings);	
 }

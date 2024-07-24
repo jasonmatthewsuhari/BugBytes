@@ -34,7 +34,7 @@
   "origin":4,
   "parent":{
     "name":"Ant",
-    "path":"folders/Sprites/Enemy/Ant.yy",
+    "path":"folders/Sounds/Enemy/Ant.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

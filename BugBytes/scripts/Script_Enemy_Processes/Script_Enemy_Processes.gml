@@ -468,6 +468,7 @@ function path_find_flies()
 			target_pos_y = obj_flag.y;
 		}
 	} 
+		var _dis = distance_to_object(target_id);
 		move_towards_point(target_pos_x, target_pos_y, max_speed);
 		if _dis <= attack_dis {
 			speed = 0;

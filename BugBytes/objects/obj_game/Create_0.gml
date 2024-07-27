@@ -10,6 +10,7 @@ global.wave_count = 1;
 global.piercing = 1;
 global.showhp = false;
 
+has_spawned_pause = false;
 
 wave_time_source = time_source_create(time_source_game, 60, time_source_units_seconds, function() 
 {

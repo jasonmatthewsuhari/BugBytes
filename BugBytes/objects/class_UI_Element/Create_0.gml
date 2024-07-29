@@ -2,6 +2,6 @@
 
 event_inherited();
 depth = -998;
-max_hp = 100;
+max_hp = 300;
 curr_hp = max_hp;
 darker = false;

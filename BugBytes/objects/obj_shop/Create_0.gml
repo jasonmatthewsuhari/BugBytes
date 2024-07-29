@@ -54,7 +54,7 @@ flame = {
 
 piercing = {
 	name: "piercing",
-	sprite: spr_apple,
+	sprite: spr_piercing,
 	description: "Adds Piercing effect to all your damage bullets, increase healing on heal gun",
 	price: 200,
 	use: function() {
@@ -69,7 +69,7 @@ piercing = {
 
 speed_potion = {
 	name: "speed potion",
-	sprite: spr_grass_tileset,
+	sprite: spr_speed_up,
 	description: "Increase movement speed for 30s",
 	price: 120,
 	use: function() {
@@ -78,7 +78,7 @@ speed_potion = {
 			obj_singleplayer.max_speed = obj_singleplayer.max_speed * 2;
 			obj_inventory.inventory.item_subtract(name, 1);
 			// this could cause bugs if another array_delete is triggered before this time source executes
-			array_push(obj_powers.powers, new Power("speed up", spr_grass_tileset, "x2"));
+			array_push(obj_powers.powers, new Power("speed up", spr_speed_up, "x2"));
 			
 			reset_speed = time_source_create(time_source_game, 5, time_source_units_seconds, function() 
 			{

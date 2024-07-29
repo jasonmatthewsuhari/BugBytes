@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_demon_idle",
-    "path":"sprites/spr_demon_idle/spr_demon_idle.yy",
+    "name":"spr_torrent_leech",
+    "path":"sprites/spr_torrent_leech/spr_torrent_leech.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -3,14 +3,14 @@ event_inherited();
 
 #region Health, sprite, state variables
 
-max_speed = 1.5;
+max_speed = 0.75;
 curr_speed = max_speed;
 
-spr_idle = spr_demon_idle;
-spr_attack = spr_demon_attack;
-spr_dead = spr_demon_dead;
-spr_hurt = spr_demon_hurt;
-spr_move = spr_demon_walk;
+spr_idle = spr_torrent_leech;
+spr_attack = spr_torrent_leech;
+spr_dead = spr_torrent_leech;
+spr_hurt = spr_torrent_leech;
+spr_move = spr_torrent_leech;
 
 state = STATES.IDLE;
 face = 1;
@@ -79,10 +79,10 @@ path_clear = function() {
 #endregion
 
 #region initialise attack variables
-attack_frame = 6;						// Sprite attack frame 
+attack_frame = 1;						// Sprite attack frame 
 cooldown = 2 * game_get_speed(gamespeed_fps);				// Attack cooldown of the weapon in frames
 timer = 0;					// Timer for weapon cooldown
-damage = 5;						// Damage of the weapon
+damage = 10;						// Damage of the weapon
 attack_dis = 12;
 weapon_x = x;
 weapon_y = y;

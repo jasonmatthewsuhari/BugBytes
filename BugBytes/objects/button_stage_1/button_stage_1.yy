@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"button_singleplayer",
+  "%Name":"button_stage_1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"button_singleplayer",
+  "name":"button_stage_1",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Singleplayer_Button",
-    "path":"sprites/Singleplayer_Button/Singleplayer_Button.yy",
+    "name":"Stage_1",
+    "path":"sprites/Stage_1/Stage_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

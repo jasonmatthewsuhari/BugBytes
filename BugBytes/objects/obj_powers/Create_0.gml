@@ -1,5 +1,5 @@
 powers = [];
-piercing = new Power("Piercing", spr_apple, 1);
+piercing = new Power("Piercing", spr_piercing, 1);
 
 array_push(powers, piercing);
 

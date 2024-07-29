@@ -1,1 +1,1 @@
-obj_cutscenes.index += 1;
+// obj_cutscenes.index += 1;

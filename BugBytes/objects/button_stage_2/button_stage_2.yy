@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"button_mode_2",
+  "%Name":"button_stage_2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"button_mode_2",
+  "name":"button_stage_2",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Mode_2",
-    "path":"sprites/Mode_2/Mode_2.yy",
+    "name":"Stage_2",
+    "path":"sprites/Stage_2/Stage_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

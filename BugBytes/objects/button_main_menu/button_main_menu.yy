@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"button_mode_1",
+  "%Name":"button_main_menu",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"button_mode_1",
+  "name":"button_main_menu",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Mode_1",
-    "path":"sprites/Mode_1/Mode_1.yy",
+    "name":"Main_Menu_Button",
+    "path":"sprites/Main_Menu_Button/Main_Menu_Button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

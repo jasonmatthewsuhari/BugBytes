@@ -20,10 +20,12 @@ switch(state) {
 	case STATES.ATTACK:
 		perform_attack();
 		enemy_anim();
-		curr_hp += damage;
-		if curr_hp > max_hp curr_hp = max_hp;
-		heal = true;
-		flash_alpha = 0.1;
+		if (timer == cooldown) {
+			curr_hp += damage;
+			if curr_hp > max_hp curr_hp = max_hp;
+			heal = true;
+			flash_alpha = 0.1;
+		}
 		
 	break;
 	case STATES.HURT:

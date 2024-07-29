@@ -1,4 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-event_inherited()
+event_inherited();
+if (mouse_check_button(mb_left)) {
+    darker = true;
+}
+else
+{
+    darker = false;
+}

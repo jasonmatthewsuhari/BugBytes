@@ -8,5 +8,3 @@ if(keyboard_check_pressed(vk_backspace)) {
 		global.username = string_delete(global.username, string_length(global.username), 1);
 	}
 }
-
-

@@ -21,7 +21,7 @@ switch(state) {
 		if path_index == -1		state = STATES.IDLE;
 	break;
 	case STATES.ATTACK:
-		if instance_exists(target_id) {
+		if instance_exists(target_id) && target_id != obj_singleplayer && target_id != obj_player {
 			spr_idle = target_id.sprite_index;
 			spr_attack = target_id.sprite_index;
 			spr_dead = target_id.sprite_index;

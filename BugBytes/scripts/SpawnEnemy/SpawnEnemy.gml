@@ -13,7 +13,7 @@ function SpawnEnemy(enemy_list, ratio){
 		instance_create_layer(spawn_x, spawn_y, "Enemies", enemy_id);
 		ratio[index] =  ratio[index] - 1;
 		
-		if(instance_exists(obj_server) || instance_exists(obj_client)) {
+		if(instance_exists(obj_server)) {
 			buffer = buffer_create(7, buffer_fixed, 1);
 			buffer_write(buffer, buffer_u8, PACKETS.EVENT);
 			buffer_write(buffer, buffer_u8, EVENTS.ENEMY_SPAWNED);
@@ -22,7 +22,7 @@ function SpawnEnemy(enemy_list, ratio){
 			buffer_write(buffer, buffer_s16, spawn_y);
 			buffer_write(buffer, buffer_u8, enemy_id);
 		
-			network_send_udp(global.socket, remote_ip, remote_port, buffer, buffer_tell(buffer));
+			network_send_udp(global.socket, obj_server.remote_ip, obj_server.remote_port, buffer, buffer_tell(buffer));
 			buffer_delete(buffer);	
 		}
 	}

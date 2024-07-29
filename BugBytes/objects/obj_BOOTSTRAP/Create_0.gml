@@ -3,7 +3,7 @@ AutomatedTesting();
 
 
 //debug
-//window_set_fullscreen(true);
+// window_set_fullscreen(true);
 
 audio_group_load(Music);
 audio_group_load(SFX);
@@ -53,11 +53,11 @@ global.waves = [
 	[4, [obj_ant, obj_phyllUIdae]], // at minute 1
 	[5, [obj_ant, obj_phyllUIdae]], // at minute 2
 	[1, [obj_big_zombie]], // at minute 3
-	[2, [obj_ant, obj_big_zombie]], // at minute 4
+	[2, [obj_ant, obj_fleaswarm]], // at minute 4
 	[2, [obj_phyllUIdae, obj_big_zombie]], // boss number 1
-	[25, [obj_ant, obj_big_zombie]], // at minute 5
-	[25, [obj_ant, obj_big_zombie]], // at minute 6
-	[35, [obj_ant, obj_big_zombie]], // at minute 7
+	[5, [obj_ant, obj_fleaswarm]], // at minute 5
+	[1, [obj_centurypede_head]], // at minute 6
+	[50, [obj_centurypede_head], // at minute 7
 	[10, [obj_ant, obj_big_zombie]], // at minute 8
 	[25, [obj_ant, obj_big_zombie]], // at minute 9
 	[1, [obj_ant, obj_big_zombie]], // boss number 2

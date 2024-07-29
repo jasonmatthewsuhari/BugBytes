@@ -1,3 +1,5 @@
+event_inherited();
+
 movement_array = array_create(4, 1);
 moveSpeed = 4;
 is_local = true;

@@ -10,6 +10,5 @@ else {
 }
 
 var shake_value = 2.5 - (point_distance(obj_camera.x, obj_camera.y, x, y)/700) * 1.5
-show_debug_message(shake_value);
 Screenshake(0.5,shake_value,0.1);
 

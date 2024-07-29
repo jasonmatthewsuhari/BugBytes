@@ -14,8 +14,7 @@ function MenuSelect(menu){
 		
 		// MULTIPLAYER JOIN
 		case 2:
-			room_goto(rm_lobby);
-			instance_create_layer(0, 0, "Instances", obj_client);
+			room_goto(rm_ipentry);
 		break;
 		
 		case 3:

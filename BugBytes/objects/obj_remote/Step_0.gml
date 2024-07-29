@@ -1,3 +1,5 @@
+event_inherited();
+
 aim_direction = point_direction(x, y, remote_mouse_x, remote_mouse_y);
 if (aim_direction <= 90 || aim_direction > 270) {
 	face = 1;

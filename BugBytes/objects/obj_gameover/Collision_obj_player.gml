@@ -11,7 +11,7 @@ if(can_attack) {
 			network_send_udp(global.socket, obj_server.remote_ip, obj_server.remote_port, buffer, buffer_tell(buffer));
 		}
 		else if(instance_exists(obj_client)) {
-			network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
+			network_send_udp(global.socket, global.host_ip, 8000, buffer, buffer_tell(buffer));
 		}
 		
 	}
@@ -27,7 +27,7 @@ if(can_attack) {
 			network_send_udp(global.socket, obj_server.remote_ip, obj_server.remote_port, buffer, buffer_tell(buffer));
 		}
 		else if(instance_exists(obj_client)) {
-			network_send_udp(global.socket, "127.0.0.1", 8000, buffer, buffer_tell(buffer));
+			network_send_udp(global.socket, global.host_ip, 8000, buffer, buffer_tell(buffer));
 		}
 
 		buffer_delete(buffer);

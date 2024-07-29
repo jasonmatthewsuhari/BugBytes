@@ -9,6 +9,8 @@ in_wall = place_meeting(x,y,obj_solid);
 if(curr_hp <= 0) {
 	
 	if(grounded) { 
+		var news = instance_create_layer(0,0,"Misc",obj_breakingnews);
+		news.display_text = display_text;
 		instance_destroy(); 
 	}
 	else {
@@ -26,5 +28,5 @@ else {
 	
 		x = vx + ui_position_x;
 		y = vy + ui_position_y;	
-	}
+	}	
 }

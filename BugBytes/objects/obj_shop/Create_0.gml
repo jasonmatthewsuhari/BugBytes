@@ -26,7 +26,7 @@ water = {
 	name: "water",
 	sprite: spr_water,
 	description: "Fully restores health",
-	price: 50,
+	price: 20,
 	use: function() {
 		var index = obj_inventory.inventory.item_find(name);
 		if (index >= 0) {

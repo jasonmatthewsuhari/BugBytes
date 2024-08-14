@@ -10,3 +10,4 @@ global.wave_count = 1;
 global.piercing = 1;
 global.showhp = false;
 
+has_spawned_pause = false;

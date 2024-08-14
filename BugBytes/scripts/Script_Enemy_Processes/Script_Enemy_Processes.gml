@@ -60,6 +60,9 @@ function path_find()
 			
 			//set a weight value, based on the object type, and how far away we are, scaling for each object
 			switch(_id.object_index) {
+				case obj_pause_menu:
+					_weight = round(map_value(_dis, range, 5, 0, 200)) * !in_wall;
+				break;
 				case obj_right_mouse_button:
 					_weight = round(map_value(_dis, range, 5, 0, 20)) * !in_wall;	
 				break;
@@ -364,11 +367,9 @@ function path_find_flies()
 			
 			//set a weight value, based on the object type, and how far away we are, scaling for each object
 			switch(_id.object_index) {
-				/*
 				case obj_pause_menu:
-					_weight = round(map_value(_dis, range, 5, 0, 200));
+					_weight = round(map_value(_dis, range, 5, 0, 200)) * !in_wall;
 				break;
-				*/
 				case obj_right_mouse_button:
 					_weight = round(map_value(_dis, range, 5, 0, 20)) * !in_wall;	
 				break;

@@ -24,14 +24,6 @@ switch(index) {
 	break;
 	
 	case 4:
-		sprite_index = spr_scene_5;
-	break;
-	
-	case 5:
-		sprite_index = spr_scene_6;
-	break;
-	
-	case 6:
 		instance_destroy();
 	break;
 }

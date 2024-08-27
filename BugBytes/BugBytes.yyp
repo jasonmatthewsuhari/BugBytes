@@ -304,8 +304,6 @@
     {"id":{"name":"spr_scene_2","path":"sprites/spr_scene_2/spr_scene_2.yy",},},
     {"id":{"name":"spr_scene_3","path":"sprites/spr_scene_3/spr_scene_3.yy",},},
     {"id":{"name":"spr_scene_4","path":"sprites/spr_scene_4/spr_scene_4.yy",},},
-    {"id":{"name":"spr_scene_5","path":"sprites/spr_scene_5/spr_scene_5.yy",},},
-    {"id":{"name":"spr_scene_6","path":"sprites/spr_scene_6/spr_scene_6.yy",},},
     {"id":{"name":"spr_server","path":"sprites/spr_server/spr_server.yy",},},
     {"id":{"name":"spr_shop","path":"sprites/spr_shop/spr_shop.yy",},},
     {"id":{"name":"spr_shotgun","path":"sprites/spr_shotgun/spr_shotgun.yy",},},

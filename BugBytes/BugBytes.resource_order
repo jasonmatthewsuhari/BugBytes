@@ -114,12 +114,18 @@
     {"name":"spr_menu_tutorial","order":7,"path":"sprites/spr_menu_tutorial/spr_menu_tutorial.yy",},
     {"name":"spr_piercing","order":2,"path":"sprites/spr_piercing/spr_piercing.yy",},
     {"name":"spr_pointer","order":16,"path":"sprites/spr_pointer/spr_pointer.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_scene_1","order":6,"path":"sprites/spr_scene_1/spr_scene_1.yy",},
     {"name":"spr_scene_2","order":7,"path":"sprites/spr_scene_2/spr_scene_2.yy",},
     {"name":"spr_scene_3","order":8,"path":"sprites/spr_scene_3/spr_scene_3.yy",},
     {"name":"spr_scene_4","order":9,"path":"sprites/spr_scene_4/spr_scene_4.yy",},
     {"name":"spr_scene_5","order":4,"path":"sprites/spr_scene_5/spr_scene_5.yy",},
     {"name":"spr_scene_6","order":5,"path":"sprites/spr_scene_6/spr_scene_6.yy",},
+=======
+    {"name":"spr_scene_2","order":1,"path":"sprites/spr_scene_2/spr_scene_2.yy",},
+    {"name":"spr_scene_3","order":2,"path":"sprites/spr_scene_3/spr_scene_3.yy",},
+    {"name":"spr_scene_4","order":3,"path":"sprites/spr_scene_4/spr_scene_4.yy",},
+>>>>>>> Stashed changes
     {"name":"spr_slider","order":2,"path":"sprites/spr_slider/spr_slider.yy",},
     {"name":"spr_speed_up","order":3,"path":"sprites/spr_speed_up/spr_speed_up.yy",},
     {"name":"spr_testbutton","order":4,"path":"sprites/spr_testbutton/spr_testbutton.yy",},

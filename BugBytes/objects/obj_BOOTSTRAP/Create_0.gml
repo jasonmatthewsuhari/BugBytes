@@ -74,4 +74,4 @@ global.waves = [
 	[25, []], // at minute 19
 	[1, []], // final boss
 	
-];
+]];
